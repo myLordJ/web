@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
 // endbower
 
 .browsehappy {
@@ -24,7 +25,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -38,6 +38,7 @@ body {
 
 /* Custom page footer */
 .footer {
+  margin-top: 50px;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -65,6 +66,10 @@ body {
   p + h4 {
     margin-top: 28px;
   }
+}
+
+.red {
+  color: tomato;
 }
 
 /* Responsive: Portrait tablets and up */
