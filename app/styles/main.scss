@@ -39,6 +39,7 @@ body {
 /* Custom page footer */
 .footer {
   margin-top: 50px;
+  margin-bottom: 100px;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -59,6 +60,27 @@ body {
   }
 }
 
+#map-container {
+  overflow: hidden;
+  height: 300px;
+  width: 700px;
+}
+
+#map {
+  height: 300px;
+  width: 700px;
+  margin-bottom: 100px;
+
+  img {
+    max-width: none;
+    background: none;
+  }
+}
+
+.top-buffer { 
+  margin-top: 30px;
+}
+
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -66,6 +88,10 @@ body {
   p + h4 {
     margin-top: 28px;
   }
+}
+
+.brand {
+  width: 16px;
 }
 
 .red {

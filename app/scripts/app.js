@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mwl.calendar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -35,6 +36,7 @@ angular
       })
       .when('/schedule', {
         templateUrl: 'views/schedule.html',
+        controller: 'ScheduleCtrl'
       })
       .when('/blog', {
         templateUrl: 'views/blog.html',
