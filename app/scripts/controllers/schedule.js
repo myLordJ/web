@@ -46,5 +46,16 @@ angular.module('webAppApp')
         resizable: true,
         recursOn: 'month'
       },
+      {
+        title: 'Metro y Medio',
+        type: 'inverse',
+        startsAt: new Date(2015,1,1,18),
+        endsAt: new Date(2016,1,1,18),
+        editable: false,
+        deletable: false,
+        draggable: false, 
+        resizable: true,
+        recursOn: 'month'
+      },
     ];
   });
