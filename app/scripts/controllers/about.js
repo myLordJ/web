@@ -2,5 +2,7 @@
 
 angular.module('rac')
   .controller('AboutCtrl', function ($scope, $page) {
-    $scope.content = $page.get({id: 'about'});
+    $page.get({id: 'about'}, function(page) {
+      $scope.content = page.content;
+    });
   });
