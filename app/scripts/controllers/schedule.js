@@ -1,13 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name webAppApp.controller:ScheduleCtrl
- * @description
- * # ScheduleCtrl
- * Controller of the webAppApp
- */
-angular.module('webAppApp')
+angular.module('rac')
   .controller('ScheduleCtrl', function ($scope) {
     $scope.calendarView = 'month';
     $scope.currentDay = new Date();
