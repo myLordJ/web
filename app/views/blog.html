@@ -17,8 +17,12 @@
   </div>
 </div>
 
-<hr>
-<div class="row">
-  <div class="col-xs-12" ng-bind-html="content">
+<div ng-if="content">
+  <br>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12" ng-bind-html="content">
+    </div>
   </div>
 </div>
