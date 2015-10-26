@@ -13,6 +13,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.bootstrap',
     'mwl.calendar',
     'rac.directives',
     'rac.filters'
