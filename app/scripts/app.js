@@ -22,6 +22,7 @@ angular
       })
       .when('/live', {
         templateUrl: 'views/live.html',
+        controller: 'LiveCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
