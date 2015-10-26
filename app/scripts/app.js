@@ -1,5 +1,9 @@
 'use strict';
 
+angular.module('rac.directives', []);
+angular.module('rac.controllers', []);
+angular.module('rac.services', []);
+
 angular
   .module('rac', [
     'ngAnimate',
@@ -8,7 +12,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'mwl.calendar'
+    'mwl.calendar',
+    'rac.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -33,6 +38,7 @@ angular
       })
       .when('/blog', {
         templateUrl: 'views/blog.html',
+        controller: 'BlogCtrl'
       })
       .otherwise({
         redirectTo: '/'
