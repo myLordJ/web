@@ -2,5 +2,5 @@
 
 angular.module('rac')
   .factory('$page', function($resource) {
-    return $resource('http://localhost:3000/api/page/:id');
+    return $resource('http://localhost:3000/api/page/:name');
   });

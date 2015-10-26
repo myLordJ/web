@@ -1,10 +1,17 @@
 'use strict';
 
 angular.module('rac')
-.controller('BlogCtrl', function ($scope, $post) {
-  $scope.posts = [];
+.controller('BlogCtrl', function ($scope, $post, $page, $sce) {
   var skip = 0;
   var endOfBlogs = false;
+
+  $scope.posts = [];
+  $scope.title = 'Blog';
+
+  $page.get({name: 'blog'}, function(page){
+    $scope.title = page.title;
+    $scope.content = $sce.trustAsHtml(page.content);
+  });
 
   $scope.getPosts = function() {
     if (!endOfBlogs) {
