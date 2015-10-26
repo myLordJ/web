@@ -8,92 +8,15 @@
   </div>
 </div> -->
 
-<div infinite-scroll="scrollTest" style="height: 200px; overflow: auto">
-  <div class="A">
-    <div class="col-md-4 portfolio-item">
+<div infinite-scroll="getPosts()">
+  <div class="row">
+    <div class="col-md-6 portfolio-item" ng-repeat="post in posts">
       <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/1" alt="">
+        <img class="img-responsive" ng-src="{{'http://lorempixel.com/g/325/150/people/' + $index}}" alt="">
       </a>
       <h3>
-        <a href="#">Post #1</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/2" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #2</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/3" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #3</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-  </div>
-
-  <div class="A">
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/4" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #4</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/5" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #5</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/6" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #6</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-  </div>
-
-  <div class="A">
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/7" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #7</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/8" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #8</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://lorempixel.com/g/215/125/people/9" alt="">
-      </a>
-      <h3>
-        <a href="#">Post #9</a>
+        <a href="#">{{post.title}}</a>
+        <small>{{post.publishedDate | date:'dd.MM.yyyy'}}</small>
       </h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     </div>
