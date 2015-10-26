@@ -3,6 +3,7 @@
 angular.module('rac.directives', []);
 angular.module('rac.controllers', []);
 angular.module('rac.services', []);
+angular.module('rac.filters', []);
 
 angular
   .module('rac', [
@@ -13,7 +14,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'mwl.calendar',
-    'rac.directives'
+    'rac.directives',
+    'rac.filters'
   ])
   .config(function ($routeProvider) {
     $routeProvider
