@@ -29,9 +29,9 @@ angular.module('rac')
 
     $scope.sendEmail = function() {
       $email.save({
-        to: $scope.to,
-        name: $scope.name,
-        message: 'lalala'
+        from: $scope.from,
+        message: $scope.message,
+        name: $scope.name
       },function(res) {
         console.log(res);
       });
