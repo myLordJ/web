@@ -4,6 +4,8 @@ angular.module('rac')
   .controller('ContactCtrl', function ($scope, $page, $email, $sce) {
     $scope.title = 'Contactanos';
 
+    $scope.email = {};
+
     $scope.map = { 
       center: { latitude: -34.5776996, longitude: -58.46083050000004 }, 
       zoom: 16,
@@ -29,14 +31,16 @@ angular.module('rac')
 
     $scope.sendEmail = function() {
       $email.save({
-        from: $scope.from,
-        message: $scope.message,
-        name: $scope.name
+        from: $scope.email.from,
+        message: $scope.email.message,
+        name: $scope.email.name
       }, function() {
         $scope.alert = {
-          msg: 'Mensaje Enviado',
+          message: 'Mensaje Enviado',
           type: 'success'
         };
+
+        $scope.email = {};
       });
     };
   });
