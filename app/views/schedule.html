@@ -7,3 +7,15 @@
     events="events"
     auto-open="true">
 </mwl-calendar>
+
+<div class="row top-buffer">
+  <div class="col-xs-6">
+    <h3>Últimos {{ mixcloud.length }} Programas</h3>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="cast in mixcloud">
+        <a href="{{cast.url}}" target="_blank">{{cast.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ScheduleCtrl', function ($scope) {
+  .controller('ScheduleCtrl', function ($scope, $mixcloud) {
     $scope.calendarView = 'month';
     $scope.currentDay = new Date();
 
@@ -51,4 +51,9 @@ angular.module('rac')
         recursOn: 'month'
       },
     ];
+
+    $mixcloud.get({}, function(res){
+        $scope.mixcloud = res.data;
+    });
+
   });
