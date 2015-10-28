@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ContactCtrl', function ($scope, $page, $sce) {
+  .controller('ContactCtrl', function ($scope, $page, $email, $sce) {
     $scope.title = 'Contactanos';
 
     $scope.map = { 
@@ -26,4 +26,14 @@ angular.module('rac')
       $scope.content = $sce.trustAsHtml(page.content);
       $scope.title = page.title;
     });
+
+    $scope.sendEmail = function() {
+      $email.save({
+        to: $scope.to,
+        name: $scope.name,
+        message: 'lalala'
+      },function(res) {
+        console.log(res);
+      });
+    };
   });
