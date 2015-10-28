@@ -14,10 +14,10 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
+    'uiGmapgoogle-maps',
     'mwl.calendar',
     'rac.directives',
-    'rac.filters',
-    'uiGmapgoogle-maps'
+    'rac.filters'
   ])
   .config(function ($routeProvider) {
     $routeProvider

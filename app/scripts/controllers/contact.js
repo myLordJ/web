@@ -32,8 +32,11 @@ angular.module('rac')
         from: $scope.from,
         message: $scope.message,
         name: $scope.name
-      },function(res) {
-        console.log(res);
+      }, function() {
+        $scope.alert = {
+          msg: 'Mensaje Enviado',
+          type: 'success'
+        };
       });
     };
   });
