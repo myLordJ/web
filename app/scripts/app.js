@@ -16,7 +16,8 @@ angular
     'ui.bootstrap',
     'mwl.calendar',
     'rac.directives',
-    'rac.filters'
+    'rac.filters',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,6 +35,7 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
       })
       .when('/schedule', {
         templateUrl: 'views/schedule.html',
