@@ -6,7 +6,15 @@ angular.module('rac')
 
     $scope.map = { 
       center: { latitude: -34.5776996, longitude: -58.46083050000004 }, 
-      zoom: 16
+      zoom: 16,
+      options: {
+        panControl: false,
+        rotateControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        zoomControl: false,
+        mapTypeControl: false
+      }
     };
 
     $scope.marker = {

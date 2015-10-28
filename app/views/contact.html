@@ -4,15 +4,14 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
       <ui-gmap-marker idKey='marker.key' coords='marker.location'></ui-gmap-marker>
     </ui-gmap-google-map>
   </div>
 </div>
 
 <div class="row top-buffer">
-  <div class="col-xs-12 col-md-4">
-    <p ng-bind-html="content"></p>
+  <div class="col-xs-12 col-md-4" ng-bind-html="content">
   </div>
   <div class="col-xs-12 col-md-8">
     <form class="form-horizontal">
