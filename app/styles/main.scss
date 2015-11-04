@@ -106,6 +106,26 @@ body {
   width: 700px;
 }
 
+.aside-left, .aside-right {
+  padding: 0 !important;
+}
+
+.aside-left {
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+.aside-right {
+  margin-left: 10px;
+  margin-right: -20px;
+}
+
+.ad {
+  margin-bottom: 10px;
+}
+
+
+
 .angular-google-map-container { 
   height: 200px; 
 }
@@ -113,7 +133,11 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 2px !important;
+    padding-left: 2px !important;
   }
 
   /* Remove the padding we set earlier */
