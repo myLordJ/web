@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-.controller('BlogCtrl', function ($scope, $post, $page, $sce) {
+.controller('BlogCtrl', function ($scope, $post, $page, $sce, $location, $current) {
   var skip = 0;
   var endOfBlogs = false;
 
@@ -12,6 +12,11 @@ angular.module('rac')
     $scope.title = page.title;
     $scope.content = $sce.trustAsHtml(page.content);
   });
+
+  $scope.goToPost = function(index) {
+    $current.post = this.posts[index];
+    $location.path('/blog/' + $current.post.title);
+  };
 
   $scope.getPosts = function() {
     if (!endOfBlogs) {
