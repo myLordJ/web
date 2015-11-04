@@ -1,3 +1,15 @@
 <div class="page-header">
-  <h1>{{post.title}}</h1>
+  <h1>
+    {{post.title}}
+    <small>{{post.publishedDate | date:'dd.MM.yyyy'}}</small>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img ng-src="{{post.image.url}}" alt="{{post.title}}" class="post-img">
+    <h3>
+      {{post.content.brief | text}}
+    </h3>
+  </div>
 </div>

@@ -2,7 +2,7 @@
 
 angular.module('rac')
   .factory('$current', function() {
-    var post = {};
+    var post;
 
     return {
       post: post
