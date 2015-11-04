@@ -77,8 +77,11 @@
         </div>
       </div>
 
-      <div class="container">
-        <div ng-view=""></div>
+      <div>
+        <aside ng-controller="SidebarCtrl">
+          <img class="img-thumbnail" src="{{ad.image || 'http://dummyimage.com/200x200/f3f3f3/3d3d3d'}}" alt="{{ad.name}}" ng-repeat="ad in ads"> 
+        </aside>
+        <div ng-view="" class="container"></div>
       </div>
 
       <div class="footer">
@@ -153,6 +156,7 @@
       <script src="scripts/controllers/blog.js"></script>
       <script src="scripts/controllers/contact.js"></script>
       <script src="scripts/controllers/post.js"></script>
+      <script src="scripts/controllers/sidebar.js"></script>
 
      <script src="scripts/services/page.js"></script>
      <script src="scripts/services/post.js"></script>
@@ -160,6 +164,7 @@
      <script src="scripts/services/email.js"></script>
      <script src="scripts/services/mixcloud.js"></script>
      <script src="scripts/services/current.js"></script>
+     <script src="scripts/services/ad.js"></script>
 
      <script src="scripts/directives/infinit-scroll.js"></script>
 
