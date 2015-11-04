@@ -82,7 +82,7 @@
           
           <div class="col-xs-2 aside-left">
             <aside ng-controller="AsideCtrl">
-              <img class="img-thumbnail ad" src="{{ad.image || 'http://dummyimage.com/200x200/f3f3f3/3d3d3d'}}" alt="{{ad.name}}" ng-repeat="ad in ads"> 
+              <img class="img-thumbnail ad" src="{{ad.image || 'http://dummyimage.com/200x200/f3f3f3/3d3d3d'}}" alt="{{ad.title}}" ng-repeat="ad in ads"> 
             </aside>
           </div>
 
@@ -92,7 +92,7 @@
           
           <div class="col-xs-2 aside-right">
             <aside ng-controller="AsideCtrl">
-              <div ng-bind-html="widget" ng-repeat="widget in widget">
+              <div class="widget" ng-repeat="widget in widgets" script="{{widget.content}}">
               </div>
             </aside>
           </div>
@@ -184,6 +184,7 @@
      <script src="scripts/services/widget.js"></script>
 
      <script src="scripts/directives/infinit-scroll.js"></script>
+     <script src="scripts/directives/script.js"></script>
 
      <script src="scripts/filters/text.js"></script>
      <!-- endbuild -->
