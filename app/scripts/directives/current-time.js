@@ -5,7 +5,7 @@ angular.module('rac.directives')
     return function(scope, element, attrs){
         var format;
         
-        scope.$watch(attrs.myCurrentTime, function(value) {
+        scope.$watch(attrs.currentTime, function(value) {
             format = value;
             updateTime();
         });
