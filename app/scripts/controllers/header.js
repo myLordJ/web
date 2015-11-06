@@ -7,5 +7,4 @@ angular.module('rac')
   $weather.get({}, function(city){
     $scope.temp = city.main;
   });
-
 });
