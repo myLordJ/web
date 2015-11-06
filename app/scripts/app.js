@@ -13,7 +13,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap',
     'uiGmapgoogle-maps',
     'mwl.calendar',
     'rac.directives',

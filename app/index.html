@@ -56,7 +56,7 @@
               </button>
 
               <a class="navbar-brand" href="#/">
-                <img alt="Brand" src="images/logo.png" height="24" width="24">
+                <img alt="Brand" src="images/logo_bird.png" height="24" width="24">
               </a>
             </div>
 
@@ -73,10 +73,12 @@
               <ul class="nav navbar-nav navbar-right">
                 <li>
                   <a href="#" class="player">
-                    <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="isPlaying"></span>
-                    <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="!isPlaying"></span>
+                    <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="!isPlaying"></span>
+                    <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="isPlaying"></span>
                   </a>
-                  <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying"></ng-include>
+                  <a style="margin-right: 60px; float: left">
+                    <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying"></ng-include>  
+                  </a>
                 </li>
                 <li><a href="#" current-time="'h:mm:ss a'"></a></li>
                 <li><a href="#">{{temp.temp}}°C</a></li>
@@ -183,7 +185,6 @@
      <!-- endbuild -->
 
      <script src="http://maps.google.com/maps/api/js"></script>
-     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 
      <!-- build:js({.tmp,app}) scripts/scripts.js -->
      <script src="scripts/app.js"></script>
