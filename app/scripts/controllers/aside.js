@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-.controller('AsideCtrl', function ($scope, $ad, $widget, $weather) {
+.controller('AsideCtrl', function ($scope, $ad, $widget) {
   $scope.ads = [];
   $scope.widgets = [];
 
@@ -11,10 +11,6 @@ angular.module('rac')
 
   $widget.get({}, function(widgets) {
     $scope.widgets = widgets;
-  });
-
-  $weather.get({}, function(city){
-    console.log(city);
   });
 
 });

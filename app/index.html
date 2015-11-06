@@ -43,7 +43,7 @@
       <![endif]-->
 
       <!-- Add your site or application content here -->
-      <div class="header">
+      <div class="header" ng-controller="HeaderCtrl">
         <div class="navbar navbar-inverse" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -69,8 +69,12 @@
                 <li><a ng-href="#/blog">Blog</a></li>
                 <li><a ng-href="#/contact">Contacto</a></li>
               </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">{{temp.temp}}C</a></li>
+              </ul>
+
             </div>
-            
             <!-- Radio Playe r-->
             <!-- Time and Weather -->
           </div>
@@ -182,6 +186,7 @@
      <script src="scripts/controllers/contact.js"></script>
      <script src="scripts/controllers/post.js"></script>
      <script src="scripts/controllers/aside.js"></script>
+     <script src="scripts/controllers/header.js"></script>
 
      <script src="scripts/services/page.js"></script>
      <script src="scripts/services/post.js"></script>
