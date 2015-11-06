@@ -124,7 +124,22 @@ body {
   margin-bottom: 10px;
 }
 
+.wave {
+  float: left;
+  margin-top: 17px;
+  margin-left: 10px;
+  margin-right: 60px;
+}
 
+.wave svg path,
+.wave svg rect {
+  fill: #fff;
+}
+
+header a.player {
+  font-size: 1.5em;
+  float: left;
+}
 
 .angular-google-map-container { 
   height: 200px; 

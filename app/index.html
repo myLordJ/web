@@ -43,7 +43,7 @@
       <![endif]-->
 
       <!-- Add your site or application content here -->
-      <div class="header" ng-controller="HeaderCtrl">
+      <header ng-controller="HeaderCtrl">
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -71,7 +71,13 @@
               </ul>
 
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-play-circle"></span></a></li>
+                <li>
+                  <a href="#" class="player">
+                    <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="isPlaying"></span>
+                    <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="!isPlaying"></span>
+                  </a>
+                  <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying"></ng-include>
+                </li>
                 <li><a href="#" current-time="'h:mm:ss a'"></a></li>
                 <li><a href="#">{{temp.temp}}°C</a></li>
               </ul>
@@ -81,12 +87,12 @@
             <!-- Time and Weather -->
           </div>
         </div>
-      </div>
+      </header>
 
-      <div class="container" style="padding-top: 50px;">
+      <div class="container" style="padding-top: 80px;">
         <div class="row">
           
-          <div class="col-xs-2 aside-left">
+          <div class="col-xs-2 aside-left hidden-xs hidden-sm">
             <aside ng-controller="AsideCtrl">
               <a href="{{ad.url}}" target="_blank" ng-repeat="ad in ads">
                 <img class="img-thumbnail ad" src="{{ad.image ? ad.image.url : 'http://dummyimage.com/200x200/f3f3f3/3d3d3d'}}" alt="{{ad.title}}"> 
@@ -94,11 +100,11 @@
             </aside>
           </div>
 
-          <div class="col-xs-8">
+          <div class="col-xs-12 col-md-8">
             <div ng-view=""></div>
           </div>  
           
-          <div class="col-xs-2 aside-right">
+          <div class="col-xs-2 aside-right hidden-xs hidden-sm">
             <aside ng-controller="AsideCtrl">
               <div class="widget" ng-repeat="widget in widgets" script="{{widget.content}}">
               </div>
@@ -146,7 +152,7 @@
       }(document, 'script', 'facebook-jssdk'));</script>
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-      <script>
+      <!-- <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
          (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
          r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
@@ -154,7 +160,7 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-     </script>
+     </script> -->
 
      <!-- build:js(.) scripts/vendor.js -->
      <!-- bower:js -->
