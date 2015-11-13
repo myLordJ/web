@@ -3,7 +3,7 @@
 angular.module('rac')
 .controller('BlogCtrl', function ($scope, $post, $page, $sce, $location, $current) {
   var skip = 0;
-  var endOfBlogs = false;
+  $scope.endOfBlogs = false;
 
   $scope.posts = [];
   $scope.title = 'Blog';
@@ -19,7 +19,7 @@ angular.module('rac')
   };
 
   $scope.getPosts = function() {
-    if (!endOfBlogs) {
+    if (!$scope.endOfBlogs) {
       $post.get({skip: skip}, function(posts) {
         if (posts && posts.length > 0) {
           $scope.posts.push(posts[0]);
@@ -29,7 +29,7 @@ angular.module('rac')
           skip += 2;
         }
         else {
-          endOfBlogs = true;
+          $scope.endOfBlogs = true;
         }
       });
     }

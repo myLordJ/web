@@ -15,6 +15,13 @@
       <p>{{post.content.brief | text}}</p>
     </div>
   </div>
+  <div class="row" ng-show="!endOfBlogs">
+    <div class="col-xs-12 text-center">
+      <h3 class="glyphicon glyphicon-arrow-down red">
+      </h3>
+      <p><small>Cargando...</small></p>
+    </div>
+  </div>
 </div>
 
 <div ng-if="content">
