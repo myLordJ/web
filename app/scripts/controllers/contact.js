@@ -3,7 +3,7 @@
 angular.module('rac')
   .controller('ContactCtrl', function ($scope, $page, $email, $sce) {
     $scope.title = 'Contactanos';
-    $scope.isSending = true;
+    $scope.isSending = false;
     $scope.email = {};
 
     $scope.map = { 
