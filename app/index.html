@@ -72,7 +72,7 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#" class="player">
+                  <a class="player">
                     <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="!isPlaying"></span>
                     <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="isPlaying"></span>
                   </a>
@@ -80,8 +80,8 @@
                     <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying"></ng-include>  
                   </a>
                 </li>
-                <li><a href="#" current-time="'h:mm:ss a'"></a></li>
-                <li><a href="#">{{temp.temp}}°C</a></li>
+                <li><a current-time="'h:mm:ss a'"></a></li>
+                <li><a>{{temp.temp}}°C</a></li>
               </ul>
 
             </div>
