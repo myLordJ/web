@@ -76,9 +76,8 @@
                     <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="!isPlaying"></span>
                     <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="isPlaying"></span>
                   </a>
-                  <a style="margin-right: 60px; float: left">
-                    <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying"></ng-include>  
-                  </a>
+                  <!-- <a style="margin-right: 60px; float: left">
+                  </a> -->
                 </li>
                 <li><a current-time="'h:mm a'"></a></li>
                 <li><a>{{temp.temp}}°C</a></li>

@@ -3,7 +3,7 @@
 angular.module('rac')
   .controller('ContactCtrl', function ($scope, $page, $email, $sce) {
     $scope.title = 'Contactanos';
-
+    $scope.isSending = true;
     $scope.email = {};
 
     $scope.map = { 
@@ -30,13 +30,16 @@ angular.module('rac')
     });
 
     $scope.sendEmail = function() {
+      $scope.isSending = true;
       $email.save({
         from: $scope.email.from,
         message: $scope.email.message,
         name: $scope.email.name
       }, function() {
+        $scope.isSending = false;
+
         $scope.alert = {
-          message: 'Mensaje Enviado',
+          message: $scope.email.name + ', gracias por escribirnos, nos pondremos en contacto a la brevedad.' ,
           type: 'success'
         };
 
