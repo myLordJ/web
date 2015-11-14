@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ScheduleCtrl', function ($scope, $mixcloud) {
+  .controller('ScheduleCtrl', function ($scope, $mixcloud, $show) {
     $scope.calendarView = 'month';
     $scope.currentDay = new Date();
+    $scope.shows = [];
 
     $scope.events = [
       {
@@ -52,7 +53,11 @@ angular.module('rac')
       },
     ];
 
-    $mixcloud.get({}, function(res){
+    $show.get({}, function(res) {
+        $scope.shows = res;
+    });
+
+    $mixcloud.get({}, function(res) {
         $scope.mixcloud = res.data;
     });
 
