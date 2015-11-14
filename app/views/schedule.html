@@ -1,4 +1,16 @@
-<h1>Programación</h1>
+<div class="page-header">
+  <h1>{{title}}<small>{{subTitle}}</small></h1>
+</div>
+
+<div class="row top-buffer">
+  <div class="col-xs-12">
+    <h2>Nuestros Programas</h2>
+    <hr>
+  </div>
+  <div class="col-xs-12 col-md-3" ng-repeat="show in shows">
+    <h3>{{show.title}}</h3>
+  </div>
+</div>
 
 <mwl-calendar
     view="calendarView"
@@ -7,15 +19,3 @@
     events="events"
     auto-open="true">
 </mwl-calendar>
-
-<div class="row top-buffer">
-  <div class="col-xs-6">
-    <h3>Últimos {{ mixcloud.length }} Programas</h3>
-    <hr>
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="cast in mixcloud">
-        <a href="{{cast.url}}" target="_blank">{{cast.name}}</a>
-      </li>
-    </ul>
-  </div>
-</div>

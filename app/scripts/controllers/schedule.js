@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ScheduleCtrl', function ($scope, $mixcloud, $show) {
+  .controller('ScheduleCtrl', function ($scope, $mixcloud, $page, $show) {
     $scope.calendarView = 'month';
     $scope.currentDay = new Date();
     $scope.shows = [];
+    $scope.title = 'Programación';
+    $scope.subTitle = '';
 
     $scope.events = [
       {
@@ -53,12 +55,13 @@ angular.module('rac')
       },
     ];
 
-    $show.get({}, function(res) {
-        $scope.shows = res;
+    $page.get({name: 'schedule'}, function(page) {
+      $scope.title = page.title;
+      $scope.subTitle = page.subTitle;
     });
 
-    $mixcloud.get({}, function(res) {
-        $scope.mixcloud = res.data;
+    $show.get({}, function(res) {
+        $scope.shows = res;
     });
 
   });
