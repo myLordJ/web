@@ -48,7 +48,7 @@ angular
         templateUrl: 'views/post.html',
         controller: 'PostCtrl'
       })
-      .when('/show/:name', {
+      .when('/show/:title', {
         templateUrl: 'views/show.html',
         controller: 'ShowCtrl'
       })
