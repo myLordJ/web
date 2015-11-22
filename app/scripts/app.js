@@ -48,6 +48,10 @@ angular
         templateUrl: 'views/post.html',
         controller: 'PostCtrl'
       })
+      .when('/show/:name', {
+        templateUrl: 'views/show.html',
+        controller: 'ShowCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
