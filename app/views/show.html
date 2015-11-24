@@ -13,3 +13,9 @@
      </blockquote>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-xs-2" ng-repeat="image in show.gallery">
+    <img class="img-thumbnail img-responsive" ng-src="{{image.url}}" alt="{{show.title}}">
+  </div>
+</div>
