@@ -18,6 +18,7 @@ angular
     'rac.directives',
     'rac.filters'
   ])
+  .constant('API_URL', 'http://localhost:3000/api')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
