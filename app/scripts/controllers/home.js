@@ -10,7 +10,7 @@ angular.module('rac')
       $scope.content = $sce.trustAsHtml(page.content);
     });
 
-    $gallery.get({key: 'home-page-slider'}, function(gallery) {
+    $gallery.get({name: 'home-page-slider'}, function(gallery) {
       gallery[0].active = true;
       $scope.images = gallery;
     });

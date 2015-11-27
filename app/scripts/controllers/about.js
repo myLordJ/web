@@ -10,7 +10,7 @@ angular.module('rac')
       $scope.subTitle = page.subTitle;
     });
 
-    $gallery.get({key: 'workspace'}, function(gallery) {
+    $gallery.get({name: 'workspace'}, function(gallery) {
       $scope.images = gallery;
     });
   });
