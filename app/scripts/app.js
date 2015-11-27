@@ -16,7 +16,8 @@ angular
     'uiGmapgoogle-maps',
     'mwl.calendar',
     'rac.directives',
-    'rac.filters'
+    'rac.filters',
+    'angularUtils.directives.dirDisqus'
   ])
   .constant('API_URL', 'http://localhost:3000/api')
   .config(function ($routeProvider) {
