@@ -30,20 +30,22 @@ angular.module('rac')
     });
 
     $scope.sendEmail = function() {
-      $scope.isSending = true;
-      $email.save({
-        from: $scope.email.from,
-        message: $scope.email.message,
-        name: $scope.email.name
-      }, function() {
-        $scope.isSending = false;
+      if ($scope.emailForm.$valid) {
+        $scope.isSending = true;
+        $email.save({
+          from: $scope.email.from,
+          message: $scope.email.message,
+          name: $scope.email.name
+        }, function() {
+          $scope.isSending = false;
 
-        $scope.alert = {
-          message: $scope.email.name + ', gracias por escribirnos, nos pondremos en contacto a la brevedad.' ,
-          type: 'success'
-        };
+          $scope.alert = {
+            message: $scope.email.name + ', gracias por escribirnos, nos pondremos en contacto a la brevedad.' ,
+            type: 'success'
+          };
 
-        $scope.email = {};
-      });
+          $scope.email = {};
+        });
+      }
     };
   });
