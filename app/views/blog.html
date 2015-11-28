@@ -15,19 +15,17 @@
       <p>{{post.content.brief | text}}</p>
     </div>
   </div>
-  <div class="row" ng-show="!endOfBlogs">
+
+  <div class="row top-buffer" ng-show="!endOfBlogs">
     <div class="col-xs-12 text-center">
       <ng-include src="'templates/wave.html'" class="success"></ng-include>
     </div>
   </div>
 </div>
 
-<div ng-if="content">
-  <br>
-  <br>
+<div class="row top-buffer" ng-if="content">
   <hr>
-  <div class="row">
-    <div class="col-xs-12" ng-bind-html="content">
-    </div>
+  <div class="col-xs-12" ng-bind-html="content">
   </div>
 </div>
+
