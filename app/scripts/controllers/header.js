@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-.controller('HeaderCtrl', function ($scope, $weather) {
+.controller('HeaderCtrl', function ($scope, $weather, $currentShow) {
   $scope.temp = {};
   $scope.isPlaying = false;
 
@@ -12,4 +12,8 @@ angular.module('rac')
   $scope.play = function() {
     $scope.isPlaying = !$scope.isPlaying;
   };
+
+  $currentShow.get({}, function(show){
+    $scope.currentShow = show;
+  });
 });
