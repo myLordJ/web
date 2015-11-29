@@ -19,7 +19,7 @@ angular
     'rac.filters',
     'angularUtils.directives.dirDisqus'
   ])
-  .constant('API_URL', 'http://localhost:3000/api')
+  .constant('API_URL', 'https://rac-dashboard.herokuapp.com/api')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

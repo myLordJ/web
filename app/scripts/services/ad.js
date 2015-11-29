@@ -1,7 +1,7 @@
 'use strict';
 angular.module('rac')
-  .factory('$ad', function($resource) {
-    return $resource('http://localhost:3000/api/ad', {}, 
+  .factory('$ad', function($resource, API_URL) {
+    return $resource(API_URL + '/ad', {}, 
       { 
         get: { 
           method: 'GET', 
