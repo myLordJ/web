@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('rac')
-  .factory('$page', function($resource) {
-    return $resource('http://localhost:3000/api/page/:name');
+  .factory('$page', function($resource, API_URL) {
+    return $resource(API_URL + '/page/:name');
   });
