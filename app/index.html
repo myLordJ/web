@@ -136,7 +136,7 @@
     <div class="container" style="padding-top: 80px; ng-cloak">
       <div class="row">
 
-        <div class="col-xs-2 aside-left hidden-xs hidden-sm">
+        <div class="col-xs-2 aside-left hidden-xs hidden-sm" ng-cloak>
           <aside ng-controller="AsideCtrl">
             <a href="{{ad.url}}" target="_blank" ng-repeat="ad in ads">
               <img class="img-thumbnail ad" ng-src="{{ad.image ? ad.image.url : ''}}" alt="{{ad.title}}"> 
@@ -148,7 +148,7 @@
           <div ng-view=""></div>
         </div>  
 
-        <div class="col-xs-12 col-md-2 aside-right hidden-sm">
+        <div class="col-xs-12 col-md-2 aside-right hidden-sm" ng-cloak>
           <aside ng-controller="AsideCtrl">
             <div class="widget" ng-repeat="widget in widgets" script="{{widget.content}}">
             </div>
