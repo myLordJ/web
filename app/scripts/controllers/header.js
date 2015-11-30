@@ -2,11 +2,11 @@
 
 angular.module('rac')
 .controller('HeaderCtrl', function ($scope, $weather, $currentShow) {
-  $scope.temp = {};
+  $scope.weather = {};
   $scope.isPlaying = false;
 
   $weather.get({}, function(city){
-    $scope.temp = city.currently;
+    $scope.weather = city.currently;
   });
 
   $scope.play = function() {
