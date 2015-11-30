@@ -73,7 +73,7 @@
                 <li><a ng-href="#/contact">Contacto</a></li>
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right" ng-cloak>
                 <li>
                   <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -133,7 +133,7 @@
       </div>
     </header>
 
-    <div class="container" style="padding-top: 80px;">
+    <div class="container" style="padding-top: 80px; ng-cloak">
       <div class="row">
 
         <div class="col-xs-2 aside-left hidden-xs hidden-sm">
@@ -148,7 +148,7 @@
           <div ng-view=""></div>
         </div>  
 
-        <div class="col-xs-2 aside-right hidden-xs hidden-sm">
+        <div class="col-xs-12 col-md-2 aside-right hidden-sm">
           <aside ng-controller="AsideCtrl">
             <div class="widget" ng-repeat="widget in widgets" script="{{widget.content}}">
             </div>
