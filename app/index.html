@@ -139,7 +139,7 @@
         <div class="col-xs-2 aside-left hidden-xs hidden-sm">
           <aside ng-controller="AsideCtrl">
             <a href="{{ad.url}}" target="_blank" ng-repeat="ad in ads">
-              <img class="img-thumbnail ad" src="{{ad.image ? ad.image.url : ''}}" alt="{{ad.title}}"> 
+              <img class="img-thumbnail ad" ng-src="{{ad.image ? ad.image.url : ''}}" alt="{{ad.title}}"> 
             </a>
           </aside>
         </div>
