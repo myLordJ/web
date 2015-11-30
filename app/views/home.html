@@ -2,7 +2,7 @@
   <h1>Radio a la Calle <small><a href="#" class="red">En Vivo!</a></small></h1>
 </div>
 
-<div id="slider" class="carousel slide" data-ride="carousel">
+<div id="slider" class="carousel slide" data-ride="carousel" ng-if="images && images.length">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#slider" data-slide-to="$index" ng-repeat="image in images" ng-class="{active: $index === 0}"></li>
