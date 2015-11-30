@@ -11,8 +11,10 @@ angular.module('rac')
     });
 
     $gallery.get({name: 'home-page-slider'}, function(gallery) {
-      gallery[0].active = true;
-      $scope.images = gallery;
+      if (gallery && gallery.length) {
+        gallery[0].active = true;
+        $scope.images = gallery;
+      }
     });
 
     $mixcloud.get({}, function(res) {
