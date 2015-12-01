@@ -24,32 +24,26 @@
   <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="new/css/styles.css">
-  <link rel="stylesheet" href="new/css/screen.css">
-  <link rel="stylesheet" href="new/icons/style.css">
-  <link rel="stylesheet" href="new/css/jquery.mmenu.all.css">
-  <link rel="stylesheet" type="text/css" href="new/css/flexslider.min.css">
-  <!-- Modernizr -->
-  <script type="text/javascript" src="new/js/modernizr.js"></script>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
+  <link rel="stylesheet" href="bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  
+  <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 <body ng-app="rac">
     <!--[if lt IE 7]>
       <p class="browsehappy">Estas usando un navegador <strong>obsoleto</strong>. Por favor <a href="http://browsehappy.com/">actualiza to navegador</a> para mejorar tu experiencia de uso.</p>
       <![endif]-->
-
-      <!-- Page Loader -->
-      <div id="loader-wrapper" ng-show="false">
-          <div class="spinner"></div>
-      </div>
-      <!-- End Page Loader -->
-
-      <header id="main" data-color="#ef5350">
-        <div class="container align-vertical">
-          <h1>Estas escuchando</h1>
-          <p>[Nombre del Programa]</p>
-        </div>
-      </header>
 
       <!-- Add your site or application content here -->
       <header ng-controller="HeaderCtrl">
