@@ -1,20 +1,39 @@
-<div class="page-header">
-  <h1>Radio a la Calle <small><a href="#" class="red">En Vivo!</a></small></h1>
-</div>
+<section class="title text-left red">
+  <div class="container">
+    <aside>
+      <div class="g md-one-whole">
+        <h1>Radio a la Calle <small><a href="#" class="red">En Vivo!</a></small></h1>
+        <p>We approach our projects with strategic and creative thinking. We partner with our clients to creats and digital experiences. And we spend each day doing so by sharpening the tools of the digital trade.</p>
+      </div>
+    </aside>
+  </div>
+</section>
 
-<div id="slider" class="carousel slide" data-ride="carousel" ng-if="images && images.length">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#slider" data-slide-to="$index" ng-repeat="image in images" ng-class="{active: $index === 0}"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item" ng-repeat="image in images" ng-class="{active: $index === 0}">
-      <img ng-src="{{image.url}}">
+<aside class="featured-blog">
+  <div class="container">
+    <div class="gw">
+      <div class="g lg-one-whole">
+        <aside class="feature-slider" slider="images">
+          <ul class="slides">
+            <li ng-repeat="image in images">
+              <div class="featured-img">
+                <div class="img-holder overlay">
+                  <img ng-src="{{image.url}}" alt="blog-featured" class="background-image">
+                </div>
+                <div class="inner align-vertical">
+                  <a href="#">
+                    <p>Right ideas. real <strong>results.</strong> all in.</p>
+                  </a>
+                  <p>Experience a completely aute et occaecat nostrud Duis aute ad velit quis consectetur aliquip.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </div>
-</div>
+</aside>
 
 <div ng-if="content">
   <br>
