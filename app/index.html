@@ -44,34 +44,36 @@
       </div>
       <!-- End Page Loader -->
 
-      <header id="main" data-color="#1DB3BA" ng-controller="HeaderCtrl">
-        <div class="container align-vertical">
-          <h1>Estas escuchando</h1>
-          <p>[Nombre del Programa]</p>
-          <a class="player">
-            <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="!isPlaying"></span>
-            <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="isPlaying"></span>
-          </a>
-          <a>{{currentShow.title}}</a>
-          <a current-time="'h:mm a'"></a>
-          <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
-        </div>
-      </header>
+      <div id="wrapper">
 
-      <div id="content">
-        <section id="main-nav">
-          <div class="container clearfix">
-            <a class="branding" href="#">
-              <img alt="Brand" src="images/logo_bird.png" style="height: 24px; width:24 px">
-              Radio a la Calle
+        <header id="main" data-color="#1DB3BA" ng-controller="HeaderCtrl">
+          <div class="container align-vertical">
+            <h1>Estas escuchando</h1>
+            <p>[Nombre del Programa]</p>
+            <a class="player">
+              <span class="glyphicon glyphicon-play" ng-click="play()" ng-show="!isPlaying"></span>
+              <span class="glyphicon glyphicon-pause" ng-click="play()" ng-show="isPlaying"></span>
             </a>
-            <nav class="site-nav">
-              <ul>
-                <li><a href="#/live">Radio en Vivo</a></li>
-                <li><a href="#/about">Nosotros</a></li>
-                <li><a href="#/schedule">Programas</a></li>
-                <li><a href="#/blog">Entrevistas</a></li>
-                <li><a href="#/contact">Contacto</a></li>
+            <a>{{currentShow.title}}</a>
+            <a current-time="'h:mm a'"></a>
+            <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
+          </div>
+        </header>
+
+        <div id="content">
+          <section id="main-nav">
+            <div class="container clearfix">
+              <a class="branding" href="#">
+                <img alt="Brand" src="images/logo_bird.png" style="height: 24px; width:24 px">
+                Radio a la Calle
+              </a>
+              <nav class="site-nav">
+                <ul>
+                  <li><a href="#/live">Radio en Vivo</a></li>
+                  <li><a href="#/about">Nosotros</a></li>
+                  <li><a href="#/schedule">Programas</a></li>
+                  <li><a href="#/blog">Entrevistas</a></li>
+                  <li><a href="#/contact">Contacto</a></li>
                 <!-- <li id="search-icon">
                   <form id="seo-ico" >
                     <input type="search" placeholder="What are you looking for?"  />
@@ -111,7 +113,7 @@
       </div> <!-- main container -->
 
 
-      <div class="container" style="padding-top: 80px; ng-cloak">
+<!--       <div class="container" style="padding-top: 80px; ng-cloak">
         <div class="row">
 
           <div class="col-xs-2 aside-left hidden-xs hidden-sm" ng-cloak>
@@ -126,11 +128,11 @@
             <aside ng-controller="AsideCtrl">
               <div class="widget" ng-repeat="widget in widgets" script="{{widget.content}}">
               </div>
-            </aside>
+            </aside> 
           </div>
 
         </div>
-      </div>
+      </div> -->
 
       <div class="footer">
         <div class="container">
@@ -159,17 +161,19 @@
         </div>
       </div>
 
-      <!-- Facebook SDK -->
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=525871400826517";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+    </div>
 
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=525871400826517";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <!-- <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
          (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),

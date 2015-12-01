@@ -3,7 +3,7 @@
     <aside>
       <div class="g md-one-whole">
         <h1>Radio a la Calle <small><a href="#" class="red">En Vivo!</a></small></h1>
-        <p>We approach our projects with strategic and creative thinking. We partner with our clients to creats and digital experiences. And we spend each day doing so by sharpening the tools of the digital trade.</p>
+        <p ng-bind-html="content"></p>
       </div>
     </aside>
   </div>
@@ -35,35 +35,20 @@
   </div>
 </aside>
 
-<div ng-if="content">
-  <br>
-  <br>
-  <div class="row">
-    <blockquote ng-bind-html="content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    </blockquote>
-  </div>
-</div>
-
-<div class="row" ng-show="videos && videos.length">
-  <div class="col-xs-12">
-    <h3>Videos</h3>
-    <hr>
-  </div>
-</div>
-
-<div class="row" ng-show="mixcloud && mixcloud.length">
-  <div class="col-xs-12">
-    <h3>Ultimos Programas</h3>
-    <hr>
-    <div class="row">
-      <div class="col-md-3" ng-repeat="cast in mixcloud">
-        <a href="{{cast.url}}" target="_blank">
-          <span class="glyphicon glyphicon-volume-up"></span>
-          {{cast.name.substring(0, cast.name.indexOf('20'))}}
-        </a>
-        <p><small>{{cast.created_time | date}}</small></p>
+<article id="skills">
+  <div class="container">
+    <div class="gw">
+      <div class="g lg-three-twelfths" ng-repeat="cast in mixcloud">
+        <div class="info">
+          <p>
+            <a href="{{cast.url}}" target="_blank">
+              <span class="glyphicon glyphicon-volume-up"></span>
+              {{cast.name.substring(0, cast.name.indexOf('20'))}}
+            </a>
+            <p><small>{{cast.created_time | date}}</small></p>
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</article>
