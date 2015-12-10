@@ -6508,7 +6508,11 @@ blog thumbs wrapper
    footer 
    ========================================================================== */
 .site-footer {
-  padding: 0 !important; }
+  padding: 0 !important;
+  width: 100%; }
+  .site-footer .container {
+    max-width: 100%;
+    padding: 0; }
   .site-footer article {
     background-color: #FFF;
     overflow: hidden;
