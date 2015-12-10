@@ -9,14 +9,70 @@
   </div>
 </section>
 
-
-<div class="row" ng-show="images && images.length">
-  <div class="col-xs-12">
-    <h3>Conoce la Radio</h3>
-    <div class="row">
-      <div class="col-xs-3" ng-repeat="image in images">
-        <img class="img-responsive img-thumbnail" src="{{image.url}}" alt="radio-a-la-calle">
+<article id="team">
+  <div class="container">
+    <div class="gw">
+      <div class="g lg-two-thirds sm-one-half md-one-half">
+        <figure class="client-wrapper">
+          <img src="../new/images/team-1.jpg" alt="client">
+          <figcaption>
+            <div class="client-name">
+              <h3>Franci Martinez</h3>
+              <small>Head of Design</small>
+              <ul>
+                <li><a href="#"><i class="icon-facebook4"></i></a></li>
+                <li><a href="#"><i class="icon-twitter3"></i></a></li>
+                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
+              </ul>
+            </div>
+          </figcaption>     
+        </figure>
+      </div>
+      <div class="g lg-two-thirds sm-one-half md-one-half">
+        <figure class="client-wrapper">
+          <img src="../new/images/team-2.jpg" alt="client">
+          <figcaption>
+            <div class="client-name right">
+              <h3>Franci Martinez</h3>
+              <small>Head of Design</small>
+              <ul>
+                <li><a href="#"><i class="icon-facebook4"></i></a></li>
+                <li><a href="#"><i class="icon-twitter3"></i></a></li>
+                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
+              </ul>
+            </div>
+          </figcaption>     
+        </figure>
+      </div>
+      <div class="g lg-two-thirds sm-one-half md-one-half">
+        <figure class="client-wrapper">
+          <img src="../new/images/team-3.jpg" alt="client">
+          <figcaption>
+            <div class="client-name">
+              <h3>Yolande Brux</h3>
+              <small>Video Maker</small>
+              <ul>
+                <li><a href="#"><i class="icon-facebook4"></i></a></li>
+                <li><a href="#"><i class="icon-twitter3"></i></a></li>
+                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
+              </ul>
+            </div>
+          </figcaption>     
+        </figure>
       </div>
     </div>
   </div>
-</div>
+</article>
+
+<article id="logo-banner" ng-show="images && images.length">
+  <div class="container">
+    <section class="block">
+    <h2>La Radio</h2>
+      <aside class="gw">
+        <div class="g lg-two-twelfths" ng-repeat="image in images">
+          <img class="img--center" src="{{image.url}}" alt="radio-a-la-calle" style="width: 400px">
+        </div>
+      </aside>
+    </section>
+  </div>
+</article>
