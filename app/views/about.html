@@ -9,52 +9,19 @@
   </div>
 </section>
 
-<article id="team">
+<article id="team" ng-show="users && users.length">
   <div class="container">
     <div class="gw">
-      <div class="g lg-two-thirds sm-one-half md-one-half">
+      <div class="g lg-one-third sm-one-half md-one-half" ng-repeat="user in users">
         <figure class="client-wrapper">
-          <img src="../new/images/team-1.jpg" alt="client">
+          <img ng-src="{{user.profilePicture}}" alt="client">
           <figcaption>
             <div class="client-name">
-              <h3>Franci Martinez</h3>
-              <small>Head of Design</small>
+              <h3>{{user.name}}</h3>
+              <small>{{user.job}}</small>
               <ul>
-                <li><a href="#"><i class="icon-facebook4"></i></a></li>
-                <li><a href="#"><i class="icon-twitter3"></i></a></li>
-                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
-              </ul>
-            </div>
-          </figcaption>     
-        </figure>
-      </div>
-      <div class="g lg-two-thirds sm-one-half md-one-half">
-        <figure class="client-wrapper">
-          <img src="../new/images/team-2.jpg" alt="client">
-          <figcaption>
-            <div class="client-name right">
-              <h3>Franci Martinez</h3>
-              <small>Head of Design</small>
-              <ul>
-                <li><a href="#"><i class="icon-facebook4"></i></a></li>
-                <li><a href="#"><i class="icon-twitter3"></i></a></li>
-                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
-              </ul>
-            </div>
-          </figcaption>     
-        </figure>
-      </div>
-      <div class="g lg-two-thirds sm-one-half md-one-half">
-        <figure class="client-wrapper">
-          <img src="../new/images/team-3.jpg" alt="client">
-          <figcaption>
-            <div class="client-name">
-              <h3>Yolande Brux</h3>
-              <small>Video Maker</small>
-              <ul>
-                <li><a href="#"><i class="icon-facebook4"></i></a></li>
-                <li><a href="#"><i class="icon-twitter3"></i></a></li>
-                <li><a href="#"><i class="icon-googleplus5"></i></a></li>
+                <li><a ng-href="user.facebook"><i class="icon-facebook4"></i></a></li>
+                <li><a ng-href="user.twitter"><i class="icon-twitter3"></i></a></li>
               </ul>
             </div>
           </figcaption>     
