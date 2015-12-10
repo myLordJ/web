@@ -19,5 +19,6 @@ angular.module('rac')
 
     $mixcloud.get({}, function(res) {
       $scope.mixcloud = res.data.slice(0, 4);
+      console.log($scope.mixcloud);
     });
   });

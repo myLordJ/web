@@ -39,7 +39,8 @@
   <div class="container">
     <div class="gw">
       <div class="g lg-three-twelfths" ng-repeat="cast in mixcloud">
-        <div class="info">
+        <div class="info" style="text-align: center">
+          <img ng-src="{{cast.pictures.medium}}" alt="cast.name" style="height: 100px; width: 100px">
           <p>
             <a href="{{cast.url}}" target="_blank">
               <span class="glyphicon glyphicon-volume-up"></span>
