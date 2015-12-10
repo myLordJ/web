@@ -1,15 +1,14 @@
-<div class="page-header">
-  <h1>
-    {{title}}
-    <small>{{subTitle}}</small>
-  </h1>
-  <hr>
-</div>
-
-<div class="row">
-  <div class="col-xs-12" ng-bind-html="content">
+<section class="title text-left">
+  <div class="container">
+    <aside>
+      <div class="g md-one-whole">
+        <h1>{{title}} <small>{{subTitle}}</small></h1>
+        <p ng-bind-html="content"></p>
+      </div>
+    </aside>
   </div>
-</div>
+</section>
+
 
 <div class="row" ng-show="images && images.length">
   <div class="col-xs-12">

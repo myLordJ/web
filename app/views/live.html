@@ -1,18 +1,33 @@
-<div class="page-header">
-  <h1>{{title}}</h1>
-</div>
-
-<div class="row" is-flash="false">
-  <div class="col-xs-12" ng-bind-html="content">
+<section class="title text-left">
+  <div class="container">
+    <aside>
+      <div class="g md-one-whole">
+        <h1>{{title}} <small>{{subTitle}}</small></h1>
+      </div>
+    </aside>
   </div>
-</div>
+</section>
 
-<div class="row" is-flash="true">
-  <div class="col-xs-12">
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="758" height="440" align="absmiddle">
-      <param name="movie" value="https://www.alsolnet.com/stream/alacalle/alsolnethd.swf">
-      <param name="flashvars" value="audioid=alacalle">
-      <param name="quality" value="high">
-      <embed src="https://www.alsolnet.com/stream/alacalle/alsolnethd.swf" width="658" height="440" align="absmiddle" flashvars="audioid=alacalle" quality="high" pluginspage="https://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></object>
+<aside class="featured-blog" is-flash="false">
+  <div class="container">
+    <div class="gw">
+      <div class="g lg-one-whole" ng-bind-html="content">
+      </div>
+    </div>
   </div>
-</div>
+</aside>
+
+<aside class="featured-blog" is-flash="true">
+  <div class="container">
+    <div class="gw">
+      <div class="g lg-one-whole">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="758" height="440" align="absmiddle">
+          <param name="movie" value="https://www.alsolnet.com/stream/alacalle/alsolnethd.swf">
+          <param name="flashvars" value="audioid=alacalle">
+          <param name="quality" value="high">
+          <embed src="https://www.alsolnet.com/stream/alacalle/alsolnethd.swf" width="658" height="440" align="absmiddle" flashvars="audioid=alacalle" quality="high" pluginspage="https://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
+        </object>
+      </div>
+    </div>
+  </div>
+</aside>
