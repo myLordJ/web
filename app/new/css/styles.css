@@ -1305,13 +1305,16 @@ fieldset {
 
 ------------------------------------------------------ */
 h1, .h1 {
-  margin-bottom: 1em; }
-  small {
-    font-size: 0.9em !important;
-    text-transform: none;
-    color: tomato;
-    font-style: italic;
-    margin-left: 0.2em;}
+  margin-bottom: 1em; 
+}
+
+h1 small {
+  font-size: 0.9em !important;
+  text-transform: none;
+  color: tomato;
+  font-style: italic;
+  margin-left: 0.2em;
+}
 
 h2, .h2 {
   margin-bottom: 1em; }
