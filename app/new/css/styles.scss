@@ -72,7 +72,7 @@ themeforest Account : http://www.themeforest.net/user/topone
 =            import the main libraries of sass      =
 ===================================================*/
 
-@import "bourbon";
+@import "bourbon/_bourbon.scss";
 @import "screen";
 @import "myvar";
 
@@ -212,7 +212,7 @@ html, body {
    Main Solid Color Header
    ========================================================================== */
 header#main {
-    background-color: #03A9F4;
+    background-color: #1DB3BA;
     min-height: 31.875em;
     position: relative;
     @include bp-until($breakpoint__md) {
