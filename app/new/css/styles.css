@@ -4708,7 +4708,7 @@ html, body {
    ========================================================================== */
 header#main {
   background-color: #1DB3BA;
-  min-height: 31.875em;
+  min-height: 13em;
   position: relative; }
   @media screen and (max-width: 47.99em) {
     header#main {
@@ -5268,6 +5268,13 @@ header#main.type-writer:after {
     max-width: 32em !important;
     font-size: 1.0625em !important;
     line-height: 1.7; }
+
+/* ==========================================================================
+   Main View
+   ========================================================================== */
+section#main {
+  max-width: 900px;
+  margin: auto; }
 
 /* ==========================================================================
    Services Pages
