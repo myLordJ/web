@@ -49,23 +49,34 @@
 
         <header id="main" data-color="#1DB3BA" ng-controller="HeaderCtrl">
           <div class="container align-vertical" style="color: #fff; padding-top: 10px">
-            <h1>
-              <a class="player" style="color: tomato;float: left">
-                <i class="fa fa-play" ng-click="play()" ng-show="!isPlaying" style="font-size: 1.8em;"></i>
-                <i class="fa fa-pause" ng-click="play()" ng-show="isPlaying" style="font-size: 1.8em;"></i>
-              </a>
-              <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying" style="margin-left: 18px;margin-top: 4px;float: left;"></ng-include>
-              <span style="margin-left: 18px;margin-top: 4px; float: left">Radio en <span style="color: tomato">VIVO</span></span>
-            </h1>
-            <br>
-            <h2 style="font-style: italic; clear: both">
-              <img ng-src="{{currentShow.profilePicture || 'images/logo_bird.png' }}" alt="radio-a-la-calle" style="width: 48px; height:48px; border-radius: 20%">
-              <a href="#/">{{currentShow.title || 'Lista Rock Nacional'}}</a>
-            </h2>
-            <h3>
-              <a current-time="'h:mm a'"></a> - 
-              <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
-            </h3>
+            <div class="g lg-one-half">
+              <h1>
+                <a class="player" style="color: #C16D85;float: left">
+                  <i class="fa fa-play" ng-click="play()" ng-show="!isPlaying" style="font-size: 1.8em;"></i>
+                  <i class="fa fa-pause" ng-click="play()" ng-show="isPlaying" style="font-size: 1.8em;"></i>
+                </a>
+                <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying" style="margin-left: 18px;margin-top: 4px;float: left;"></ng-include>
+                <span style="margin-left: 18px;margin-top: 4px; float: left">Radio en <span style="color: #C16D85">VIVO</span></span>
+              </h1>
+              <br>
+              <h2 style="font-style: italic; clear: both">
+                <img ng-src="{{currentShow.profilePicture || 'images/logo_bird.png' }}" alt="radio-a-la-calle" style="width: 48px; height:48px; border-radius: 20%">
+                <a href="#/">{{currentShow.title || 'Lista Rock Nacional'}}</a>
+              </h2>
+            </div>
+            <div class="g lg-one-half" style="text-align: right; font-size: 2em;">
+              <i class="fa fa-twitter" style="margin-left: 10px"></i>
+              <i class="fa fa-facebook" style="margin-left: 10px"></i>
+              <i class="fa fa-youtube" style="margin-left: 10px"></i>
+              <i class="fa fa-instagram" style="margin-left: 10px"></i>
+              <i class="fa fa-mixcloud" style="margin-left: 10px"></i>
+              <p style="font-size: 0.8em;">
+                <b>
+                  <a current-time="'h:mm a'"></a> - 
+                <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
+                </b>
+              </p>
+            </div>
           </div>
         </header>
 
@@ -147,7 +158,7 @@
             </a>
             <nav class="site-nav">
               <p><strong>Copyright © 2016</strong> - 
-                <span style="color: tomato">
+                <span style="color: #C16D85">
                   By <strong>Keepers</strong> <i class="fa fa-heart"></i></p>
                 </span>
               </nav>

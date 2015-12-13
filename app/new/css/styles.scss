@@ -213,7 +213,7 @@ html, body {
    ========================================================================== */
 header#main {
     background-color: #1DB3BA;
-    min-height: 13em;
+    min-height: 10em;
     position: relative;
     @include bp-until($breakpoint__md) {
         margin-bottom: 1.3em;
@@ -484,7 +484,7 @@ header#main {
         @extend %white;
         margin-bottom: 8px;
         .branding {
-            color: tomato;
+            color: #C16D85;
             font-size: 1.25em;
             //= 20px
             display: block;
@@ -586,7 +586,7 @@ header#main {
                 background-color: #fff;
                 padding: .5em .9em;
                 .branding {
-                    color: tomato;
+                    color: #C16D85;
                     font-size: 1.25em;
                     //= 20px
                     float: left;
@@ -600,7 +600,7 @@ header#main {
                     margin: 0 auto 0.125em;
                     font-size: 2.6625em;
                     text-decoration: none;
-                    color: tomato;
+                    color: #C16D85;
                     margin-top: 4px;
                 }
             }
@@ -2332,7 +2332,7 @@ blog thumbs wrapper
         @include clearfix;
         vertical-align: middle;
         .branding {
-            color: tomato;
+            color: #C16D85;
             font-family: $Monte;
             font-size: 1.25em;
             @extend %serif--bold;

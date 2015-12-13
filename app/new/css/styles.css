@@ -1305,16 +1305,7 @@ fieldset {
 
 ------------------------------------------------------ */
 h1, .h1 {
-  margin-bottom: 1em; 
-}
-
-h1 small {
-  font-size: 0.9em !important;
-  text-transform: none;
-  color: tomato;
-  font-style: italic;
-  margin-left: 0.2em;
-}
+  margin-bottom: 1em; }
 
 h2, .h2 {
   margin-bottom: 1em; }
@@ -1330,7 +1321,6 @@ h5, .h5 {
 
 h6, .h6 {
   margin-bottom: 1em; }
-
 
 /**
 
@@ -4718,7 +4708,7 @@ html, body {
    ========================================================================== */
 header#main {
   background-color: #1DB3BA;
-  min-height: 13em;
+  min-height: 10em;
   position: relative; }
   @media screen and (max-width: 47.99em) {
     header#main {
@@ -4936,7 +4926,7 @@ header#main.type-writer:after {
       #content #main-nav {
         display: none; } }
     #content #main-nav .branding {
-      color: tomato;
+      color: #C16D85;
       font-size: 1.25em;
       display: block;
       text-transform: uppercase;
@@ -5024,7 +5014,7 @@ header#main.type-writer:after {
     background-color: #fff;
     padding: .5em .9em; }
     #content .mobile-nav .banner-mobile aside .branding {
-      color: tomato;
+      color: #C16D85;
       font-size: 1.25em;
       float: left;
       display: block;
@@ -5039,7 +5029,7 @@ header#main.type-writer:after {
       margin: 0 auto 0.125em;
       font-size: 2.6625em;
       text-decoration: none;
-      color: tomato;
+      color: #C16D85;
       margin-top: 4px; }
   #content .mm-title {
     color: red !important; }
@@ -6535,7 +6525,7 @@ blog thumbs wrapper
       content: "";
       display: table; }
     .site-footer article .branding {
-      color: tomato;
+      color: #C16D85;
       font-family: "Montserrat", sans-serif;
       font-size: 1.25em;
       text-transform: uppercase; }
