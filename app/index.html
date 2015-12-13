@@ -73,7 +73,7 @@
               <p style="font-size: 0.8em;">
                 <b>
                   <a current-time="'h:mm a'"></a> - 
-                <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
+                  <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
                 </b>
               </p>
             </div>
@@ -157,26 +157,28 @@
               Radio a la Calle
             </a>
             <nav class="site-nav">
-              <p><strong>Copyright © 2016</strong> - 
+              <p>
+                <strong>Copyright © 2016</strong> - 
                 <span style="color: #C16D85">
-                  By <strong>Keepers</strong> <i class="fa fa-heart"></i></p>
+                By <strong>Keepers</strong> <i class="fa fa-heart" style="color: tomato"></i>
                 </span>
-              </nav>
-            </article>
-          </div>
-        </footer>
+              </p>
+            </nav>
+          </article>
+        </div>
+      </footer>
 
-        <!-- Facebook SDK -->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=525871400826517";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+      <!-- Facebook SDK -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=525871400826517";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <!-- <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
          (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
