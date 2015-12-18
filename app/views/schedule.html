@@ -1,13 +1,17 @@
-<div class="page-header">
-  <h1>
-    {{title}}
-    <small>&nbsp;{{subTitle}}</small>
-  </h1>
-  <hr>
-</div>
+<section class="title text-left">
+  <div class="container">
+    <aside>
+      <div class="g md-one-whole">
+        <h1>
+          {{title}} <small style="color: #C16D85; text-transform: none"><i>&nbsp;{{subTitle}}</i></small>
+        </h1>
+      </div>
+    </aside>
+  </div>
+</section>
 
-<div class="all">
-  <section>
+<section>
+  <div class="container">
     <div class="g block lg-one-whole">
       <h3>Vertical Tabs</h3>
       <div class="vertical-tabs-container" vertical-tab>
@@ -25,8 +29,19 @@
         <div class="vertical-tab-content-container">
           <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="all">Todos</a>
           <div id="all" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+
+          <div class="g xl-one-half lg-one-half md-one-half  sm-one-half  wrapper" ng-repeat="show in shows">
+              <div class=" block-3 color-1 flex">
+                <div class="content ">
+                 <span class="text-right"><i class="icon-lightbulb"></i></span>
+                 <small>25 Jan</small>
+                 <p>Carefully designed for a great <strong>experience</strong></p>
+               </div>
+             </div>
+           </div>
+
             <div class="row">
-              <div class="col-xs-12 col-md-4" ng-repeat="show in shows">
+              <div class="col-xs-12 col-md-4" >
                 <a ng-click="goToShow($index)">
                   <h3>{{show.title}}</h3>
                 </a>
@@ -66,5 +81,5 @@
         </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
