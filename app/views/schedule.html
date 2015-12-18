@@ -10,70 +10,80 @@
   </div>
 </section>
 
-<section>
+<article class="elments-page">
   <div class="container">
-    <div class="g block lg-one-whole">
-      <h3>Vertical Tabs</h3>
-      <div class="vertical-tabs-container" vertical-tab>
-        <div class="vertical-tabs">
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab is-active" rel="all">Todos</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="mon">Lunes</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="tues">Martes</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="wed">Miércoles</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="thurs">Jueves</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="fri">Viernes</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="sat">Sábado</a>
-          <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="sun">Domingo</a>
-        </div>
+    <div class="all">
+      <section>
 
-        <div class="vertical-tab-content-container">
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="all">Todos</a>
-          <div id="all" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+        <div class="g block lg-one-whole">
+          <div class="vertical-tabs-container" vertical-tab>
+            <div class="vertical-tabs">
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab is-active" rel="all">Todos</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="mon">Lunes</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="tues">Martes</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="wed">Miércoles</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="thurs">Jueves</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="fri">Viernes</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="sat">Sábado</a>
+              <a href="javascript:void(0)" class="js-vertical-tab vertical-tab" rel="sun">Domingo</a>
+            </div>
 
-          <div class="g xl-one-half lg-one-half md-one-half  sm-one-half  wrapper" ng-repeat="show in shows">
-              <div class=" block-3 color-1 flex">
-                <div class="content">
-                 <span class="text-right">
-                  <img class="img-responsive img-thumbnail" ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" style="width: 64px">
-                 </span>
-                 <small>{{show | showDays}}</small>
-                 <a ng-click="goToShow($index)">
-                 <p>{{show.title}}</p>
-                 </a>
-               </div>
-             </div>
-           </div>
-          </div>
-    
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
-          <div id="mon" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-          </div>
+            <div class="vertical-tab-content-container">
+              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="all">Todos</a>
+              <div id="all" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tues">Martes</a>
-          <div id="tues" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-          </div>
+                <div class="g xl-one-half lg-one-half md-one-half sm-one-half wrapper" ng-repeat="show in shows">
+                  <div class=" block-3 color-1 flex">
+                    <div class="content">
+                     <span class="text-right">
+                      <img class="img-responsive img-thumbnail" ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" style="width: 64px">
+                    </span>
+                    <small>{{show | showDays}}</small>
+                    <a ng-click="goToShow($index)">
+                      {{show.title}}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="wed">Miércoles</a>
-          <div id="wed" class="js-vertical-tab-content vertical-tab-content" style="display: block;">
-          </div>
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
+            <div id="mon" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="thurs">Jueves</a>
-          <div id="thurs" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-          </div>
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tues">Martes</a>
+            <div id="tues" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="fri">Viernes</a>
-          <div id="fri" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-          </div>
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="wed">Miércoles</a>
+            <div id="wed" class="js-vertical-tab-content vertical-tab-content" style="display: block;">
+            </div>
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sat">Sábado</a>
-          <div id="sat" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-          </div>
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="thurs">Jueves</a>
+            <div id="thurs" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
 
-          <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sun">Domingo</a>
-          <div id="sun" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="fri">Viernes</a>
+            <div id="fri" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sat">Sábado</a>
+            <div id="sat" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sun">Domingo</a>
+            <div id="sun" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
           </div>
-        </div>
-      </div>
+        </div>      
+      </section>
     </div>
   </div>
+</article>
+
+<section>
+  <div class="container">
+
+  </div>
+</div>
 </section>
