@@ -32,23 +32,17 @@
 
           <div class="g xl-one-half lg-one-half md-one-half  sm-one-half  wrapper" ng-repeat="show in shows">
               <div class=" block-3 color-1 flex">
-                <div class="content ">
-                 <span class="text-right"><i class="icon-lightbulb"></i></span>
-                 <small>25 Jan</small>
-                 <p>Carefully designed for a great <strong>experience</strong></p>
+                <div class="content">
+                 <span class="text-right">
+                  <img class="img-responsive img-thumbnail" ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" style="width: 64px">
+                 </span>
+                 <small>{{show}}</small>
+                 <a ng-click="goToShow($index)">
+                 <p>{{show.title}}</p>
+                 </a>
                </div>
              </div>
            </div>
-
-            <div class="row">
-              <div class="col-xs-12 col-md-4" >
-                <a ng-click="goToShow($index)">
-                  <h3>{{show.title}}</h3>
-                </a>
-                <img class="img-responsive img-thumbnail" ng-src="{{show.profilePicture.url}}" alt="{{show.name}}">
-                <p>{{show.description}}</p>
-              </div>
-            </div>
           </div>
     
           <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
