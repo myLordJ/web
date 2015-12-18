@@ -4,32 +4,49 @@ angular.module('rac.filters')
   .filter('showDays', function () {
     return function (show) {
       var result = [];
+      var time;
+
+      function formatTime(from, to) {
+        from = from.toString();
+        to = to.toString();
+        from = from.substring(0,2) + ':' + from.substring(2,4);
+        to = to.substring(0,2) + ':' + to.substring(2,4);
+        return  from + ' - ' + to;
+      }
+
       if (show.monday) {
-        result.push('LUN');
+        time = formatTime(show.mondayStartTime, show.mondayEndTime);
+        result.push('LUN: ' + time);
       }
 
       if (show.tuesday) {
-        result.push('MAR');
+        time = formatTime(show.tuesdayStartTime, show.tuesdayEndTime);
+        result.push('MAR: ' + time);
       }
 
       if (show.wednesday) {
-        result.push('MIE');
+        time = formatTime(show.wednesdayStartTime, show.wednesdayEndTime);
+        result.push('MIE:' + time);
       }
 
       if (show.thursday) {
-        result.push('JUE');
+        time = formatTime(show.thursdayStartTime, show.thursdayEndTime);
+        result.push('JUE:' + time);
       }
 
       if (show.friday) {
-        result.push('VIE');
+        time = formatTime(show.fridayStartTime, show.fridayEndTime);
+        result.push('VIE:' + time);
       }
 
       if (show.saturday) {
-        result.push('SAB');
+        time = formatTime(show.saturdayStartTime, show.saturdayEndTime);
+        result.push('SAB:' + time);
       }
 
       if (show.sunday) {
-        result.push('DOM');
+        time = formatTime(show.sundayStartTime, show.sundayEndTime);
+        result.push('DOM:' + time);
       }
 
       return result.join(' - ');

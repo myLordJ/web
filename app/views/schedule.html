@@ -36,7 +36,7 @@
                  <span class="text-right">
                   <img class="img-responsive img-thumbnail" ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" style="width: 64px">
                  </span>
-                 <small>{{show}}</small>
+                 <small>{{show | showDays}}</small>
                  <a ng-click="goToShow($index)">
                  <p>{{show.title}}</p>
                  </a>
