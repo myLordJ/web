@@ -29,7 +29,7 @@ angular.module('rac')
     $show.get({}, function(res) {
         $scope.shows = res;
 
-        $scope.shows.each(function(index, show) {
+        $scope.shows.forEach(function(show) {
             if (show.monday) {
                 $scope.monday.push(show);
             }
