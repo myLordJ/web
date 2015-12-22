@@ -1,38 +1,34 @@
-<div class="page-header">
-  <h1>
-    {{show.title}}
-  </h1>
-  <small>
-    <span ng-repeat="link in show.socialLinks">
-      <a href="{{link}}" target="_blank">F</a>
-    </span>
-  </small>
-  <hr>
-</div>
+<article class="full-blog-post">
 
-<div class="row">
-  <div class="col-xs-12">
-    <img class="img-thumbnail img-responsive" ng-src="{{show.coverPicture.url}}" alt="{{show.title}}">
-     <blockquote>
-      {{show.description}}
-     </blockquote>
-  </div>
-</div>
+  <div class="g md-one-whole ">
+    <aside class="wrapper-post video-wrapper">
+      <img ng-src="{{show.coverPicture.url}}" alt="{{show.title}}">
+      <div class="post-info none">
+        <h6>{{show.title}}</h6>
+        <p>
+          {{show.description}}
+        </p>
+      </div><!-- video wrapper -->
+    </div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <h3>Ultimos Programas</h3>
-  </div>
-</div>
+    <section class="block">
+      <div class="container ">
+        <aside>
+          <div class="g md-one-whole author-info">
+            <div class="client">
+              <img ng-src="{{show.profilePicture.url}}" class="img--circle" alt="client">
+              <h1>Seguinos!</h1>
+              <p>Blogilates es un canal de YouTube creado y presentado por el increíblemente motivados Cassey 
+                Ho, un instructor de gimnasio pilates plenamente.</p>
+                <ul>
+                  <li ng-repeat="link in show.socialLinks">
+                    <a href="{{link}}" target="_blank">{{link}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-<div class="row">
-  <div class="col-xs-2" ng-repeat="image in show.gallery">
-    <img class="img-thumbnail img-responsive" ng-src="{{image.url}}" alt="{{show.title}}">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <h3>Escucha nuestros programas</h3>
-  </div>
-</div>
+    </article>
