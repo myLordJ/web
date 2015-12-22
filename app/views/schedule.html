@@ -37,10 +37,10 @@
                     <div class="g lg-one-whole md-one-half sm-one-whole xs-one-whole block contentP client wrapper">
                       <article class="media">
                         <div class="media__left ">
-                          <img ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" class="img--circle">
+                          <img ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" class="img--circle" ng-click="goToShow($index)" style="cursor: pointer;">
                         </div>
                         <div class="media__body">
-                         <a ng-click="goToShow($index)">
+                         <a ng-click="goToShow($index)" style="cursor: pointer;">
                           <h3 style="color: #C16D85">{{show.title}}</h3>
                         </a>
                         <p>{{show | showDays}}</p>
