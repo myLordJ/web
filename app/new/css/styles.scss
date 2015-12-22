@@ -3264,7 +3264,7 @@ section.content {
             padding: 1.6em 2.5em;
             h2 {
                 margin-bottom: 0;
-                color: #F57F17;
+                color: #C16D85;
                 font-size: 1.875em;
                 @extend %sans--regular;
             }
@@ -3274,7 +3274,7 @@ section.content {
                     font-size: 0.875em;
                     margin-bottom: 2em;
                     span {
-                        color: #F57F17;
+                        color: #C16D85;
                     }
                 }
                 &:nth-of-type(2) {
@@ -3288,7 +3288,7 @@ section.content {
             }
             // form section
             form {
-                input, textarea {
+                input, textarea, button {
                     border-color: #ecebeb;
                     font-size: .75em;
                     text-transform: capitalize;
@@ -3301,14 +3301,16 @@ section.content {
                         font-family: $Monte;
                     }
                 }
-                input[type="submit"] {
-                    background-color: #f57f17;
+                input[type="submit"], button {
+                    background-color: #C16D85;
                     color: #fff;
+                    width: 100%;
                     font-size: .9375em;
+                    border: none;
                     @include transition(all 0.27s ease);
                     &:hover {
                         cursor: pointer;
-                        background-color: lighten(#f57f17, 10%);
+                        background-color: lighten(#C16D80, 10%);
                     }
                 }
                 label {
