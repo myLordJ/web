@@ -10,7 +10,7 @@
   </div>
 </section>
 
-<article class="elments-page">
+<article id="services">
   <div class="container">
     <div class="all">
       <section style="padding-top: 0">
@@ -32,64 +32,66 @@
               <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="all">Todos</a>
               <div id="all" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
 
-                <section class="block news clearfix">
-                  <div class="g xl-one-half lg-one-half md-one-half sm-one-half wrapper" ng-repeat="show in shows">
-
-                    <div class="block-2 flex">
-                    <div class="img-holder" ng-style="{'background-url': show.profilePicture.url + ' 50% 0%;'}">
-                        <img ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" class="background-image" style="display: none;">
-                      </div>
-                      <div class="content">
-                        <a ng-click="goToShow($index)">
-                          <h3>{{show.title}}</h3>
+                <div class="g lg-one-half" ng-repeat="show in shows">
+                  <div class="left-row">
+                    <div class="g lg-one-whole md-one-half sm-one-whole xs-one-whole block contentP client wrapper">
+                      <article class="media">
+                        <div class="media__left ">
+                          <img ng-src="{{show.profilePicture.url}}" alt="{{show.name}}" class="img--circle">
+                        </div>
+                        <div class="media__body">
+                         <a ng-click="goToShow($index)">
+                          <h3 style="color: #C16D85">{{show.title}}</h3>
                         </a>
-                        <p>{{show.description}}</p>
-                        <small>{{show | showDays}}</small>
+                        <p>{{show | showDays}}</p>
                       </div>
-                    </div>
-
+                    </article>
+                    <aside class="block contentP second">
+                      <p>{{show.description}}</p>
+                    </aside>
                   </div>
-                </section>
-
+                </div>
               </div>
 
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
-              <div id="mon" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tues">Martes</a>
-              <div id="tues" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="wed">Miércoles</a>
-              <div id="wed" class="js-vertical-tab-content vertical-tab-content" style="display: block;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="thurs">Jueves</a>
-              <div id="thurs" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="fri">Viernes</a>
-              <div id="fri" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sat">Sábado</a>
-              <div id="sat" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
-
-              <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sun">Domingo</a>
-              <div id="sun" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
-              </div>
             </div>
-          </div>      
-        </section>
-      </div>
-    </div>
-  </article>
 
-  <section>
-    <div class="container">
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
+            <div id="mon" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
 
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tues">Martes</a>
+            <div id="tues" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="wed">Miércoles</a>
+            <div id="wed" class="js-vertical-tab-content vertical-tab-content" style="display: block;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="thurs">Jueves</a>
+            <div id="thurs" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="fri">Viernes</a>
+            <div id="fri" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sat">Sábado</a>
+            <div id="sat" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+
+            <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="sun">Domingo</a>
+            <div id="sun" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
+            </div>
+          </div>
+        </div>      
+      </section>
     </div>
   </div>
+</article>
+
+<section>
+  <div class="container">
+
+  </div>
+</div>
 </section>

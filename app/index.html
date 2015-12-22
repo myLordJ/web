@@ -48,22 +48,23 @@
 
       <div id="wrapper">
 
-        <header id="main" data-color="#1DB3BA" ng-controller="HeaderCtrl">
+        <header id="main" data-color="#1DB3BA" ng-controller="HeaderCtrl" style="background: url('http://www.radioalacalle.com/images/bg_body.jpg')">
           <div class="container align-vertical" style="color: #fff; padding-top: 10px">
             <div class="g lg-one-half">
-              <h1>
+              <img src="http://www.radioalacalle.com/images/logo_calle.png" alt="radio-a-la-calle">
+              <!-- <h1>
                 <a class="player" style="color: #C16D85;float: left">
                   <i class="fa fa-play" ng-click="play()" ng-show="!isPlaying" style="font-size: 1.8em;"></i>
                   <i class="fa fa-pause" ng-click="play()" ng-show="isPlaying" style="font-size: 1.8em;"></i>
                 </a>
                 <ng-include src="'templates/wave.html'" class="wave" ng-show="isPlaying" style="margin-left: 18px;margin-top: 4px;float: left;"></ng-include>
                 <span style="margin-left: 18px;margin-top: 4px; float: left">Radio en <span style="color: #C16D85">VIVO</span></span>
-              </h1>
-              <br>
+              </h1> -->
+              <!-- <br>
               <h2 style="font-style: italic; clear: both">
                 <img ng-src="{{currentShow.profilePicture || 'images/logo_bird.png' }}" alt="radio-a-la-calle" style="width: 48px; height:48px; border-radius: 20%">
                 <a href="#/">{{currentShow.title || 'Lista Rock Nacional'}}</a>
-              </h2>
+              </h2> -->
             </div>
             <div class="g lg-one-half" style="text-align: right; font-size: 2em;">
               <i class="fa fa-twitter" style="margin-left: 10px"></i>
@@ -83,14 +84,14 @@
 
         <div id="content">
           <section id="main-nav">
-            <div class="container clearfix">
+            <div class="container clearfix" ng-controller="HeaderCtrl">
               <a class="branding" href="#/" style="color: #1DB3BA;">
                 <img alt="Brand" src="images/logo_bird_green.png" style="height: 32px; width: 32px">
                 Radio a la Calle
               </a>
               <nav class="site-nav">
                 <ul>
-                  <li><a href="#/live">Radio en Vivo</a></li>
+                  <li><a href="#/live">Radio en <span style="color: tomato;font-weight: bold">VIVO</span></a></li>
                   <li><a href="#/about">Nosotros</a></li>
                   <li><a href="#/schedule">Programas</a></li>
                   <li><a href="#/blog">Entrevistas</a></li>
