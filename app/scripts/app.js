@@ -7,17 +7,13 @@ angular.module('rac.filters', []);
 
 angular
   .module('rac', [
-    'ngAnimate',
-    'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'uiGmapgoogle-maps',
-    'mwl.calendar',
+    // 'uiGmapgoogle-maps',
+    // 'mwl.calendar',
     'rac.directives',
     'rac.filters',
-    'angularUtils.directives.dirDisqus'
+    // 'angularUtils.directives.dirDisqus'
   ])
   .constant('API_URL', window.location.href.indexOf('localhost') === -1 ? 'https://rac-dashboard.herokuapp.com/api' : 'http://localhost:3000/api')
   .config(function ($routeProvider) {
