@@ -57,12 +57,12 @@
           </div>
         </div>
         <div class="top top-right">
-          <div class="sidebar-widget">contact us now: 00123456778</div>
+          <div class="sidebar-widget">+54 9 11 123456778</div>
         </div>
       </div>
     </div>
 
-    <header id="masthead" class="navbar navbar-sticky swatch-green-white" role="banner">
+    <header id="masthead" class="navbar navbar-sticky swatch-green-white" role="banner" ng-controller="HeaderController">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
@@ -92,10 +92,10 @@
               <a href="/" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="/live" class="dropdown-toggle" data-toggle="dropdown">Vivo!</a>
+              <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown">Vivo!</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="/about" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+              <a ng-click="goTo('/about')" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
               <a href="/schedule" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
@@ -111,16 +111,31 @@
       </div>
     </header>
     
-    <div id="content" role="main" ng-view>
+    <div id="content" role="main">
+      <div class="cotainer">
+        <div class="row">
+          <section class="section swatch-green-white">
+            <div class="container">
+              <header class="section-header underline">
+                <h1 class="headline super hairline">
+                  {{ title || 'Radio a la Calle' }}
+                  <br>
+                  <small>{{subTitle}}</small>
+                </h1>
+              </header>
+            </div>
+          </section>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-xs-12" ng-view></div>
+          <!-- <div class="col-md-3 col-xs-12"></div> -->
+        </div>
+      </div>
     </div>
 
     <footer id="footer" role="contentinfo">
       <section class="section swatch-green-white has-top">
-        <div class="decor-top">
-          <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
-          </svg>
-        </div>
+        <div class="decor-top"></div>
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
@@ -161,7 +176,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="assets/js/packages.js"></script>
-    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>

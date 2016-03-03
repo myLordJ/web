@@ -1,13 +1,42 @@
-<section class="title text-left">
+<section class="section swatch-white-green">
   <div class="container">
-    <aside>
-      <div class="g md-one-whole">
-        <h1>{{title}} <small style="color: #C16D85; text-transform: none"><i>&nbsp;{{subTitle}}</i></small></h1>
-        <article ng-bind-html="content">
-          
-        </article>
+    <div class="row">
+      <div class="col-xs-12" ng-bind-html="content"> 
+
       </div>
-    </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section swatch-green-white" ng-show="users && users.length">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row">
+          <ul class="list-unstyled row box-list">
+            <li class="col-md-4" ng-repeat="user in users">
+              <div class="box-hex flat-shadow box-huge">
+                <div class="box-dummy"></div>
+                <figure class="box-inner">
+                  <img class="svg-inject" src="assets/images/design/people/man-1-600x518.png" alt="a man with a mustache">
+                  <figcaption class="box-caption">
+                    <h4>Likes</h4><p>Coffee and Beer</p>
+                  </figcaption>
+                </figure>
+                <div class="hex-right"></div>
+                <div class="hex-left"></div>
+              </div>
+              <h3 class="text-center">
+                <a href="about-me.html">{{user.name}}</a>
+                <small class="block">{{user.job}}</small>
+              </h3>
+              <p class="text-center">Your bones don’t break, mine do. That’s clear. Your cells react to bacteria and viruses differently than mine. You don’t get sick, I do. That’s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke.</p>
+                <ul class="list-inline text-center social-icons social-simple"><li><a href="about-me.html" target="_self"><i class="fa fa-facebook"></i></a></li><li><a href="about-me.html" target="_self"><i class="fa fa-twitter"></i></a></li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -36,7 +65,7 @@
 <article id="logo-banner" ng-show="images && images.length">
   <div class="container">
     <section class="block">
-    <h2>La Radio</h2>
+      <h2>La Radio</h2>
       <aside class="gw">
         <div class="g lg-two-twelfths" ng-repeat="image in images">
           <img class="img--center" src="{{image.url}}" alt="radio-a-la-calle" style="width: 400px">

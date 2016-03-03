@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-.controller('HeaderCtrl', function ($scope, $weather, $currentShow) {
+.controller('HeaderController', function ($scope, $weather, $currentShow, $location) {
   $scope.weather = {};
   $scope.isPlaying = false;
 
@@ -16,4 +16,8 @@ angular.module('rac')
   $currentShow.get({}, function(show){
     $scope.currentShow = show;
   });
+
+  $scope.goTo = function(url){
+    $location.url(url);
+  };
 });
