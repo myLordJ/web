@@ -45,7 +45,7 @@
   <body class="pace-on pace-dot" ng-app="rac">
     <div class="pace-overlay"></div>
 
-    <div class="top-bar swatch-red-white">
+    <div class="top-bar swatch-green-white">
       <div class="container">
         <div class="top top-left">
           <div class="sidebar-widget">
@@ -57,7 +57,10 @@
           </div>
         </div>
         <div class="top top-right">
-          <div class="sidebar-widget">+54 9 11 123456778</div>
+          <div class="sidebar-widget">
+            <a current-time="'h:mm a'"></a>
+            <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
+          </div>
         </div>
       </div>
     </div>
@@ -114,11 +117,26 @@
     <div id="content" role="main">
       <div class="cotainer">
         <div class="row">
-          <section class="section swatch-green-white">
+          <section class="section swatch-red-white" ng-show="showHomeVideo">
+              <div class="background-media" style="background-image: url(''); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;">
+                  <video poster="" style="width: 100%; height: 100%;" loop autoplay class="section-background-video">
+                      <source type="video/mp4" src="http://theme-background-videos.s3.amazonaws.com/corporate.m4v"></source>
+                      <source type="video/webm" src=""></source>
+                      <source type="video/ogg" src=""></source>
+                  </video>
+              </div>
+              <div class="background-overlay" style="background-color:rgba(193,109,133,0.8)"></div>
+              <div class="container">
+                  <header class="section-header underline">
+                      <h1 class="headline hyper hairline">Radio A La Calle</h1>
+                  </header>
+              </div>
+          </section>
+          <section class="section swatch-green-white" ng-show="!showHomeVideo">
             <div class="container">
               <header class="section-header underline">
                 <h1 class="headline super hairline">
-                  {{ title || 'Radio a la Calle' }}
+                  {{ title }}
                   <br>
                   <small>{{subTitle}}</small>
                 </h1>

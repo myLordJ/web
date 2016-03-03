@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-.controller('HeaderController', function ($scope, $weather, $currentShow, $location) {
+.controller('HeaderController', function ($scope, $rootScope, $weather, $currentShow, $location) {
   $scope.weather = {};
   $scope.isPlaying = false;
 
@@ -19,5 +19,8 @@ angular.module('rac')
 
   $scope.goTo = function(url){
     $location.url(url);
+
+    $rootScope.showHomeVideo = url.indexOf('home') !== -1 ? true : false;
   };
+
 });

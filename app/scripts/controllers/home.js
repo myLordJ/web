@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('rac')
-  .controller('HomeCtrl', function ($scope, $gallery, $page, $sce, $mixcloud) {
+  .controller('HomeCtrl', function ($scope, $rootScope, $gallery, $page, $sce, $mixcloud) {
     $scope.images = [];
     $scope.mixcloud = [];
     $scope.interval = 3000;
+
+    $rootScope.showHomeVideo = true;
 
     $page.get({name: 'home'}, function(page) {
       $scope.content = $sce.trustAsHtml(page.content);

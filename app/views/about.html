@@ -1,7 +1,7 @@
 <section class="section swatch-white-green">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12" ng-bind-html="content"> 
+      <div class="col-xs-12 text-center" ng-bind-html="content"> 
 
       </div>
     </div>
@@ -40,37 +40,42 @@
   </div>
 </section>
 
-<article id="team" ng-show="users && users.length">
+<section class="section swatch-white-green" ng-show="workspace && workspace.length">
   <div class="container">
-    <div class="gw">
-      <div class="g lg-one-third sm-one-half md-one-half" ng-repeat="user in users">
-        <figure class="client-wrapper">
-          <img ng-src="{{user.profilePicture}}" alt="client">
-          <figcaption>
-            <div class="client-name">
-              <h3>{{user.name}}</h3>
-              <small>{{user.job}}</small>
-              <ul>
-                <li><a ng-href="user.facebook"><i class="icon-facebook4"></i></a></li>
-                <li><a ng-href="user.twitter"><i class="icon-twitter3"></i></a></li>
-              </ul>
-            </div>
-          </figcaption>     
-        </figure>
+    <header class="section-header underline">
+      <h1 class="headline super hairline">Conoce la Radio</h1>
+    </header>
+    <div class="row">
+      <div slider class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center" data-flex-captionhorizontal=""
+      data-flex-captionvertical="" data-flex-controlsposition="" data-flex-directions-type="">
+        <ul class="slides">
+          <li ng-repeat="image in workspace">
+            <figure>
+              <img ng-src="{{image.url}}" alt="radio-a-la-calle">
+            </figure>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</article>
+</section>
 
-<article id="logo-banner" ng-show="images && images.length">
+<section class="section swatch-white-green" ng-show="clients && clients.length">
   <div class="container">
-    <section class="block">
-      <h2>La Radio</h2>
-      <aside class="gw">
-        <div class="g lg-two-twelfths" ng-repeat="image in images">
-          <img class="img--center" src="{{image.url}}" alt="radio-a-la-calle" style="width: 400px">
-        </div>
-      </aside>
-    </section>
+    <header class="section-header underline">
+      <h1 class="headline super hairline">Confian en Nosotros</h1>
+    </header>
+    <div class="row">
+      <div slider class="flexslider os-animation" data-flex-speed="7000" data-flex-itemwidth="235pxpx" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center" data-flex-captionhorizontal=""
+      data-flex-captionvertical="" data-flex-controlsposition="" data-flex-directions-type="">
+        <ul class="slides">
+          <li ng-repeat="image in clients">
+            <figure>
+              <img ng-src="{{image.url}}" alt="radio-a-la-calle">
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</article>
+</section>

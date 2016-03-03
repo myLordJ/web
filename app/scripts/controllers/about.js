@@ -11,7 +11,11 @@ angular.module('rac')
     });
 
     $gallery.get({name: 'workspace'}, function(gallery) {
-      $scope.images = gallery;
+      $scope.workspace = gallery;
+    });
+
+    $gallery.get({name: 'clients'}, function(gallery) {
+      $scope.clients = gallery;
     });
 
     $scope.users = [
