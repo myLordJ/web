@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <base href="/">
+
     <title>Radio a la Calle | Home </title>
     
     <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
@@ -21,25 +23,28 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/theme.min.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/color-defaults.min.css">
-    <link rel="stylesheet" href="assets/css/swatch-beige-black.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/swatch-beige-black.min.css">
     <link rel="stylesheet" href="assets/css/swatch-black-beige.min.css">
     <link rel="stylesheet" href="assets/css/swatch-black-white.min.css">
     <link rel="stylesheet" href="assets/css/swatch-black-yellow.min.css">
     <link rel="stylesheet" href="assets/css/swatch-blue-white.min.css">
+     -->
     <link rel="stylesheet" href="assets/css/swatch-green-white.min.css">
-    <link rel="stylesheet" href="assets/css/swatch-red-white.min.css">
-    <link rel="stylesheet" href="assets/css/swatch-white-black.min.css">
+    <link rel="stylesheet" href="assets/css/swatch-red-white.css">
+    <!-- <link rel="stylesheet" href="assets/css/swatch-white-black.min.css">
     <link rel="stylesheet" href="assets/css/swatch-white-blue.min.css">
     <link rel="stylesheet" href="assets/css/swatch-white-green.min.css">
     <link rel="stylesheet" href="assets/css/swatch-white-red.min.css">
     <link rel="stylesheet" href="assets/css/swatch-yellow-black.min.css">
-    <link rel="stylesheet" href="assets/css/fonts.min.css" media="screen">
+     -->
+     <link rel="stylesheet" href="assets/css/fonts.min.css" media="screen">
   </head>
+  
   <body class="pace-on pace-dot" ng-app="rac">
     <div class="pace-overlay"></div>
-    <header id="masthead" class="navbar navbar-sticky swatch-red-white" role="banner">
+    <header id="masthead" class="navbar navbar-sticky swatch-green-white" role="banner">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
@@ -66,22 +71,22 @@
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown active">
-              <a href="#/" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
+              <a href="/" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="#/live" class="dropdown-toggle" data-toggle="dropdown">Vivo!</a>
+              <a href="/live" class="dropdown-toggle" data-toggle="dropdown">Vivo!</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="#/about" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+              <a href="/about" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="#/schedule" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
+              <a href="/schedule" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="#/news" class="dropdown-toggle" data-toggle="dropdown">Notas</a>
+              <a href="/news" class="dropdown-toggle" data-toggle="dropdown">Notas</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a href="#/contact" class="dropdown-toggle" data-toggle="dropdown">Contacto</a>
+              <a href="/contact" class="dropdown-toggle" data-toggle="dropdown">Contacto</a>
             </li>
           </ul>
         </nav>
@@ -92,7 +97,7 @@
     </div>
 
     <footer id="footer" role="contentinfo">
-      <section class="section swatch-red-white has-top">
+      <section class="section swatch-green-white has-top">
         <div class="decor-top">
           <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0 L50 100 L100 0 L100 100 L0 100" stroke-width="0"></path>
@@ -137,7 +142,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="assets/js/packages.min.js"></script>
+    <script src="assets/js/packages.js"></script>
     <script src="assets/js/theme.min.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->

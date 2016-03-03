@@ -4689,6 +4689,8 @@ pre {
 /* - Content - */
 #content {
   overflow: hidden;
+  /*width: 800px;*/
+  margin: auto;
 }
 
 /* - Container - */
@@ -10368,7 +10370,7 @@ input[type="color"]::-webkit-input-placeholder,
 }
 
 .progress-bar-danger.progress-bar {
-  background-color: #e74c3c;
+  background-color: #1DB3BA;
 }
 
 .progress-bar-success.progress-bar {
@@ -10916,7 +10918,7 @@ textarea.ginput_container input, textarea.ginput_container select, textarea.ginp
 }
 
 #content.widecolumn {
-  background-color: #e74c3c;
+  background-color: #1DB3BA;
   min-height: 100vh;
 }
 
@@ -10957,7 +10959,7 @@ textarea.ginput_container input, textarea.ginput_container select, textarea.ginp
   box-shadow: 0px 3px 0px #ccc;
 }
 .mu_register li a {
-  color: #e74c3c;
+  color: #1DB3BA;
 }
 .mu_register .mu_alert {
   background-color: #f7b244 !important;
@@ -10966,7 +10968,7 @@ textarea.ginput_container input, textarea.ginput_container select, textarea.ginp
   margin: 10px 0px;
 }
 .mu_register .mu_alert a {
-  color: #e74c3c;
+  color: #1DB3BA;
 }
 
 /* --------------------------------- */
@@ -14316,7 +14318,7 @@ table.variations .select-wrap select, .variation-wrap .select-wrap select {
 .woocommerce-invalid input, .woocommerce-invalid input, input.woocommerce-invalid,
 .woocommerce-invalid textarea, textarea.woocommerce-invalid {
   border: 0;
-  box-shadow: 0px -4px 0px #e74c3c inset;
+  box-shadow: 0px -4px 0px #1DB3BA inset;
 }
 
 /* - Order review on the right - */
