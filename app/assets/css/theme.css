@@ -6036,6 +6036,18 @@ pre {
   vertical-align: middle;
 }
 
+.circle {
+	display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  text-align: center;
+  line-height: 36px;
+  border-radius:50%;
+}
+
 .hex-alt {
   display: block;
   margin-left: 10px;

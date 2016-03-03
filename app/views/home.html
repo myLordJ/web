@@ -24,14 +24,17 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section swatch-white-green">
   <div class="container">
+    <header class="section-header underline">
+      <h1 class="headline super hairline">Últimos Programas</h1>
+    </header>
     <div class="row">
-      <ul class="list-unstyled row box-list" ng-repeat="cast in mixcloud">
-        <li class="col-md-3 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="{{ '.' + ($index + 3).toString() + 's'}}">
+      <ul class="list-unstyled row box-list">
+        <li class="col-md-3 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="{{ '.' + ($index + 3).toString() + 's'}}" ng-repeat="cast in mixcloud">
           <div class="box-round">
             <div class="box-dummy"></div>
-            <a class="box-inner" href="{{cast.url}}">
+            <a href="{{cast.url}}" target="_blank">
               <img class="svg-inject animated" ng-src="{{cast.pictures.medium}}" alt="a clock" data-animation="">
             </a>
           </div>

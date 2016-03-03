@@ -200,20 +200,20 @@
 }
 
 .go-top {
-  background: #e32f1c !important;
+  background: #C16D85 !important;
 }
 .go-top i {
   color: #fff;
 }
 .go-top:before {
-  border-right-color: #e32f1c !important;
+  border-right-color: #C16D85 !important;
 }
 .go-top:after {
-  border-left-color: #e32f1c !important;
+  border-left-color: #C16D85 !important;
 }
 
 .audioplayer {
-  background-color: #e32f1c;
+  background-color: #C16D85;
 }
 
 .gform_wrapper .gfield_required.gfield_error, .gform_wrapper .gfield_error .gfield_label, .gform_wrapper .gfield_contains_required.gfield_error {
