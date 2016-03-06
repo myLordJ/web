@@ -1,25 +1,51 @@
-<section class="title text-left">
+<!-- <section class="section swatch-red-white">
   <div class="container">
-    <aside>
-      <div class="g md-one-whole">
-        <h1>
-          {{title}} <small style="color: #C16D85; text-transform: none"><i>&nbsp;{{subTitle}}</i></small>
-        </h1>
+    <div class="row">
+      <div class="tabbable tab-pills col-md-12 clearfix">
+        <ul class="nav nav-pills nav-stacked col-md-2">
+          <li class="active">
+            <a data-toggle="tab" href="#pill-tab1">Home</a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#pill-tab2">Profile</a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#pill-tab3">Messages</a>
+          </li>
+        </ul>
+        <div class="tab-content col-md-10">
+          <div class="tab-pane active" id="pill-tab1">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          <div class="tab-pane" id="pill-tab2">
+            <h3>Profile</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="tab-pane" id="pill-tab3">
+            <h3>Messages</h3>
+            <p>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
       </div>
-    </aside>
+    </div>
   </div>
 </section>
+ -->
 
-<section class="section swatch-red-white">
+<section class="section swatch-white-green">
   <div class="container">
-    <header class="section-header text-center underline">
-      <h1 class="headline hyper hairline">Our Work</h1>
-    </header>
     <div class="row">
       <div class="text-default os-animation" data-os-animation="fadeInUp" data-os-animation-delay=".0s">
-        <ul class="isotope-filters text-center">
+        <ul isotope-filter class=".isotope-filters text-center">
           <li class="active">
-            <a class="pseudo-border active" data-filter="*" href="#">   all
+            <a class="pseudo-border active" data-filter="*">Todos
             </a>
           </li>
           <li>
@@ -32,146 +58,36 @@
             <a class="pseudo-border" data-filter=".filter-video" href="#">video</a>
           </li>
         </ul>
-        <div class="portfolio isotope  no-transition portfolio-round portfolio-shadows row">
-          <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-gallery filter-image">
+        <div isotope class="portfolio no-transition portfolio-round portfolio-shadows row">
+          <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-gallery" ng-repeat="show in shows">
             <figure class="portfolio-figure">
-              <a href="portfolio-item-big.html">
-                <img width="600" height="518" src="assets/images/design/vector/img-8-600x600.png" class="img-responsive" alt="some image">
+              <a>
+                <img width="600" height="518" ng-src="{{show.profilePicture.url}}" class="img-responsive" alt="some image">
               </a>
               <figcaption>
                 <h4>
                   <a href="portfolio-item-big.html">
-                    Gallery items
+                    {{show.title}}
                   </a>
                 </h4>
-                <p>You think water moves fast? You should see ice.</p>
-                <a class="magnific-gallery image-all more" title="" href="" data-links="
-                
-                assets/images/design/vector/img-4-1200x600.png ,
-                
-                assets/images/design/vector/img-3-1200x600.png
-                " data-prev-text="Previous" data-next-text="Next">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video">
-          <figure class="portfolio-figure">
-            <a href="portfolio-item-big.html">
-              <img width="600" height="518" src="assets/images/design/vector/img-4-600x600.png" class="img-responsive" alt="some image">
-            </a>
-            <figcaption>
-              <h4>
-                <a href="portfolio-item-big.html">
-                  Vimeo Item
+                <p>{{show | showDays}}</p>
+                <a class="magnific-gallery image-all more" title="" href="" data-links="assets/images/design/vector/img-4-1200x600.png,assets/images/design/vector/img-3-1200x600.png" data-prev-text="Previous" data-next-text="Next">
+                  <i class="fa fa-search-plus"></i>
                 </a>
-              </h4>
-              <p>You think water moves fast? You should see ice. It moves like it has a mind.</p>
-              <a class="magnific-vimeo image-all more" href="http://vimeo.com/41336551">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video filter-image">
-          <figure class="portfolio-figure">
-            <a href="portfolio-item-big.html">
-              <img width="600" height="518" src="assets/images/design/vector/img-1-600x600.png" class="img-responsive" alt="some image">
-            </a>
-            <figcaption>
-              <h4>
-                <a href="portfolio-item-big.html">
-                  Integer sollicibulum
+                <a class="link" href="portfolio-item-big.html">
+                  <i class="fa fa-link"></i>
                 </a>
-              </h4>
-              <p>After the avalanche it took us a week to climb out.</p>
-              <a class="magnific image-all more" href="assets/images/design/vector/img-1-1200x600.png" title="Quisque porta" data-prev-text="Previous" data-next-text="Next">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video filter-image filter-gallery">
-          <figure class="portfolio-figure">
-            <a href="portfolio-item-big.html">
-              <img width="600" height="518" src="assets/images/design/vector/img-5-600x600.png" class="img-responsive" alt="some image">
-            </a>
-            <figcaption>
-              <h4>
-                <a href="portfolio-item-big.html">
-                  Quisque porta
-                </a>
-              </h4>
-              <p>I was living in his world, a world where chaos rules not order.</p>
-              <a class="magnific image-all more" href="assets/images/design/vector/img-5-1200x600.png" title="Quisque porta" data-prev-text="Previous" data-next-text="Next">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-video">
-          <figure class="portfolio-figure">
-            <a href="portfolio-item-big.html">
-              <img width="600" height="518" src="assets/images/design/vector/img-6-600x600.png" class="img-responsive" alt="some image">
-            </a>
-            <figcaption>
-              <h4>
-                <a href="portfolio-item-big.html">
-                  Youtube video
-                </a>
-              </h4>
-              <p>You think water moves fast? You should see ice.</p>
-              <a class="magnific-vimeo image-all more" href="http://www.youtube.com/watch?v=Sv3xVOs7_No">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-image filter-gallery">
-          <figure class="portfolio-figure">
-            <a href="portfolio-item-big.html">
-              <img width="600" height="518" src="assets/images/design/vector/img-3-600x600.png" class="img-responsive" alt="some image">
-            </a>
-            <figcaption>
-              <h4>
-                <a href="portfolio-item-big.html">
-                  Quisque porta
-                </a>
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a class="magnific image-all more" href="assets/images/design/vector/img-3-1200x600.png" title="Quisque porta" data-prev-text="Previous" data-next-text="Next">
-                <i class="fa fa-search-plus"></i>
-              </a>
-              <a class="link" href="portfolio-item-big.html">
-                <i class="fa fa-link"></i>
-              </a>
-            </figcaption>
-          </figure>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
 
-<article id="services">
+<!-- <article id="services">
   <div class="container">
     <div class="all">
       <section style="padding-top: 0">
@@ -213,7 +129,7 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- all -->
+              </div> 
 
               <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="mon">Lunes</a>
               <div id="mon" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
@@ -237,7 +153,7 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- monday -->
+              </div> 
 
               <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tues">Martes</a>
               <div id="tues" class="js-vertical-tab-content vertical-tab-content" style="display: none;">
@@ -389,3 +305,4 @@
     </div>
   </article>
 
+ -->

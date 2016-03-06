@@ -14,7 +14,7 @@
   </div>
 </section>
 
-<section class="section swatch-green-white">
+<section class="section swatch-green-white" ng-show="content">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -24,13 +24,13 @@
   </div>
 </section>
 
-<section class="section swatch-white-green">
+<section class="section swatch-white-green" ng-show="mixcloud && mixcloud.length">
   <div class="container">
     <header class="section-header underline">
       <h1 class="headline super hairline">Últimos Programas</h1>
     </header>
     <div class="row">
-      <ul class="list-unstyled row box-list">
+      <ul class="list-unstyled row box-list" style="margin-top: -170px;">
         <li class="col-md-3 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="{{ '.' + ($index + 3).toString() + 's'}}" ng-repeat="cast in mixcloud">
           <div class="box-round">
             <div class="box-dummy"></div>

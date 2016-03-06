@@ -1,63 +1,74 @@
-<!-- <div class="page-header">
-  <h1>{{title}}</h1>
-</div> -->
+<section class="section swatch-white-red has-top" infinite-scroll="getPosts()">
+  <div class="container">
+    <div class="row">
+      <ul isotope class="list-unstyled no-transition">
+        <li class="col-md-4 post-item isotope-item" ng-repeat="post in posts">
+          <div class="grid-post swatch-red-white">
+            <article class="post post-showinfo">
+              <div class="post-media overlay">
+                <a class="feature-image magnific hover-animate" href="assets/images/design/vector/img-4-800x600.png" title="Thats a nice image">
+                  <img alt="some image" ng-src="{{post.image ? post.image.url : 'http://lorempixel.com/g/325/150/people/' + $index}}">
+                  <i class="fa fa-search-plus"></i>
+                </a>
+              </div>
+              <div class="post-head small-screen-center">
+                <h2 class="post-title">
+                  <a ng-click="goToPost($index)" class="pointer">
+                    {{post.title}}
+                  </a>
+                </h2>
+                <small class="post-author">
+                  <a href="blog.html">John Langan,</a>
+                </small>
+                <small class="post-date">
+                  <a href="post.html">12 August 2014</a>
+                </small>
+                <div class="post-icon flat-shadow flat-hex">
+                  <div class="hex hex-big">
+                    <i class="fa fa-camera"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="post-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quo, veniam culpa maiores iure distinctio atque similique veritatis rem et adipisci eveniet aspernatur aut sapiente amet doloremque eos quasi numquam.Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Facilis, quo, veniam culpa maiores iure distinctio atque similique veritatis rem et adipisci eveniet aspernatur aut sapiente amet doloremque eos quasi numquam.
+                </p>
+                <a class="more-link" href="post.html">
+                  read more
+                </a>
+              </div>
+              <div class="bordered post-extras text-center">
+                <div class="text-center">
+                  <span class="post-category">
+                    <a href="post.html">
+                      <i class="fa fa-folder-open"></i>
+                      Flat world
+                    </a>
+                  </span>
+                  <span class="post-tags">
+                    <i class="fa fa-tags"></i>
 
-<article class="full-blog-post" infinite-scroll="getPosts()">
-  <div class="gw">
-    <div class="g md-one-half" ng-repeat="post in posts">
-      <aside class="wrapper-post small-post">
-        <div class="min-half">
-          <div class="img-holder" style="background: url(&quot;images/blog-13.jpg&quot;) 50% 0%;">
-            <img class="img-responsive img-thumbnail" ng-src="{{post.image ? post.image.url : 'http://lorempixel.com/g/325/150/people/' + $index}}" alt="{{post.title}}">
+                    <a href="post.html">
+                      Design
+                    </a>
+
+
+
+
+                  </span>
+                  <span class="post-link">
+                    <a href="post.html">
+                      <i class="fa fa-comments"></i>
+                      2 comments
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </article>
           </div>
-        </div>
-        <aside class="info hidden">
-          <article>
-            <div class="client post-padding">
-              <img src="images/client-4.jpg" alt="client-1" class="img--circle">
-              <a ng-click="goToPost($index)" class="pointer">
-                {{post.title}}
-              </a>
-            </div>
-            <div class="meta-info post-padding">
-             <small><a href="blog-in.html">read more</a></small>
-             <ul>
-              <li>comment <span>0</span> <i class="icon-comment_alt2_stroke"></i></li>
-              <li class="share-button sharer-1" style="display: block;"><label class="entypo-export"><span>Share</span></label><div class="social load top center networks-3"><ul><li class="entypo-pinterest" data-network="pinterest"></li><li class="entypo-twitter" data-network="twitter"></li><li class="entypo-facebook" data-network="facebook"></li><li class="entypo-gplus" data-network="google_plus"></li><li class="entypo-paper-plane" data-network="email"></li></ul></div></li>
-            </ul>
-          </div>
-        </article>
-      </aside>
-    </aside>
-  </div>
-</div>
-</article>
-
-
-<!-- <div >
-  <div class="row">
-    <div class="col-md-6 portfolio-item">
-      
-        
-      </a>
-      <h3>
-        <a ng-click="goToPost($index)" class="pointer">{{post.title}}</a>
-        <small>{{post.publishedDate | date:'dd.MM.yyyy'}}</small>
-      </h3>
-      <p>{{post.content.brief | text}}</p>
+        </li>
+      </ul>
     </div>
   </div>
-
-  <div class="row top-buffer" ng-show="!endOfBlogs">
-    <div class="col-xs-12 text-center">
-      <ng-include src="'templates/wave.html'" class="success"></ng-include>
-    </div>
-  </div>
-</div>
-
-<div class="row top-buffer" ng-if="content">
-  <hr>
-  <div class="col-xs-12" ng-bind-html="content">
-  </div>
-</div> -->
-
+</section>

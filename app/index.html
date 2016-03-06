@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,18 +10,23 @@
 
     <title>Radio a la Calle | Home </title>
     
-    <link rel="icon" type="image/x-icon" href="assets/images/favicons/favicon.ico" />
-    <link rel="icon" type="image/png" href="assets/images/favicons/favicon.png" />
-    
-    <!-- For iPhone 4 Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114-precomposed.png">
-    
-    <!-- For iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72-precomposed.png">
-    
-    <!-- For iPhone: -->
-    <link rel="apple-touch-icon-precomposed" href="assets/images/favicons/apple-touch-icon-60x60-precomposed.png">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/theme.css">
@@ -45,7 +51,7 @@
   <body class="pace-on pace-dot" ng-app="rac">
     <div class="pace-overlay"></div>
 
-    <div class="top-bar swatch-green-white">
+    <div class="top-bar swatch-green-white" style="background: url('http://www.radioalacalle.com/images/bg_body.jpg')">
       <div class="container">
         <div class="top top-left">
           <div class="sidebar-widget">
@@ -58,14 +64,16 @@
         </div>
         <div class="top top-right">
           <div class="sidebar-widget">
-            <a current-time="'h:mm a'"></a>
+            <b>
+              <a current-time="'h:mm a'"></a>
             <a>{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
+            </b>
           </div>
         </div>
       </div>
     </div>
 
-    <header id="masthead" class="navbar navbar-sticky swatch-green-white" role="banner" ng-controller="HeaderController">
+    <header id="masthead" class="navbar navbar-sticky swatch-green-white" role="banner" ng-controller="HeaderController" style="background: url('http://www.radioalacalle.com/images/bg_body.jpg')">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
@@ -95,7 +103,7 @@
               <a href="/" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown">Vivo!</a>
+              <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown" style="font-weight: bold">Vivo!</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
               <a ng-click="goTo('/about')" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
@@ -104,7 +112,7 @@
               <a ng-click="goTo('/schedule')" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
-              <a ng-click="goTo('/news')" class="dropdown-toggle" data-toggle="dropdown">Notas</a>
+              <a ng-click="goTo('/blog')" class="dropdown-toggle" data-toggle="dropdown">Notas</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
               <a ng-click="goTo('/contact')" class="dropdown-toggle" data-toggle="dropdown">Contacto</a>
@@ -128,7 +136,8 @@
               <div class="background-overlay" style="background-color:rgba(193,109,133,0.8)"></div>
               <div class="container">
                   <header class="section-header underline">
-                      <h1 class="headline hyper hairline">Radio A La Calle</h1>
+                      <!-- <h1 class="headline hyper hairline">RADIO A LA CALLE</h1> -->
+                      <img src="http://www.radioalacalle.com/images/logo_calle.png" alt="">
                   </header>
               </div>
           </section>
@@ -226,6 +235,7 @@
     <script src="scripts/directives/current-time.js"></script>
     <script src="scripts/directives/flash.js"></script>
     <script src="scripts/directives/slider.js"></script>
+    <script src="scripts/directives/isotope.js"></script>
     <script src="scripts/directives/mobile-menu.js"></script>
     <script src="scripts/directives/vertical-tab.js"></script>
 

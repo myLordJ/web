@@ -371,40 +371,40 @@ jQuery(document).ready(function( $ ) {
     // Isotope Init
     // ======================
 
-    $('.isotope').each( function( index, element ) {
-        var $container = $(element);
-        $container.imagesLoaded().done( function( loadedContainer ) {
-            setTimeout(function(){
-                // wait for possible flexsliders to render before rendering isotope
-                $container.isotope();
-                setTimeout(function(){
-                    $container.removeClass('no-transition');
-                    // remove no-tranlstion class so all other calls animate
-                },500);
-            },100);
-        });
-    });
+    // $('.isotope').each( function( index, element ) {
+    //     var $container = $(element);
+    //     $container.imagesLoaded().done( function( loadedContainer ) {
+    //         setTimeout(function(){
+    //             // wait for possible flexsliders to render before rendering isotope
+    //             $container.isotope();
+    //             setTimeout(function(){
+    //                 $container.removeClass('no-transition');
+    //                 // remove no-tranlstion class so all other calls animate
+    //             },500);
+    //         },100);
+    //     });
+    // });
 
-    var filters = $('.isotope-filters');
-    filters.on('click', 'a', function(e) {
-        var active = $(this),
-            activeClass = active.data('filter'),
-            parentFilters = active.closest('.isotope-filters');
+    // var filters = $('.isotope-filters');
+    // filters.on('click', 'a', function(e) {
+    //     var active = $(this),
+    //         activeClass = active.data('filter'),
+    //         parentFilters = active.closest('.isotope-filters');
 
-        if(active.hasClass('selected')){
-            // don't do anything if clicked already selected filter
-            return false;
-        }
-        // clear all active filters
-        parentFilters.find('a').removeClass('active');
-        // make clicked filter active
-        active.addClass('active');
-        // filter the collection below the isotope-filters (find for recent posts , addback for port)
-        parentFilters.next().find('.isotope').addBack('.isotope').isotope({ filter: active.attr('data-filter') });
+    //     if(active.hasClass('selected')){
+    //         // don't do anything if clicked already selected filter
+    //         return false;
+    //     }
+    //     // clear all active filters
+    //     parentFilters.find('a').removeClass('active');
+    //     // make clicked filter active
+    //     active.addClass('active');
+    //     // filter the collection below the isotope-filters (find for recent posts , addback for port)
+    //     parentFilters.next().find('.isotope').addBack('.isotope').isotope({ filter: active.attr('data-filter') });
 
-        // return false to prevent click
-        return false;
-    });
+    //     // return false to prevent click
+    //     return false;
+    // });
 
     $(window).smartresize(function(){
         // just trigger relayout
@@ -671,35 +671,35 @@ jQuery(document).ready(function( $ ) {
     });
 
     // Init classes for portfolios
-    var portfolios = $('.portfolio');
-    portfolios.each(function() {
-        var portfolio = $(this);
+    // var portfolios = $('.portfolio');
+    // portfolios.each(function() {
+    //     var portfolio = $(this);
 
-        portfolio.find('.portfolio-item').css('display', 'block');
+    //     portfolio.find('.portfolio-item').css('display', 'block');
 
-        if ( portfolio.hasClass('portfolio-hex') ) {
-            portfolio.find('figure').append('<div class="hex-right"></div><div class="hex-left"></div>');
-            portfolio.find('.more, .link').addClass('hex-alt');
-        }
-        if ( portfolio.hasClass('portfolio-round') ) {
-            portfolio.find('img').addClass('img-circle');
-        }
+    //     if ( portfolio.hasClass('portfolio-hex') ) {
+    //         portfolio.find('figure').append('<div class="hex-right"></div><div class="hex-left"></div>');
+    //         portfolio.find('.more, .link').addClass('hex-alt');
+    //     }
+    //     if ( portfolio.hasClass('portfolio-round') ) {
+    //         portfolio.find('img').addClass('img-circle');
+    //     }
 
-        if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-hex') ) {
-            portfolio.find('figure').wrap('<div class="flat-shadow">');
-        }
+    //     if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-hex') ) {
+    //         portfolio.find('figure').wrap('<div class="flat-shadow">');
+    //     }
 
-        if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-round') ) {
-            portfolio.find('figure').wrap('<div class="flat-shadow">');
-        }
+    //     if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-round') ) {
+    //         portfolio.find('figure').wrap('<div class="flat-shadow">');
+    //     }
 
-        if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-rect') ) {
-            portfolio.find('figure').wrap('<div class="flat-shadow flat-rect">');
-        }
-        if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-square') ) {
-            portfolio.find('figure').wrap('<div class="flat-shadow flat-square">');
-        }
-    });
+    //     if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-rect') ) {
+    //         portfolio.find('figure').wrap('<div class="flat-shadow flat-rect">');
+    //     }
+    //     if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-square') ) {
+    //         portfolio.find('figure').wrap('<div class="flat-shadow flat-square">');
+    //     }
+    // });
 
     // Init SkrollR after portfolio init
     if ( initScrollr === true) {
