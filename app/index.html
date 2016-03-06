@@ -86,7 +86,7 @@
           </a>
         </div>
         <nav class="collapse navbar-collapse main-navbar" role="navigation">
-          <div class="sidebar-widget widget_search pull-right">
+          <!-- <div class="sidebar-widget widget_search pull-right">
             <form>
               <div class="input-group">
                 <input class="form-control" type="text" placeholder="Buscar...">
@@ -97,10 +97,10 @@
                 </span>
               </div>
             </form>
-          </div>
+          </div> -->
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown">Inicio</a>
+            <li class="dropdown" ng-class="{'active': isSelected('')}">
+              <a href="/#" class="dropdown-toggle">Inicio</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
               <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown" style="font-weight: bold">Vivo!</a>
@@ -136,8 +136,7 @@
               <div class="background-overlay" style="background-color:rgba(193,109,133,0.8)"></div>
               <div class="container">
                   <header class="section-header underline">
-                      <!-- <h1 class="headline hyper hairline">RADIO A LA CALLE</h1> -->
-                      <img src="http://www.radioalacalle.com/images/logo_calle.png" alt="">
+                      <img src="http://www.radioalacalle.com/images/logo_calle.png" alt="radio-a-la-calle">
                   </header>
               </div>
           </section>

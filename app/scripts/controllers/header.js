@@ -13,14 +13,18 @@ angular.module('rac')
     $scope.isPlaying = !$scope.isPlaying;
   };
 
-  $currentShow.get({}, function(show){
+  $currentShow.get({}, function(show) {
     $scope.currentShow = show;
   });
 
-  $scope.goTo = function(url){
+  $scope.goTo = function(url) {
     $location.url(url);
 
     $rootScope.showHomeVideo = url.indexOf('home') !== -1 ? true : false;
+  };
+
+  $scope.isSelected = function(url) {
+    return url === $location.path();
   };
 
 });

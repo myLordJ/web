@@ -16,7 +16,7 @@ angular
     // 'angularUtils.directives.dirDisqus'
   ])
   .constant('API_URL', window.location.href.indexOf('localhost') === -1 ? 'https://rac-dashboard.herokuapp.com/api' : 'http://localhost:3000/api')
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
