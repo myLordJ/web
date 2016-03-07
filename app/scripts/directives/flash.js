@@ -9,10 +9,10 @@ angular.module('rac.directives')
       var isFashInstalled = ((typeof navigator.plugins !== 'undefined' && typeof navigator.plugins['Shockwave Flash'] === 'object') || (window.ActiveXObject && (new ActiveXObject('ShockwaveFlash.ShockwaveFlash')) !== false));
       
       if (isFashInstalled && isFlash) {
-        $(element.html(attrs.script)).show();
+        $(element).show();
       }
       else {
-        $(element.html(attrs.script)).hide();
+        $(element).hide();
       }
     }
   };
