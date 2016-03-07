@@ -78,10 +78,10 @@
           <div class="side-widget">
           </div>
           <div class="sidebar-widget">
-            <span style="margin-right: 30px;">
+            <b style="margin-right: 30px;">
               <i class="fa fa-whatsapp"></i>
               +54 9 11 6194 3691
-            </span>
+            </b>
             <b>
               <a style="color: #fff" current-time="'h:mm a'"></a>
               <a style="color: #fff">{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
@@ -100,7 +100,8 @@
             <span class="icon-bar"></span>
           </button>
           <a href="../index.html" class="navbar-brand">
-            <img src="images/logo_bird.png" alt="One of the best themes ever" style="width: 48px;">
+            <img src="images/logo_bird.png" alt="radio-a-la-calle" style="width: 48px;">
+            <img src="images/logo-large.png" alt="radio-a-la-calle" style="width: 200px;">
           </a>
         </div>
         <nav class="collapse navbar-collapse main-navbar" role="navigation">
@@ -148,8 +149,8 @@
         <div class="row">
           <section class="section swatch-red-white" ng-show="showHomeVideo">
               <div class="background-media" style="background-image: url(''); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;">
-                  <video poster="" style="width: 100%; height: 100%;" loop autoplay class="section-background-video">
-                      <source type="video/mp4" src="http://theme-background-videos.s3.amazonaws.com/corporate.m4v"></source>
+                  <video poster="" style="width: 100%; height: 100%;" muted loop autoplay class="section-background-video">
+                      <source type="video/mp4" src="images/video.mp4"></source>
                       <source type="video/webm" src=""></source>
                       <source type="video/ogg" src=""></source>
                   </video>
@@ -157,7 +158,7 @@
               <div class="background-overlay" style="background-color:rgba(193,109,133,0.8)"></div>
               <div class="container">
                   <header class="section-header underline">
-                      <img src="http://www.radioalacalle.com/images/logo_calle.png" alt="radio-a-la-calle">
+                      <img src="images/logo-big.png" alt="radio-a-la-calle">
                   </header>
               </div>
           </section>
