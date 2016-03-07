@@ -20,7 +20,7 @@ angular.module('rac')
     });
 
     $mixcloud.get({}, function(res) {
-      $scope.mixcloud = res.data.slice(0, 5);
+      $scope.mixcloud = res.data.slice(0, 6);
       console.log($scope.mixcloud);
     });
   });
