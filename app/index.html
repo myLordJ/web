@@ -103,7 +103,7 @@
           </div> -->
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown" ng-class="{'active': isSelected('')}">
-              <a href="/#" class="dropdown-toggle">Inicio</a>
+              <a ng-click="goTo('/')" class="dropdown-toggle">Inicio</a>
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu">
               <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown" style="font-weight: bold">Vivo!</a>
@@ -121,7 +121,7 @@
               <a ng-click="goTo('/contact')" class="dropdown-toggle" data-toggle="dropdown">Contacto</a>
             </li>
             <li>
-              <iframe src="http://tunein.com/embed/player/s244621/" style="width:69px;height:69px;margin-left: 50px; margin-top:8.5px; border-radius: 2%" scrolling="no" frameborder="no"></iframe>
+              <iframe src="http://tunein.com/embed/player/s244621/" style="width:215px;height:69px;margin-left: 50px; margin-top:8.5px; border-radius: 30%" scrolling="no" frameborder="no"></iframe>
             </li>
           </ul>
         </nav>
@@ -146,7 +146,7 @@
                   </header>
               </div>
           </section>
-          <section class="section swatch-red-white" ng-show="!showHomeVideo">
+          <section class="section swatch-red-white" ng-show="!showHomeVideo && !underConstruction">
            <div class="background-media" style="background-image: url('images/bg.jpg'); background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 0px"
                 data-top-bottom="background-position: 50% -200px">
                 </div>

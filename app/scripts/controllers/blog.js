@@ -9,6 +9,8 @@ angular.module('rac')
   $scope.posts = [];
   $rootScope.title = 'Notas';
 
+  $rootScope.underConstruction = true;
+
   $page.get({name: 'blog'}, function(page){
     $rootScope.title = page.title;
     $scope.content = $sce.trustAsHtml(page.content);

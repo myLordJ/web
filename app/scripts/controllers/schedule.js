@@ -7,6 +7,8 @@ angular.module('rac')
     $scope.title = 'Programación';
     $scope.subTitle = '';
 
+    $rootScope.underConstruction = true;
+
     $scope.shows = [];
     $scope.monday = [];
     $scope.tuesday = [];

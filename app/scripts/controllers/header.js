@@ -21,6 +21,7 @@ angular.module('rac')
     $location.url(url);
 
     $rootScope.showHomeVideo = url.indexOf('home') !== -1 ? true : false;
+    $rootScope.underConstruction = false;
   };
 
   $scope.isSelected = function(url) {
