@@ -9,7 +9,7 @@ angular
   .module('rac', [
     'ngResource',
     'ngRoute',
-    // 'uiGmapgoogle-maps',
+    'uiGmapgoogle-maps',
     // 'mwl.calendar',
     'rac.directives',
     'rac.filters',

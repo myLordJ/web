@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ContactCtrl', function ($scope, $page, $email, $sce) {
-    $scope.title = 'Contactanos';
+  .controller('ContactCtrl', function ($scope, $rootScope, $page, $email, $sce) {
+    $rootScope.title = 'Contactanos';
     $scope.isSending = false;
     $scope.email = {};
 
