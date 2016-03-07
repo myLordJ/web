@@ -14671,3 +14671,9 @@ table.variations .select-wrap select, .variation-wrap .select-wrap select {
 .woocommerce-account .form-row .chosen-container {
   width: 100% !important;
 }
+
+/* custom */
+
+ul.nav a {
+	cursor: pointer;
+}
