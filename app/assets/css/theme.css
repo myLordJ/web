@@ -9593,13 +9593,13 @@ div.mejs-speed-button {
 /* ------------ */
 /* CONTACT PAGE */
 /* ------------ */
-.google-map {
-  height: 500px;
+.google-map, .angular-google-map-container {
+  height: 300px;
 }
-.google-map img {
+.google-map img, .angular-google-map-container img {
   max-width: inherit;
 }
-.google-map.map-small {
+.google-map.map-small, .angular-google-map-container.map-small {
   height: 354px;
 }
 
