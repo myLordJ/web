@@ -1,1 +1,50 @@
-<section class="block title text-left"> <div class="container"> <aside> <div class="g md-one-whole"> <h1>{{title}}</h1> </div> </aside> </div> </section> <section id="wrapper-contact"> <div class="container"> <div class="gw"> <div class="g lg-one-whole"> <section> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0464945926797!2d-58.463004785083484!3d-34.577690080466226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5df08b43b11%3A0x19310d3c079ddc90!2sAv.+Forest+1236%2C+C1427CEW+CABA!5e0!3m2!1ses!2sar!4v1450791734028" width="963" height="365" frameborder="0" style="border:0" allowfullscreen></iframe> </section> </div> </div> <div class="gw"> <aside class="g lg-six-twelfths form-section"> <section> <h2>Matenete en <strong>contacto</strong></h2> <p>Podes escribirnos a <span>hola@radioalacalle.com</span></p> <p>Dejanos tu mensaje, te vamos a responder tan pronto como podamos.</p> <span class="red">{{alert.message}}</span> <aside class="lg-one-whole"> <form name="emailForm"> <input type="text" class="form-control" placeholder="Nombre" ng-model="email.name" required> <input type="email" class="form-control" placeholder="Email" ng-model="email.from" required> <textarea class="form-control" rows="4" placeholder="Mensaje" ng-model="email.message" required></textarea> <input type="text" class="form-control" placeholder="Cuanto es 3 + 2 ?" ng-model="email.captcha" required> <button value="Enviar" ng-click="sendEmail()"> <span ng-show="!isSending"> <span class="glyphicon glyphicon-envelope"></span>&nbsp;Enviar </span> <ng-include src="'templates/wave.html'" class="wave" ng-show="isSending"></ng-include> </button> </form> </aside> </section> </aside> <article id="contact-details"> <div class="g lg-six-twelfths"> <aside class="box block color" style="background-color: #C16D85"> <h4>Tenés un programa?</h4> <h1>Contactate!</h1> <p>Telefono: +54 11 XXXX XXXX</p> <a href="mailto:ventas@radioalacalle.com">ventas@radioalacalle.com</a> </aside> <aside class="box block"> <h2 data-color="#b39ddb" style="color: #1DB3BA">Veni a Conocer la Radio</h2> <p>Av. Forest 1236, Ciudad Autonoma de Buenos Aires, Argentina</p> </aside> <aside class="box block"> <h2 data-color="#29b6f6" style="color: #1DB3BA">Sumate a nuestro staff</h2> <p>Si te interesa formar parte de Radio a la Calle mandanos tu CV a <a href="mailto:carreras@radioalacalle.com" style="color: #1DB3BA">carreras@radioalacalle.com</a>.</p> </aside> </div> </article><!-- contact-details --> </div> </div> </section> <div class="row"> <div class="col-xs-12"> <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options"> <ui-gmap-marker idkey="marker.key" coords="marker.location"></ui-gmap-marker> </ui-gmap-google-map> </div> </div>
+<section class="section swatch-white-red section-nopadding"> <div class="container-fullwidth"> <div class="row"> <div class="col-md-12"> <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options" class="google-map"> <ui-gmap-marker idkey="marker.key" coords="marker.location"></ui-gmap-marker> </ui-gmap-google-map> </div> </div> </div> </section> <section class="section swatch-white-green has-top"> <div class="decor-top"> <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg" style="fill: #fff"> <path d="M0 100 C50 0 50 0 100 100 Z" stroke-width="0"></path> </svg> </div> <div class="container"> <header class="section-header underline"> <p class="big"> Dirección: Av. Forest 1236, Ciudad Autonoma de Buenos Aires, Argentina <br> Telefono: <a href="#">+54 11 4552 6853</a><br> Whatsapp: <a href="#">+54 9 11 6194 3691</a> <br> Email: <a href="#">hola@radioalacalle.com</a> </p> </header> <div class="row"> <div class="col-md-6 col-md-offset-3"> <form name="emailForm" class="contact-form"> <div class="form-group form-icon-group"> <input class="form-control" name="name" placeholder="Tu nombre *" type="text" required ng-model="email.name"> <i class="fa fa-user"></i> </div> <div class="form-group form-icon-group"> <input class="form-control" name="email" placeholder="Tu email *" type="email" required ng-model="email.from"> <i class="fa fa-envelope"></i> </div> <div class="form-group form-icon-group"> <textarea class="form-control" name="message" placeholder="Tu mensaje" rows="10" required ng-model="email.message"></textarea> <i class="fa fa-pencil"></i> </div> <div class="form-group form-icon-group"> <input type="text" class="form-control" placeholder="Cuanto es 3 + 2 ?" ng-model="email.captcha" required> <i class="fa fa-pencil"></i> </div> <div class="form-group text-center"> <button class="btn btn-primary btn-icon btn-icon-right" ng-click="sendEmail()" type="submit"> <span ng-show="!isSending"> <i class="fa fa-envelope"></i>&nbsp;Enviar Consulta </span> <ng-include src="'templates/wave.html'" class="wave" ng-show="isSending"></ng-include> </button> </div> </form> <div id="messages"> <span class="red">{{alert.message}}</span> </div> </div> </div> </div> </section> <section class="section swatch-white-green has-top"> <div class="decor-top"> <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg" style="fill: #57B4A0"> <path d="M0 0 C50 100 50 100 100 0  L100 100 0 100" stroke-width="0"></path> </svg> </div> <div class="container"> <header class="section-header underline"> <h1 class="headline super hairline">Soñas con tu propio programa?</h1> </header> <div class="text-center"> <a class="btn btn-primary btn-lg btn-icon-right pull-center" href="mailto:hola@radioalacalle.com"> Hagamoslo Realidad <div class="hex-alt hex-alt-big"> <i class="fa fa-rocket" data-animation="tada"></i> </div> </a> </div> </div> </section> <!-- <section id="wrapper-contact">
+  <div class="container">
+   <div class="gw">
+    <aside class="g lg-six-twelfths form-section">
+      <section>
+        <h2>Matenete en <strong>contacto</strong></h2>
+        <p>Podes escribirnos a <span>hola@radioalacalle.com</span></p>
+        <p>Dejanos tu mensaje, te vamos a responder tan pronto como podamos.</p>
+        <span class="red">{{alert.message}}</span>
+        <aside class="lg-one-whole">
+          <form name="emailForm">
+            <input type="text" class="form-control" placeholder="Nombre" ng-model="email.name" required>
+            <input type="email" class="form-control" placeholder="Email" ng-model="email.from" required>
+            <textarea class="form-control" rows="4" placeholder="Mensaje" ng-model="email.message" required></textarea>
+            <input type="text" class="form-control" placeholder="Cuanto es 3 + 2 ?" ng-model="email.captcha" required>
+            <button value="Enviar" ng-click="sendEmail()">
+              <span ng-show="!isSending">
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp;Enviar
+              </span>
+              <ng-include src="'templates/wave.html'" class="wave" ng-show="isSending"></ng-include>
+            </button>
+          </form>
+        </aside>
+      </section> 
+    </aside>
+
+    <article id="contact-details">
+      <div class="g lg-six-twelfths">
+        <aside class="box block color" style="background-color: #C16D85">
+         <h4>Tenés un programa?</h4>
+         <h1>Contactate!</h1>
+         <p>Telefono: +54 11 XXXX XXXX</p>
+         <a href="mailto:ventas@radioalacalle.com">ventas@radioalacalle.com</a>
+       </aside>
+
+       <aside class="box block">
+         <h2 data-color="#b39ddb" style="color: #1DB3BA;">Veni a Conocer la Radio</h2>
+         <p>Av. Forest 1236, Ciudad Autonoma de Buenos Aires, Argentina</p>
+       </aside>
+
+       <aside class="box block">
+         <h2 data-color="#29b6f6" style="color: #1DB3BA;">Sumate a nuestro staff</h2>
+         <p>Si te interesa formar parte de Radio a la Calle mandanos tu CV a <a href="mailto:carreras@radioalacalle.com" style="color: #1DB3BA">carreras@radioalacalle.com</a>.</p>
+       </aside>
+     </div>
+   </article>
+ </div>
+</div>
+</section>
+ -->
