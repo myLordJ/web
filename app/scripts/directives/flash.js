@@ -12,7 +12,7 @@ angular.module('rac.directives')
         $(element).show();
       }
       else {
-        $(element).hide();
+        $(element).remove();
       }
     }
   };
