@@ -25,6 +25,7 @@ angular.module('rac')
   };
 
   $scope.isSelected = function(url) {
+    console.log($location.path());
     return url === $location.path();
   };
 

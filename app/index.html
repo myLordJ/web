@@ -118,22 +118,22 @@
             </form>
           </div> -->
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown" ng-class="{'active': isSelected('')}">
+            <li class="dropdown" ng-class="{'active': isSelected('/')}">
               <a ng-click="goTo('/')" class="dropdown-toggle" style="color: #fff">Inicio</a>
             </li>
-            <li class="dropdown menu-item-object-oxy_mega_menu">
+            <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/live')}">
               <a ng-click="goTo('/live')" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff">Vivo</a>
             </li>
-            <li class="dropdown menu-item-object-oxy_mega_menu">
+            <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/about')}">
               <a ng-click="goTo('/about')" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff">Nosotros</a>
             </li>
-            <li class="dropdown menu-item-object-oxy_mega_menu">
+            <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/schedule')}">
               <a ng-click="goTo('/schedule')" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff">Programas</a>
             </li>
-            <li class="dropdown menu-item-object-oxy_mega_menu">
+            <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/blog')}">
               <a ng-click="goTo('/blog')" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff">Notas</a>
             </li>
-            <li class="dropdown menu-item-object-oxy_mega_menu">
+            <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/contact')}">
               <a ng-click="goTo('/contact')" class="dropdown-toggle" data-toggle="dropdown"style="color: #fff">Contacto</a>
             </li>
             <li>
