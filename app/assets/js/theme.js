@@ -465,11 +465,11 @@ jQuery(document).ready(function( $ ) {
     $( '.video-wrapper' ).fitVids();
 
     // Play videos & audio
-    $('audio').mediaelementplayer({
-        pauseOtherPlayers: false,
-        enableAutosize: false,
-        setDimensions:false,
-    });
+    // $('audio').mediaelementplayer({
+    //     pauseOtherPlayers: false,
+    //     enableAutosize: false,
+    //     setDimensions:false,
+    // });
 
     $('.section-background-video').mediaelementplayer({
         pauseOtherPlayers: false,

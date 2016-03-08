@@ -65,27 +65,29 @@
         <div class="top top-left">
           <div class="sidebar-widget">
             <ul class="list-unstyled inline social-icons social-simple">
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-cloud"></i></a></li>
+              <li><a href="https://twitter.com/radioalacalle" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.facebook.com/radioalacalle/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/radioalacalle/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <!--<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li> -->
+              <li>
+              <a href="https://www.mixcloud.com/radioalacalle/" target="_blank"><i class="fa fa-cloud"></i></a></li>
+              <li style="width: 234px; font-weight: bold;">
+                <a href=""><i class="fa fa-whatsapp"></i></a>
+                <span>+54 9 11 6194 3691</span>
+              </li>
+              <li style="font-weight: bold;">
+                <span style="color: #fff" current-time="'h:mm a'"></span>
+                <span style="color: #fff">{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</span>
+              </li>
             </ul>
           </div>
         </div>
         <div class="top top-right">
-          <div class="side-widget">
-          </div>
-          <div class="sidebar-widget">
-            <b style="margin-right: 30px;">
-              <i class="fa fa-whatsapp"></i>
-              +54 9 11 6194 3691
-            </b>
-            <b>
-              <a style="color: #fff" current-time="'h:mm a'"></a>
-              <a style="color: #fff">{{((weather.temperature - 32)  *  (5/9)).toFixed(2)}}°C</a>
-            </b>
+          <div class="sidebar-widget" style="padding: 2px 0;">
+           <audio controls autoplay style="margin-bottom: -10px !important;background: #fff;border: 3px #fff solid;width: 185;box-sizing: content-box;border-radius: 6px;">
+            <source src="http://01.solumedia.com.ar:8330/;stream.nsv" />
+            </audio>
           </div>
         </div>
       </div>
@@ -99,7 +101,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="../index.html" class="navbar-brand">
+          <a href="/#" class="navbar-brand">
             <img src="images/logo_bird.png" alt="radio-a-la-calle" style="width: 48px;">
             <img src="images/logo-large.png" alt="radio-a-la-calle" style="width: 200px;">
           </a>
@@ -118,6 +120,9 @@
             </form>
           </div> -->
           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <!-- <iframe src="http://tunein.com/embed/player/s244621/" style="width:215px;height:69px;margin-left: 50px; margin-top:8.5px; border-radius: 5%" scrolling="no" frameborder="no"></iframe> -->
+            </li>
             <li class="dropdown" ng-class="{'active': isSelected('/')}">
               <a ng-click="goTo('/')" class="dropdown-toggle" style="color: #fff">Inicio</a>
             </li>
@@ -135,9 +140,6 @@
             </li>
             <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/contact')}">
               <a ng-click="goTo('/contact')" class="dropdown-toggle" data-toggle="dropdown"style="color: #fff">Contacto</a>
-            </li>
-            <li>
-              <iframe src="http://tunein.com/embed/player/s244621/" style="width:215px;height:69px;margin-left: 50px; margin-top:8.5px; border-radius: 5%" scrolling="no" frameborder="no"></iframe>
             </li>
           </ul>
         </nav>
@@ -231,21 +233,21 @@
               <div class="sidebar-widget  widget_swatch_social">
                   <ul class="unstyled inline small-screen-center social-icons social-background social-simple">
                     <li>
-                      <a target="_blank" href="http://www.oxygenna.com">
+                      <a target="_blank" href="https://www.facebook.com/radioalacalle/">
                         <i class="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="http://www.oxygenna.com">
+                      <a target="_blank" href="https://twitter.com/radioalacalle">
                         <i class="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a target="_blank" href="http://www.oxygenna.com">
+                      <a target="_blank" href="https://www.instagram.com/radioalacalle/">
                         <i class="fa fa-instagram"></i>
                       </a>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a target="_blank" href="http://www.oxygenna.com">
                         <i class="fa fa-youtube"></i>
                       </a>
@@ -254,9 +256,9 @@
                       <a target="_blank" href="http://www.oxygenna.com">
                         <i class="fa fa-google-plus"></i>
                       </a>
-                    </li>
+                    </li> -->
                     <li>
-                      <a target="_blank" href="http://www.oxygenna.com">
+                      <a target="_blank" href="https://www.mixcloud.com/radioalacalle/">
                         <i class="fa fa-cloud"></i>
                       </a>
                     </li>

@@ -7,5 +7,6 @@ angular.module('rac')
     $page.get({name: 'live'}, function(page) {
       $scope.content = $sce.trustAsHtml(page.content);
       $rootScope.title = page.title;
+      $rootScope.subtitle = page.subtitle;
     });
   });
