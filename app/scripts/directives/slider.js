@@ -5,7 +5,7 @@ angular.module('rac.directives')
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
-      scope.$watch(attrs.slider, function() {
+      $(function() {
         var slider = $(element);
         var $isotopeContainer = $(element).closest('div.isotope');
 
