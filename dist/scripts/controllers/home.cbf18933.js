@@ -2,6 +2,7 @@
 
 angular.module('rac')
   .controller('HomeCtrl', function ($scope, $rootScope, $gallery, $page, $sce, $mixcloud) {
+    $scope.loadedImages = false;
     $scope.images = [];
     $scope.mixcloud = [];
     $scope.interval = 3000;
@@ -14,8 +15,8 @@ angular.module('rac')
 
     $gallery.get({name: 'home-page-slider'}, function(gallery) {
       if (gallery && gallery.length) {
-        gallery[0].active = true;
         $scope.images = gallery;
+        $scope.loadedImages = true;
       }
     });
 
