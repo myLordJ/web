@@ -115,7 +115,7 @@
 }
 
 .pace-overlay {
-  background: #D87E98;
+  background: rgba(87, 180, 160, 0.9);
 }
 
 .pace-dot .pace-progress-inner {
