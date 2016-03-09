@@ -17,10 +17,4 @@ angular.module('rac')
     $gallery.get({name: 'clients'}, function(gallery) {
       $scope.clients = gallery;
     });
-
-    $scope.users = [
-      {name: 'Juan Gnarra', job: 'CEO', twitter: '#', facebook: '#', profilePicture: '../new/images/team-1.jpg'},
-      {name: 'Agustin Peyloubet', job: 'COO', twitter: '#', facebook: '#', profilePicture: '../new/images/team-1.jpg'},
-      {name: 'El Jota', job: 'CTO', twitter: '#', facebook: '#', profilePicture: '../new/images/team-1.jpg'}
-    ];
   });
