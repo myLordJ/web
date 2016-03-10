@@ -5092,7 +5092,7 @@ pre {
 }
 #masthead .nav > li.active a:before, #masthead .nav > li a:hover:before, #masthead .nav > li.current-menu-item > a:before, #masthead .nav > li.current-page-parent > a:before, #masthead .nav > li.current-menu-parent > a:before, #masthead .nav > li.current-page-ancestor > a:before, #masthead .nav > li.current-menu-ancestor > a:before {
   opacity: 1;
-  background: #fff;
+  background: #000;
 }
 #masthead .nav > li > a:focus {
   outline: none;
