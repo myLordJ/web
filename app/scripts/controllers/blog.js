@@ -9,8 +9,6 @@ angular.module('rac')
   $scope.posts = [];
   $rootScope.title = 'Notas';
 
-  $rootScope.underConstruction = true;
-
   $page.get({name: 'blog'}, function(page){
     $rootScope.title = page.title;
     $scope.content = $sce.trustAsHtml(page.content);
@@ -25,6 +23,10 @@ angular.module('rac')
     if (!$scope.endOfBlogs) {
       $post.get({skip: skip}, function(posts) {
         if (posts && posts.length > 0) {
+          for (var i = posts.length - 1; i >= 0; i--) { 
+            posts[i].content.extended = $sce.trustAsHtml(posts[i].content.extended);
+          }
+
           $scope.posts = $scope.posts.concat(posts);
           skip += pageSize;
         }
