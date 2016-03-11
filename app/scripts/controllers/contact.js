@@ -26,7 +26,8 @@ angular.module('rac')
 
     $page.get({name: 'contact'}, function(page) {
       $scope.content = $sce.trustAsHtml(page.content);
-      $scope.title = page.title;
+      $rootScope.title = page.title;
+      $rootScope.subTitle = page.subTitle;
     });
 
     $scope.sendEmail = function() {
