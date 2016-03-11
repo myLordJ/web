@@ -3,14 +3,15 @@
 angular.module('rac')
 .controller('BlogCtrl', function ($scope, $rootScope, $post, $page, $sce, $location, $current) {
   var skip = 0;
-  var pageSize = 3;
+  var pageSize = 2;
   $scope.endOfBlogs = false;
 
   $scope.posts = [];
-  $rootScope.title = 'Notas';
+  $rootScope.title = 'Entrevistas';
 
   $page.get({name: 'blog'}, function(page){
     $rootScope.title = page.title;
+    $rootScope.subTitle = page.subTitle;
     $scope.content = $sce.trustAsHtml(page.content);
   });
 
