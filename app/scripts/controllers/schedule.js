@@ -10,8 +10,9 @@ angular.module('rac')
     $scope.shows = [];
 
     $scope.goToShow = function(index) {
-        $current.show = this.shows[index];
-        $location.path('/show/' + $current.show.title);
+      return;
+      //$current.show = this.shows[index];
+      //$location.path('/show/' + $current.show.title);
     };
 
     $page.get({name: 'schedule'}, function(page) {

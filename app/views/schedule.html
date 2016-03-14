@@ -37,17 +37,18 @@
           </a>
           <figcaption>
             <h4>
-              <a href="portfolio-item-big.html">
+              <a ng-click="goToShow($index)">
                 {{show.title}}
               </a>
             </h4>
+            <p>{{show | showDays}}</p>
             <p>{{show.bio}}</p>
-            <!-- <a class="magnific-gallery image-all more" title="Gallery items" href="{{show.profilePictureUrl}}" data-links="assets/images/design/vector/img-4-1200x600.png" data-prev-text="Previous" data-next-text="Next">
+            <a class="magnific-gallery image-all more" title="Gallery items" href="{{show.profilePictureUrl}}" data-links="assets/images/design/vector/img-4-1200x600.png" data-prev-text="Previous" data-next-text="Next">
               <i class="fa fa-search-plus"></i>
             </a>
-            <a class="link" href="#/show">
+            <a class="link" ng-click="goToShow($index)">
               <i class="fa fa-link"></i>
-            </a> -->
+            </a>
           </figcaption>
         </figure>
       </div>
