@@ -408,7 +408,7 @@ jQuery(document).ready(function( $ ) {
 
     $(window).smartresize(function(){
         // just trigger relayout
-        $('.isotope').isotope('reLayout');
+        //$('.isotope').isotope('reLayout');
     });
 
 
