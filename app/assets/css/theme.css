@@ -13,6 +13,10 @@
 	width: auto;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
 .mejs-embed, .mejs-embed body {
 	width: 100%;
 	height: 100%;
