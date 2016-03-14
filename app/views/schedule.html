@@ -1,4 +1,51 @@
-<ng-include src="'templates/under-construction.html'"></ng-include>
+<!-- <ng-include src="'templates/under-construction.html'"></ng-include> -->
+
+<section class="section swatch-green-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="isotope-filters text-center">
+          <li class="active">
+            <a class="pseudo-border active" data-filter="*">Todos
+            </a>
+          </li>
+          <li>
+            <a class="pseudo-border" data-filter=".filter-gallery">gallery</a>
+          </li>
+          <li>
+            <a class="pseudo-border" data-filter=".filter-image">image</a>
+          </li>
+          <li>
+            <a class="pseudo-border" data-filter=".filter-video">video</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div isotope="{{loadedImages}}" class="portfolio magnific-all no-transition portfolio-hex portfolio-shadows row">
+    <div class="portfolio-item infinite-item col-md-4 col-sm-4 filter-gallery filter-image" ng-repeat="show in shows">
+        <figure class="portfolio-figure">
+          <a href="portfolio-item-big.html">
+            <img width="600" height="518" src="assets/images/design/vector/img-8-600x518.png" class="img-responsive" alt="some image">
+          </a>
+          <figcaption>
+            <h4>
+              <a href="portfolio-item-big.html">
+                Gallery items
+              </a>
+            </h4>
+            <p>You think water moves fast? You should see ice.</p>
+            <a class="magnific-gallery image-all more" title="Gallery items" href="assets/images/design/vector/img-8-600x518.png" data-links="assets/images/design/vector/img-4-1200x600.png" data-prev-text="Previous" data-next-text="Next">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a class="link" href="portfolio-item-big.html">
+              <i class="fa fa-link"></i>
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
 <!-- <article id="services">
   <div class="container">

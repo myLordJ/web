@@ -7,8 +7,6 @@ angular.module('rac')
     $scope.title = 'Programación';
     $scope.subTitle = '';
 
-    $rootScope.underConstruction = true;
-
     $scope.shows = [];
     $scope.monday = [];
     $scope.tuesday = [];
@@ -59,6 +57,8 @@ angular.module('rac')
             if (show.sunday) {
                 $scope.sunday.push(show);
             }
+
+            $scope.loadedImages = true;
         });
     });
 

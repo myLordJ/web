@@ -4,46 +4,54 @@ angular.module('rac.directives')
 .directive('isotope', function () {
   return {
     restrict: 'A',
-    link: function (scope, element) {
-      var $container = $(element);
-      $container.imagesLoaded().done( function() {
-        setTimeout(function() {
-          $container.isotope();
+    link: function (scope, element, attrs) {
+      scope.$watch('loadedImages', function() {
+
+        attrs.isotope = attrs.isotope === 'true';
+        if (!attrs.isotope) {
+          return;
+        }
+
+        var $container = $(element);
+        $container.imagesLoaded().done( function() {
           setTimeout(function() {
-            $container.removeClass('no-transition');
-          },500);
-        },100);
-      });
+            $container.isotope();
+            setTimeout(function() {
+              $container.removeClass('no-transition');
+            },500);
+          },100);
+        });
 
-      var portfolios = $('.portfolio');
-      portfolios.each(function() {
-        var portfolio = $(this);
-        portfolio.imagesLoaded().done(function() {
-          portfolio.find('.portfolio-item').css('display', 'block');
-        
-          if ( portfolio.hasClass('portfolio-hex') ) {
-            portfolio.find('figure').append('<div class="hex-right"></div><div class="hex-left"></div>');
-            portfolio.find('.more, .link').addClass('hex-alt');
-          }
-          
-          if ( portfolio.hasClass('portfolio-round') ) {
-            portfolio.find('img').addClass('img-circle');
-          }
+        var portfolios = $('.portfolio');
+        portfolios.each(function() {
+          var portfolio = $(this);
+          portfolio.imagesLoaded().done(function() {
+            portfolio.find('.portfolio-item').css('display', 'block');
 
-          if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-hex') ) {
+            if ( portfolio.hasClass('portfolio-hex') ) {
+              portfolio.find('figure').append('<div class="hex-right"></div><div class="hex-left"></div>');
+              portfolio.find('.more, .link').addClass('hex-alt');
+            }
+
+            if ( portfolio.hasClass('portfolio-round') ) {
+              portfolio.find('img').addClass('img-circle');
+            }
+
+            if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-hex') ) {
               portfolio.find('figure').wrap('<div class="flat-shadow">');
-          }
+            }
 
-          if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-round') ) {
+            if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-round') ) {
               portfolio.find('figure').wrap('<div class="flat-shadow">');
-          }
+            }
 
-          if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-rect') ) {
+            if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-rect') ) {
               portfolio.find('figure').wrap('<div class="flat-shadow flat-rect">');
-          }
-          if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-square') ) {
+            }
+            if ( portfolio.hasClass('portfolio-shadows') && portfolio.hasClass('portfolio-square') ) {
               portfolio.find('figure').wrap('<div class="flat-shadow flat-square">');
-          }
+            }
+          });
         });
       });
     }
@@ -58,7 +66,7 @@ angular.module('rac.directives')
         var parentFilters = active.closest('.isotope-filters');
 
         if (active.hasClass('selected')) {
-            return false;
+          return false;
         }
 
         parentFilters.find('a').removeClass('active');
@@ -70,4 +78,3 @@ angular.module('rac.directives')
     }
   };
 });
-    
