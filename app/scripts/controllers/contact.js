@@ -31,7 +31,7 @@ angular.module('rac')
     });
 
     $scope.sendEmail = function() {
-      if ($scope.emailForm.$valid) {
+      if ($scope.emailForm.$valid && $scope.email.captcha === 5) {
         $scope.isSending = true;
         $email.save({
           from: $scope.email.from,

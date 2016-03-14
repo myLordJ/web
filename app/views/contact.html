@@ -29,7 +29,6 @@
 </div>
 </section>
 
-
 <section class="section swatch-white-green has-top">
   <div class="container">
     <header class="section-header underline">
@@ -48,6 +47,10 @@
     </header>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-info" ng-show="alert.message">
+          <button class="close" data-dismiss="alert" type="button">×</button>
+          <span>{{alert.message}}</span>
+        </div>
         <form name="emailForm" class="contact-form">
           <div class="form-group form-icon-group">
             <input class="form-control"  name="name" placeholder="Tu nombre *" type="text" required ng-model="email.name"/>
@@ -74,9 +77,6 @@
             </button>
           </div>
         </form>
-        <div id="messages">
-          <span class="red">{{alert.message}}</span>
-        </div>
       </div>
     </div>
   </div>
