@@ -9,7 +9,7 @@ angular.module('rac')
 
     $scope.shows = [];
 
-    $scope.goToShow = function(index) {
+    $scope.goToShow = function(){//index) {
       return;
       //$current.show = this.shows[index];
       //$location.path('/show/' + $current.show.title);
