@@ -22,12 +22,11 @@
                 {{post.title}}
               </a>
             </h2>
-            <small class="post-author">
-              <!-- <a ng-show="post.autho" href="blog.html">{{post.author ? post.author.name.first + ' ' post.author.name.last : ''}}</a> -->
-              <a ng-show="post.autho" href="blog.html">{{post.author.name}}</a>
-            </small>
+            <!-- <small class="post-author">
+              <a ng-show="post.autho" href="blog.html">{{post.author ? post.author.name.first + ' ' post.author.name.last : ''}}</a>
+            </small> -->
             <small class="post-date">
-              <a href="post.html">{{post.publishedDate}}</a>
+              <a href="post.html">{{post.publishedDate | date:'dd-MM-yyyy' }}</a>
             </small>
             <div class="post-icon flat-shadow flat-hex">
               <div class="hex hex-big">
