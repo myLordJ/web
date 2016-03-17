@@ -8,23 +8,23 @@
   <div class="container">
     <ul isotope-filter class="isotope-filters text-center">
       <li class="active">
-        <a class="pseudo-border active" data-filter="*">Todos
+        <a class="pseudo-border active pointer" data-filter="*">Todos
         </a>
       </li>
       <li>
-        <a class="pseudo-border" data-filter=".filter-monday">Lunes</a>
+        <a class="pseudo-border pointer" data-filter=".filter-monday">Lunes</a>
       </li>
       <li>
-        <a class="pseudo-border" data-filter=".filter-tuesday">Martes</a>
+        <a class="pseudo-border pointer" data-filter=".filter-tuesday">Martes</a>
       </li>
       <li>
-        <a class="pseudo-border" data-filter=".filter-wednesday">Miércoles</a>
+        <a class="pseudo-border pointer" data-filter=".filter-wednesday">Miércoles</a>
       </li>
       <li>
-        <a class="pseudo-border" data-filter=".filter-thursday">Jueves</a>
+        <a class="pseudo-border pointer" data-filter=".filter-thursday">Jueves</a>
       </li>
       <li>
-        <a class="pseudo-border" data-filter=".filter-friday">Viernes</a>
+        <a class="pseudo-border pointer" data-filter=".filter-friday">Viernes</a>
       </li>
       <li>
         <a class="pseudo-border" data-filter=".filter-saturday">Sábado</a>
@@ -47,13 +47,13 @@
               </a>
             </h4>
             <p>{{show | showDays}}</p>
-            <p>{{show.bio}}</p>
-            <a class="magnific-gallery image-all more" title="Gallery items" href="{{show.profilePictureUrl}}" data-links="assets/images/design/vector/img-4-1200x600.png" data-prev-text="Previous" data-next-text="Next">
+            <p>{{show.bio | ellipsis}}</p>
+            <!-- <a class="magnific-gallery image-all more" title="Gallery items" href="{{show.profilePictureUrl}}" data-links="assets/images/design/vector/img-4-1200x600.png" data-prev-text="Previous" data-next-text="Next">
               <i class="fa fa-search-plus"></i>
             </a>
             <a class="link" ng-click="goToShow($index)">
               <i class="fa fa-link"></i>
-            </a>
+            </a> -->
           </figcaption>
         </figure>
       </div>

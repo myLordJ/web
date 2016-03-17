@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ScheduleCtrl', function ($scope, $rootScope, $mixcloud, $page, $show, $current, $location) {
+  .controller('ScheduleCtrl', function ($scope, $rootScope, $mixcloud, $page, $show ) { //, $current, $location) {
     $scope.calendarView = 'month';
     $scope.currentDay = new Date();
     $scope.title = 'Programación';
