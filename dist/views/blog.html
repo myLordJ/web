@@ -1,4 +1,40 @@
-<section class="section swatch-white-green has-top" infinite-scroll="getPosts()"> <div class="decor-top"> <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg" style="fill: #fff"> <path d="M0 100 C50 0 50 0 100 100 Z" stroke-width="0"></path> </svg> </div> <div class="container"> <div class="row"> <div class="col-xs-12 col-md-6" ng-repeat="post in posts"> <article class="post post-showinfo"> <div class="post-media"> <a class="feature-image magnific hover-animate"> <img alt="some image" ng-src="{{post.image ? post.image.url : ''}}" ng-show="post.image"> <i class="fa fa-search-plus"></i> </a> </div> <div class="post-head small-screen-center"> <h2 class="post-title"> <a href="#"> {{post.title}} </a> </h2> <small class="post-author"> <!-- <a ng-show="post.autho" href="blog.html">{{post.author ? post.author.name.first + ' ' post.author.name.last : ''}}</a> --> <a ng-show="post.autho" href="blog.html">{{post.author.name}}</a> </small> <small class="post-date"> <a href="post.html">{{post.publishedDate}}</a> </small> <div class="post-icon flat-shadow flat-hex"> <div class="hex hex-big"> <i class="fa fa-volume-up"></i> </div> </div> </div> <div class="post-body"> <p> {{post.content.brief | text}} </p> <p ng-bind-html="post.content.extended"> </p> </div> <div class="bordered post-extras text-center"> <!--<div class="text-center">
+<section class="section swatch-white-green has-top" infinite-scroll="getPosts()"> <div class="decor-top"> <svg class="decor" height="100%" preserveaspectratio="none" version="1.1" viewbox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg" style="fill: #fff"> <path d="M0 100 C50 0 50 0 100 100 Z" stroke-width="0"></path> </svg> </div> <div class="container"> <div class="row"> <ul class="list-unstyled isotope no-transition"> <li class="col-md-4 post-item filter-images isotope-item" ng-repeat="post in posts"> <div class="grid-post swatch-green-white"> <article class="post post-showinfo"> <div class="post-media overlay"> <a class="feature-image magnific hover-animate" title="{{post.title}}"> <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}"> </a> </div> <div class="post-head small-screen-center"> <h2 class="post-title"> <a> {{post.title}} </a> </h2> <small class="post-author"> <img ng-src="{{post.show.profilePicture.url}}" alt="{{post.show.title}}" style="width: 24px" class="img-circle"> <a href="blog.html">{{post.show ? post.show.title : ''}}</a> </small> <small class="post-date"> <a href="post.html">{{post.publishedDate | date:'dd-MM-yyyy' }}</a> </small> <div class="post-icon flat-shadow flat-hex"> <div class="hex hex-big"> <i class="fa fa-volume-up"></i> </div> </div> </div> <div class="post-body"> <p class="bordered text-center"> {{post.content.brief | text}} </p> <p ng-bind-html="post.content.extended"> </p> </div> <div class="bordered post-extras text-center" ng-show="post.category"> <div class="text-center"> <span class="post-category"> <a href="post.html"> <i class="fa fa-tags"></i> {{post.category.name}} </a> </span> </div> </div> </article> </div> </li></ul> </div> </div> <!-- 
+  <div class="container">
+    <div isotope="{{loadedImages}}" class="isotope portfolio no-transition portfolio-round portfolio-shadows row">
+
+      <div  class="portfolio-item infinite-item col-md-4 col-sm-4" ng-repeat="post in posts">
+        <article class="post post-showinfo">
+          <div class="post-media">
+            <a class="feature-image magnific hover-animate">
+              <img alt="some image" ng-src="{{post.image ? post.image.url : ''}}" ng-show="post.image">
+              <i class="fa fa-search-plus"></i>
+            </a>
+          </div>
+          <div class="post-head small-screen-center">
+            <h2 class="post-title">
+              <a href="#">
+                {{post.title}}
+              </a>
+            </h2>
+            <!-- <small class="post-author">
+              <a ng-show="post.autho" href="blog.html">{{post.author ? post.author.name.first + ' ' post.author.name.last : ''}}</a>
+            </small> --> <!-- <small class="post-date">
+              <a href="post.html">{{post.publishedDate | date:'dd-MM-yyyy' }}</a>
+            </small>
+            <div class="post-icon flat-shadow flat-hex">
+              <div class="hex hex-big">
+                <i class="fa fa-volume-up"></i>
+              </div>
+            </div>
+          </div>
+          <div class="post-body">
+            <p>
+              {{post.content.brief | text}}
+            </p>
+            <p ng-bind-html="post.content.extended">
+            </p>
+          </div>
+          <div class="bordered post-extras text-center"> --> <!--<div class="text-center">
             <span class="post-category">
               <a href="post.html">
                 <i class="fa fa-folder-open"></i>
@@ -30,4 +66,8 @@
                 2 comments
               </a>
             </span>
-          </div> --> </div> </article> </div> </div> </div> </section>
+          </div> --> <!-- </div> 
+        </article>
+      </div>
+    </div>
+  </div> --> </section>
