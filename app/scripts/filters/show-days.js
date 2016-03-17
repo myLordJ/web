@@ -9,8 +9,8 @@ angular.module('rac.filters')
       function formatTime(from, to) {
         from = from.toString();
         to = to.toString();
-        from = from.substring(0,2) + ':' + from.substring(2,4);
-        to = to.substring(0,2) + ':' + to.substring(2,4);
+        from = from === '0'? '00:00' : from.substring(0,2) + ':' + from.substring(2,4);
+        to = to === '0'? '00:00' : to.substring(0,2) + ':' + to.substring(2,4);
         return  from + ' - ' + to;
       }
 
