@@ -46,7 +46,7 @@ angular.module('rac.filters')
 
       if (show.sunday) {
         time = formatTime(show.sundayStartTime, show.sundayEndTime);
-        result.push('DOM: ' + time);
+        result.push('DOM:     ' + time);
       }
 
       return result.join(' - ');
