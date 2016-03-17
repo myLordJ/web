@@ -9,7 +9,7 @@ angular.module('rac.filters')
       function formatTime(from, to) {
         from = from.toString();
         to = to.toString();
-        from = from === '0'? '00:00' : from.substring(0,2) + ':' + from.substring(2,4);
+        from = from === '0' ? '00:00' : from.substring(0,2) + ':' + from.substring(2,4);
         to = to === '0'? '00:00' : to.substring(0,2) + ':' + to.substring(2,4);
         return  from + ' - ' + to;
       }
@@ -26,27 +26,27 @@ angular.module('rac.filters')
 
       if (show.wednesday) {
         time = formatTime(show.wednesdayStartTime, show.wednesdayEndTime);
-        result.push('MIE:' + time);
+        result.push('MIE: ' + time);
       }
 
       if (show.thursday) {
         time = formatTime(show.thursdayStartTime, show.thursdayEndTime);
-        result.push('JUE:' + time);
+        result.push('JUE: ' + time);
       }
 
       if (show.friday) {
         time = formatTime(show.fridayStartTime, show.fridayEndTime);
-        result.push('VIE:' + time);
+        result.push('VIE: ' + time);
       }
 
       if (show.saturday) {
         time = formatTime(show.saturdayStartTime, show.saturdayEndTime);
-        result.push('SAB:' + time);
+        result.push('SAB: ' + time);
       }
 
       if (show.sunday) {
         time = formatTime(show.sundayStartTime, show.sundayEndTime);
-        result.push('DOM:' + time);
+        result.push('DOM: ' + time);
       }
 
       return result.join(' - ');

@@ -3,7 +3,7 @@
 angular.module('rac')
 .controller('BlogCtrl', function ($scope, $rootScope, $post, $page, $sce, $location, $current) {
   var skip = 0;
-  var pageSize = 2;
+  var pageSize = 3;
   $scope.endOfBlogs = false;
 
   $scope.posts = [];
@@ -22,6 +22,7 @@ angular.module('rac')
 
   $scope.getPosts = function() {
     if (!$scope.endOfBlogs) {
+      $scope.loadedImages = false;
       $post.get({skip: skip}, function(posts) {
         if (posts && posts.length > 0) {
           for (var i = posts.length - 1; i >= 0; i--) { 
@@ -29,6 +30,7 @@ angular.module('rac')
           }
 
           $scope.posts = $scope.posts.concat(posts);
+          $scope.loadedImages = true;
           skip += pageSize;
         }
         else {
