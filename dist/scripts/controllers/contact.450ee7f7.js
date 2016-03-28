@@ -15,7 +15,8 @@ angular.module('rac')
         scaleControl: false,
         streetViewControl: false,
         zoomControl: false,
-        mapTypeControl: false
+        mapTypeControl: false,
+        scrollwheel: false
       }
     };
 
