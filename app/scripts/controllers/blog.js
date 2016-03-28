@@ -3,7 +3,7 @@
 angular.module('rac')
 .controller('BlogCtrl', function ($scope, $rootScope, $post, $page, $sce, $location, $current) {
   var skip = 0;
-  var pageSize = 3;
+  var pageSize = 2;
   $scope.endOfBlogs = false;
 
   $scope.posts = [];
