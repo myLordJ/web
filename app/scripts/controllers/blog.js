@@ -4,6 +4,7 @@ angular.module('rac')
 .controller('BlogCtrl', function ($scope, $rootScope, $post, $page, $sce, $location, $current) {
   var skip = 0;
   var pageSize = 2;
+  var isLoading = false;
   $scope.endOfBlogs = false;
 
   $scope.posts = [];
@@ -21,7 +22,8 @@ angular.module('rac')
   };
 
   $scope.getPosts = function() {
-    if (!$scope.endOfBlogs) {
+    if (!$scope.endOfBlogs || isLoading) {
+      isLoading = true;
       $scope.loadedImages = false;
       $post.get({skip: skip}, function(posts) {
         if (posts && posts.length > 0) {
@@ -36,6 +38,11 @@ angular.module('rac')
         else {
           $scope.endOfBlogs = true;
         }
+
+        isLoading = false;
+      }, function(error) {
+          console.log(error);
+          isLoading = false;
       });
     }
   };
