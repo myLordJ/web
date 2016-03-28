@@ -9,37 +9,25 @@
           {{show.description}}
         </p>
       </div><!-- video wrapper -->
-    </div>
-  </article>
+    </aside>
+  </div>
+</article>
 
-  <section class="block">
-    <div class="container ">
-      <aside>
-        <div class="g md-one-whole author-info">
-          <div class="client">
-            <img ng-src="{{show.profilePicture.url}}" class="img--circle" alt="client">
-            <h1>Seguinos!</h1>
-            <p>Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Praesent egestas neque eu enim.</p>
-            <ul>
-              <li ng-repeat="link in show.socialLinks">
-                <a href="{{link}}" target="_blank">{{link}}</a>
-              </li>
-            </ul>
-          </div>
+<section class="block">
+  <div class="container ">
+    <aside>
+      <div class="g md-one-whole author-info">
+        <div class="client">
+          <img ng-src="{{show.profilePicture.url}}" class="img--circle" alt="client">
+          <h1>Seguinos!</h1>
+          <p>Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Praesent egestas neque eu enim.</p>
+          <ul>
+            <li ng-repeat="link in show.socialLinks">
+              <a href="{{link}}" target="_blank">{{link}}</a>
+            </li>
+          </ul>
         </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- <article id="logo-banner" ng-show="images && images.length">
-    <div class="container">
-      <section class="block">
-        <h2>La Radio</h2>
-        <aside class="gw">
-          <div class="g lg-two-twelfths" ng-repeat="image in images">
-            <img class="img--center" src="{{image.url}}" alt="radio-a-la-calle" style="width: 400px">
-          </div>
-        </aside>
-      </section>
-    </div>
-  </article> -->
+      </div>
+    </aside>
+  </div>
+</section>
