@@ -40,8 +40,7 @@ angular.module('rac')
         }
 
         isLoading = false;
-      }, function(error) {
-          console.log(error);
+      }, function() {
           isLoading = false;
       });
     }

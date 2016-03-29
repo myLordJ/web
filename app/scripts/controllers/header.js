@@ -5,9 +5,7 @@ angular.module('rac')
   $scope.weather = {};
   $scope.isPlaying = false;
 
-  $weather.get({}, function(city){
-    console.log(city);
-    console.log(city.currently);
+  $weather.get({}, function(city) {
     $scope.weather = city.currently;
   });
 
