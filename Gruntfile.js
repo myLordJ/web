@@ -400,7 +400,13 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.app %>',
         dest: '<%= yeoman.dist %>',
-        src: ['assets/**/*', 'templates/**/*', 'images/**/*.mp4', 'scripts/**/*.js', 'rac.appmanifest', 'manifest.json', 'browserconfig.xml']
+        src: ['assets/**/*', 'templates/**/*', 'images/**/*.mp4', 'scripts/**/*.js', 'rac.appmanifest', 'manifest.json', 'browserconfig.xml', 'images/bg.jpg']
+      },
+      bgImage: {
+        expand: true,
+        cwd: '<%= yeoman.app %>',
+        dest: '<%= yeoman.dist %>',
+        src: ['images/bg.jpg']
       }
     },
 
@@ -473,7 +479,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:bgImage'
   ]);
 
   grunt.registerTask('default', [
