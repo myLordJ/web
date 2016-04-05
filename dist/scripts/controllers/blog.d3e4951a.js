@@ -3,7 +3,7 @@
 angular.module('rac')
 .controller('BlogCtrl', function ($scope, $rootScope, $post, $page, $sce, $location, $current) {
   var skip = 0;
-  var pageSize = 2;
+  var pageSize = 3;
   var isLoading = false;
   $scope.endOfBlogs = false;
 
@@ -22,8 +22,10 @@ angular.module('rac')
   };
 
   $scope.getPosts = function() {
+    debugger
     if (!$scope.endOfBlogs || isLoading) {
       isLoading = true;
+
       $scope.loadedImages = false;
       $post.get({skip: skip}, function(posts) {
         if (posts && posts.length > 0) {

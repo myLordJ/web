@@ -7,13 +7,13 @@
 
   <div class="container">
     <div class="row">
-      <ul class="list-unstyled isotope no-transition">
-      <li class="col-md-6 post-item filter-images isotope-item"  ng-repeat="post in posts">
+      <ul class="list-unstyled no-transition">
+      <li class="col-md-4 post-item filter-images"  ng-repeat="post in posts">
         <div class="grid-post swatch-green-white">
-          <article class="post post-showinfo">
+          <article class="post post-showinfo" style="height: 650px;">
             <div class="post-media overlay">
               <a class="feature-image magnific hover-animate" title="{{post.title}}">
-                <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}">
+                <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}" style="max-height: 240px">
               </a>
             </div>
             <div class="post-head small-screen-center">
@@ -24,7 +24,7 @@
               </h2>
               <small class="post-author">
                 <img ng-src="{{post.show.profilePicture.url}}" alt="{{post.show.title}}" style="width: 24px" class="img-circle">
-                <a href="blog.html">{{post.show ? post.show.title : ''}}</a>
+                <a>{{post.show ? post.show.title : ''}}</a>
               </small>
               <small class="post-date">
                 <a href="post.html">{{post.publishedDate | date:'dd-MM-yyyy' }}</a>
