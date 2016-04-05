@@ -41,10 +41,11 @@
           </a>
           <figcaption>
             <h4>
-              <a class="pointer" ng-click="goToShow($index)">
+              <a class="pointer" ng-click="goToShow(show)">
                 {{show.title}}
               </a>
             </h4>
+            <a class="link" ng-click="goToShow(show)"><i class="fa fa-link"></i></a>
             <p>{{show | showDays}}</p>
             <p>{{show.bio | ellipsis}}</p>
           </figcaption>

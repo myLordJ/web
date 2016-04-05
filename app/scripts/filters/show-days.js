@@ -3,6 +3,10 @@
 angular.module('rac.filters')
   .filter('showDays', function () {
     return function (show) {
+      if (!show) {
+        return;
+      }
+
       var result = [];
       var time;
 
