@@ -22,7 +22,6 @@ angular.module('rac')
   };
 
   $scope.getPosts = function() {
-    debugger
     if (!$scope.endOfBlogs || isLoading) {
       isLoading = true;
 
