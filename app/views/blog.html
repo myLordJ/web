@@ -10,13 +10,13 @@
       <ul class="list-unstyled no-transition">
       <li class="col-md-4 post-item filter-images"  ng-repeat="post in posts">
         <div class="grid-post swatch-green-white">
-          <article class="post post-showinfo" style="height: 650px;">
+          <article class="post post-showinfo" style="height: 540px;">
             <div class="post-media overlay">
               <a class="feature-image magnific hover-animate" title="{{post.title}}">
-                <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}" style="max-height: 240px">
+                <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}" style="max-height: 200px">
               </a>
             </div>
-            <div class="post-head small-screen-center">
+            <div class="post-head small-screen-center" style="height: 200px; overflow: auto;">
               <h2 class="post-title">
                 <a>
                   {{post.title}}
