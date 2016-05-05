@@ -16,7 +16,7 @@
                 <img alt="{{post.title}}" ng-src="{{post.image ? post.image.url : ''}}" style="max-height: 200px">
               </a>
             </div>
-            <div class="post-head small-screen-center" style="height: 200px; overflow: auto;">
+            <div class="post-head small-screen-center">
               <h2 class="post-title">
                 <a>
                   {{post.title}}
@@ -35,7 +35,7 @@
                 </div>
               </div>
             </div>
-            <div class="post-body">
+            <div class="post-body" style="height: 200px; overflow: auto;">
               <p class="bordered text-center">
                 {{post.content.brief | text}}
               </p>
