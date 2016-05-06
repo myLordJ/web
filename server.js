@@ -7,6 +7,8 @@ var opbeat = require('opbeat').start({
   secretToken: process.env.OPBEAT_TOKEN
 });
 
+require('dotenv').load();
+
 var gzippo = require('gzippo');
 var express = require('express');
 var app = express();
