@@ -402,6 +402,12 @@ module.exports = function (grunt) {
         dest: '<%= yeoman.dist %>',
         src: ['assets/**/*', 'templates/**/*', 'images/**/*.mp4', 'scripts/**/*.js', 'rac.appmanifest', 'manifest.json', 'browserconfig.xml', 'images/bg.jpg']
       },
+      siteMap: {
+        expand: true,
+        cwd: '<%= yeoman.app %>',
+        dest: '<%= yeoman.dist %>',
+        src: ['sitemap.xml']
+      },
       bgImage: {
         expand: true,
         cwd: '<%= yeoman.app %>',
