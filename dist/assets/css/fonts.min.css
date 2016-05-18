@@ -1,1 +1,49 @@
-body{font-family:Lato,sans-serif;font-weight:400}body .btn,body button,body input,body textarea{font-family:Lato,sans-serif}.section-header p,blockquote p{font-weight:300}.light{font-weight:300!important}.hairline{font-weight:100!important}.hairline strong{font-weight:300}h1,h2,h3,h4,h5,h6{font-family:Lato,sans-serif}.lead{font-weight:300}.lead strong{font-weight:600}#masthead .brand{font-weight:300}
+body {
+  font-family: 'josefin', 'Lato', sans-serif;
+  font-weight: 400;
+}
+body input, body textarea, body .btn, body button {
+  font-family: 'Lato', sans-serif;
+}
+
+blockquote p, .section-header p {
+  font-weight: 300;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+.hairline {
+  font-weight: 100 !important;
+}
+.hairline strong {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'oswald', 'Lato', sans-serif;
+}
+
+.lead {
+  font-weight: 300;
+}
+.lead strong {
+  font-weight: 600;
+}
+
+#masthead .brand {
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: josefin;
+  src: url(../fonts/JosefinSans.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/Oswald.ttf);
+  font-weight: bold;
+}
