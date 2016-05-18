@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'josefin', 'Lato', sans-serif;
   font-weight: 400;
 }
 body input, body textarea, body .btn, body button {
@@ -22,7 +22,7 @@ blockquote p, .section-header p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'oswald', 'Lato', sans-serif;
 }
 
 .lead {
@@ -34,4 +34,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #masthead .brand {
   font-weight: 300;
+}
+
+@font-face {
+  font-family: josefin;
+  src: url(../fonts/JosefinSans.ttf);
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/Oswald.ttf);
 }
