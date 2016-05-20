@@ -22,7 +22,7 @@ blockquote p, .section-header p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'oswald', 'Lato', sans-serif;
+  font-family: 'futura', 'Lato', sans-serif;
 }
 
 .lead {
@@ -45,5 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: oswald;
   src: url(../fonts/Oswald.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: futura;
+  src: url(../fonts/futura.ttf);
   font-weight: bold;
 }
