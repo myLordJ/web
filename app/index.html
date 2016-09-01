@@ -28,7 +28,7 @@
   <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/theme.min.css">
   <link rel="stylesheet" href="assets/css/color-defaults.css">
   <link rel="stylesheet" href="assets/css/swatch-green-white.min.css">
@@ -36,6 +36,8 @@
   <link rel="stylesheet" href="assets/css/swatch-white-green.min.css">
   <link rel="stylesheet" href="assets/css/swatch-white-red.min.css">
   <link rel="stylesheet" href="assets/css/fonts.min.css" media="screen">
+  <link rel="stylesheet" href="assets/css/menu-changes.css">
+
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -111,20 +113,20 @@
         </div>
         <nav class="collapse navbar-collapse main-navbar" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown" ng-class="{'active': isSelected('/')}">
+              <li class="dropdown modifim" ng-class="{'active': isSelected('/')}">
                 <a ng-click="goTo('/')" class="dropdown-toggle">Inicio</a>
               </li>
-              <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/about')}">
+              <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/about')}">
                 <a ng-click="goTo('/about')" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
               </li>
-              <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/schedule')}">
+              <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/schedule')}">
                 <a ng-click="goTo('/schedule')" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
               </li>
-              <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/blog')}">
+              <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/blog')}">
                 <a ng-click="goTo('/blog')" class="dropdown-toggle" data-toggle="dropdown">Entrevistas</a>
               </li>
               <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/contact')}">
-                <a ng-click="goTo('/contact')" class="dropdown-toggle" data-toggle="dropdown">Contacto</a>
+                <a ng-click="goTo('/contact')" class="dropdown-toggle modifim" data-toggle="dropdown">Contacto</a>
               </li>
             </ul>
           </nav>
