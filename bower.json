@@ -14,5 +14,8 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "webAppApp"
+  "moduleName": "webAppApp",
+  "resolutions": {
+    "angular": "1.5.8"
+  }
 }
