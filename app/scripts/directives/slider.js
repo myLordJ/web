@@ -5,7 +5,8 @@ angular.module('rac.directives')
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
-      scope.$watch('loadedImages', function() {
+      //TODO: HACER ALIAS PARAMETRIZABLE
+      scope.$watch('home.loadedImages', function() {
         attrs.slider = attrs.slider === 'true';
         if (attrs.slider) {
           var slider = $(element);

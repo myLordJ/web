@@ -1,11 +1,11 @@
-<section class="section swatch-white-green" ng-show="images && images.length">
+<section class="section swatch-white-green" ng-show="home.images && home.images.length">
   
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <div slider="{{loadedImages}}" class="flexslider text-left" data-flex-speed="7000" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center" data-flex-captionhorizontal="alternate" data-flex-captionvertical="bottom" data-flex-controlsposition="inside" data-flex-directions-type="fancy">
+        <div slider="{{home.loadedImages}}" class="flexslider text-left" data-flex-speed="7000" data-flex-animation="slide" data-flex-controls="hide" data-flex-directions="show" data-flex-controlsalign="center" data-flex-captionhorizontal="alternate" data-flex-captionvertical="bottom" data-flex-controlsposition="inside" data-flex-directions-type="fancy">
           <ul class="slides">
-            <li ng-repeat="image in images">
+            <li ng-repeat="image in home.images">
               <img ng-src="{{image.url}}" alt="some image" stlye="width:818px;height:545px;">
             </li>
           </ul>
@@ -15,18 +15,18 @@
   </div>
 </section>
 
-<section class="section swatch-green-white" ng-show="content">
+<section class="section swatch-green-white" ng-show="home.content">
   
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p ng-bind-html="content"></p>
+        <p ng-bind-html="home.content"></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section swatch-white-green" ng-show="mixcloud && mixcloud.length">
+<section class="section swatch-white-green" ng-show="home.mixcloud && home.mixcloud.length">
   
   <div class="container">
     <header class="section-header underline">
@@ -34,7 +34,7 @@
     </header>
     <div class="row">
       <ul class="list-unstyled row box-list" style="margin-top: -170px;">
-        <li class="col-md-2 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="{{ '.' + ($index + 3).toString() + 's'}}" ng-repeat="cast in mixcloud">
+        <li class="col-md-2 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="{{ '.' + ($index + 3).toString() + 's'}}" ng-repeat="cast in home.mixcloud">
           <div class="box-round">
             <div class="box-dummy"></div>
             <a href="{{cast.url}}" target="_blank">
