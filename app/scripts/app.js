@@ -42,11 +42,13 @@ angular
       })
       .when('/blog', {
         templateUrl: 'views/blog.html',
-        controller: 'BlogCtrl'
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
       })
       .when('/blog/:title', {
         templateUrl: 'views/post.html',
-        controller: 'PostCtrl'
+        controller: 'PostCtrl',
+        controllerAs: 'post'
       })
       .when('/show/:title', {
         templateUrl: 'views/show.html',
