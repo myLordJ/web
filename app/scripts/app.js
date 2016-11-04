@@ -25,7 +25,8 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .when('/live', {
         templateUrl: 'views/live.html',
