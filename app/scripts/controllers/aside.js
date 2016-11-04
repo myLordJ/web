@@ -1,16 +1,18 @@
 'use strict';
 
 angular.module('rac')
-.controller('AsideCtrl', function ($scope, $ad, $widget) {
-  $scope.ads = [];
-  $scope.widgets = [];
+.controller('AsideCtrl', function ($ad, $widget) {
+  var _this = this;
+
+  this.ads = [];
+  this.widgets = [];
 
   $ad.get({}, function(ads) {
-    $scope.ads = ads;
+    _this.ads = ads;
   });
 
   $widget.get({}, function(widgets) {
-    $scope.widgets = widgets;
+    _this.widgets = widgets;
   });
 
 });
