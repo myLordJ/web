@@ -52,7 +52,8 @@ angular
       })
       .when('/show/:title', {
         templateUrl: 'views/show.html',
-        controller: 'ShowCtrl'
+        controller: 'ShowCtrl',
+        controllerAs: 'show'
       })
       .otherwise({
         redirectTo: '/'
