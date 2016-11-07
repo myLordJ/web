@@ -64,7 +64,7 @@
   </div>
   <div class="pace-overlay"></div>
 
-  <div ng-controller="HeaderController">
+  <div ng-controller="HeaderController as header">
     <div class="top-bar swatch-green-white">
       <div class="container">
         <div class="top top-left">
@@ -83,7 +83,7 @@
                 <a href="https://www.mixcloud.com/radioalacalle/" target="_blank"><i class="fa fa-cloud"></i></a></li>
                 <li style="font-weight: bold;">
                   <span style="color: #fff; margin-left: 15px" current-time="'hh:mm a'"></span>
-                  <span style="color: #fff; margin-left: 15px">{{ weather.temperature }}°C</span>
+                  <span style="color: #fff; margin-left: 15px">{{ header.weather.temperature }}°C</span>
                 </li>
               </ul>
             </div>
@@ -114,19 +114,19 @@
         <nav class="collapse navbar-collapse main-navbar" role="navigation">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown modifim" ng-class="{'active': isSelected('/')}">
-                <a ng-click="goTo('/')" class="dropdown-toggle">Inicio</a>
+                <a ng-click="header.goTo('/')" class="dropdown-toggle">Inicio</a>
               </li>
               <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/about')}">
-                <a ng-click="goTo('/about')" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+                <a ng-click="header.goTo('/about')" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
               </li>
               <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/schedule')}">
-                <a ng-click="goTo('/schedule')" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
+                <a ng-click="header.goTo('/schedule')" class="dropdown-toggle" data-toggle="dropdown">Programas</a>
               </li>
               <li class="dropdown menu-item-object-oxy_mega_menu modifim" ng-class="{'active': isSelected('/blog')}">
-                <a ng-click="goTo('/blog')" class="dropdown-toggle" data-toggle="dropdown">Entrevistas</a>
+                <a ng-click="header.goTo('/blog')" class="dropdown-toggle" data-toggle="dropdown">Entrevistas</a>
               </li>
               <li class="dropdown menu-item-object-oxy_mega_menu" ng-class="{'active': isSelected('/contact')}">
-                <a ng-click="goTo('/contact')" class="dropdown-toggle modifim" data-toggle="dropdown">Contacto</a>
+                <a ng-click="header.goTo('/contact')" class="dropdown-toggle modifim" data-toggle="dropdown">Contacto</a>
               </li>
             </ul>
           </nav>
