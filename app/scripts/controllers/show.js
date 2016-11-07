@@ -1,19 +1,19 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ShowCtrl', function ($scope, $rootScope, $location, $current) {
-    $scope.show = $current.show;
+  .controller('ShowCtrl', function ($rootScope, $location, $current) {
+    this.show = $current.show;
 
-    if (!$scope.show) {
+    if (!this.show) {
       $location.path('/schedule');
       return;
     }
 
     $rootScope.hideCover = true;
 
-    if (!$scope.show.coverPicture || !$scope.show.coverPicture.url) {
-       $scope.show.coverPicture = {};
-       $scope.show.coverPicture.url = 'images/bg.jpg';
+    if (!this.show.coverPicture || this.show.coverPicture.url) {
+       this.show.coverPicture = {};
+       this.show.coverPicture.url = 'images/bg.jpg';
     }
 
   });

@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ContactCtrl', function ($scope, $rootScope, $page, $email, $sce) {
-    $rootScope.title = 'Contactanos';
-    $scope.isSending = false;
-    $scope.email = {};
+  .controller('ContactCtrl', function ($rootScope, $page, $email, $sce) {
+    var _this = this;
 
-    $scope.map = { 
+    $rootScope.title = 'Contactanos';
+    this.isSending = false;
+    this.email = {};
+
+    this.map = { 
       center: { latitude: -34.5776996, longitude: -58.46083050000004 }, 
       zoom: 16,
       options: {
@@ -20,33 +22,33 @@ angular.module('rac')
       }
     };
 
-    $scope.marker = {
+    this.marker = {
       key: 'rac',
       location: { latitude: -34.5776996, longitude: -58.46083050000004 }, 
     };
 
     $page.get({name: 'contact'}, function(page) {
-      $scope.content = $sce.trustAsHtml(page.content);
+      _this.content = $sce.trustAsHtml(page.content);
       $rootScope.title = page.title;
       $rootScope.subTitle = page.subTitle;
     });
 
-    $scope.sendEmail = function() {
-      if ($scope.emailForm.$valid && $scope.email.captcha === 5) {
-        $scope.isSending = true;
+    this.sendEmail = function() {
+      if (this.emailForm.$valid && this.email.captcha === 5) {
+        _this.isSending = true;
         $email.save({
-          from: $scope.email.from,
-          message: $scope.email.message,
-          name: $scope.email.name
+          from: _this.email.from,
+          message: _this.email.message,
+          name: _this.email.name
         }, function() {
-          $scope.isSending = false;
+          _this.isSending = false;
 
-          $scope.alert = {
-            message: $scope.email.name + ', gracias por escribirnos, nos pondremos en contacto a la brevedad.' ,
+          _this.alert = {
+            message: _this.email.name + ', gracias por escribirnos, nos pondremos en contacto a la brevedad.' ,
             type: 'success'
           };
 
-          $scope.email = {};
+          _this.email = {};
         });
       }
     };

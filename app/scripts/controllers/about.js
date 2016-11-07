@@ -1,20 +1,21 @@
 'use strict';
 
 angular.module('rac')
-  .controller('AboutCtrl', function ($scope, $rootScope, $sce, $page, $gallery) {
+  .controller('AboutCtrl', function ($rootScope, $sce, $page, $gallery) {
+    var _this = this;
     $rootScope.title = 'Nosotros';
 
     $page.get({name: 'about'}, function(page) {
-      $scope.content = $sce.trustAsHtml(page.content);
+      _this.content = $sce.trustAsHtml(page.content);
       $rootScope.title = page.title;
       $rootScope.subTitle = page.subTitle;
     });
 
     $gallery.get({name: 'workspace'}, function(gallery) {
-      $scope.workspace = gallery;
+      _this.workspace = gallery;
     });
 
     $gallery.get({name: 'clients'}, function(gallery) {
-      $scope.clients = gallery;
+      _this.clients = gallery;
     });
   });

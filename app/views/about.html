@@ -2,13 +2,13 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 text-center" ng-bind-html="content"> 
+      <div class="col-xs-12 text-center" ng-bind-html="about.content"> 
       </div>
     </div>
   </div>
 </section>
 
-<section class="section swatch-green-white" ng-show="workspace && workspace.length">
+<section class="section swatch-green-white" ng-show="about.workspace && about.workspace.length">
   
   <div class="container">
     <header class="section-header underline">
@@ -29,7 +29,7 @@
   </div>
 </section>
 
-<section class="section swatch-white-green" ng-show="clients && clients.length">
+<section class="section swatch-white-green" ng-show="about.clients && about.clients.length">
   <div class="container">
     <header class="section-header underline">
       <h1 class="headline super hairline">Confian en Nosotros</h1>

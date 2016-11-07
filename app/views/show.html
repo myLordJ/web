@@ -1,17 +1,17 @@
 <section class="section swatch-green-white">
- <div class="background-media" style="background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 0px" ng-style="{'background-image': 'url(' + show.coverPicture.url + ')'}"
+ <div class="background-media" style="background-repeat: ; background-size: ; background-attachment: ; background-position: ; background-size: cover;" data-start="background-position: 50% 0px" ng-style="{'background-image': 'url(' + show.show.coverPicture.url + ')'}"
  data-top-bottom="background-position: 50% -200px">
 </div>
 <div class="background-overlay" style="background-color:rgba(87, 180, 160, 0.7)"></div>
 <div class="container">
   <header class="section-header underline">
-    <img ng-src="{{ show.profilePicture.url }}" alt="radio-a-la-calle" style="width: 200px; border: 2px #fff solid" class="img-circle">
+    <img ng-src="{{ show.show.profilePicture.url }}" alt="radio-a-la-calle" style="width: 200px; border: 2px #fff solid" class="img-circle">
     <br>
     <h1 class="headline super hairline">
-      {{ show.title }}
+      {{ show.show.title }}
       <br>
       <small>
-        {{show | showDays}}
+        {{show.show | showDays}}
       </small>
     </h1>
   </header>
@@ -24,24 +24,24 @@
    <div class="row">
      <div class="col-xs-12 text-center">
        <ul class="unstyled inline small-screen-center social-icons social-background social-simple">
-         <li ng-show="show.facebook">
-          <a target="_blank" href="{{show.facebook}}" style="font-size: 40px">
+         <li ng-show="show.show.facebook">
+          <a target="_blank" href="{{show.show.facebook}}" style="font-size: 40px">
             <i class="fa fa-facebook"></i>
           </a>
         </li>
-        <li ng-show="show.twitter">
-          <a target="_blank" href="{{show.twitter}}" style="font-size: 40px">
+        <li ng-show="show.show.twitter">
+          <a target="_blank" href="{{show.show.twitter}}" style="font-size: 40px">
             <i class="fa fa-twitter"></i>
           </a>
         </li>
-        <li ng-show="show.instagram">
-          <a target="_blank" href="{{show.facebook}}" style="font-size: 40px">
+        <li ng-show="show.show.instagram">
+          <a target="_blank" href="{{show.show.facebook}}" style="font-size: 40px">
             <i class="fa fa-instagram"></i>
           </a>
         </li>
       </ul>
       <p>
-        <b>{{ show.bio }}</b>
+        <b>{{ show.show.bio }}</b>
       </p>
     </div>
   </div>
@@ -57,7 +57,11 @@
       </div>
     </div>
   </div> -->
-  
 </div>
 </div> 
 </section>
+
+
+
+
+

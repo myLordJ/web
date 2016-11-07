@@ -5,7 +5,7 @@ angular.module('rac.directives')
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
-      scope.$watch('loadedImages', function() {
+      scope.$watch('schedule.loadedImages', function() {
 
         attrs.isotope = attrs.isotope === 'true';
         if (!attrs.isotope) {

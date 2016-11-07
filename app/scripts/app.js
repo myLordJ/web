@@ -20,11 +20,13 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        controllerAs:'home'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .when('/live', {
         templateUrl: 'views/live.html',
@@ -32,23 +34,28 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
       })
       .when('/schedule', {
         templateUrl: 'views/schedule.html',
-        controller: 'ScheduleCtrl'
+        controller: 'ScheduleCtrl',
+        controllerAs: 'schedule'
       })
       .when('/blog', {
         templateUrl: 'views/blog.html',
-        controller: 'BlogCtrl'
+        controller: 'BlogCtrl',
+        controllerAs: 'blog'
       })
       .when('/blog/:title', {
         templateUrl: 'views/post.html',
-        controller: 'PostCtrl'
+        controller: 'PostCtrl',
+        controllerAs: 'post'
       })
       .when('/show/:title', {
         templateUrl: 'views/show.html',
-        controller: 'ShowCtrl'
+        controller: 'ShowCtrl',
+        controllerAs: 'show'
       })
       .otherwise({
         redirectTo: '/'
