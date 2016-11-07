@@ -34,7 +34,8 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
       })
       .when('/schedule', {
         templateUrl: 'views/schedule.html',
