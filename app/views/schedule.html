@@ -29,19 +29,19 @@
         <a class="pseudo-border pointer" data-filter=".filter-sunday">Domingo</a>
       </li>
     </ul>
-    <div isotope="{{loadedImages}}" class="isotope portfolio no-transition portfolio-round portfolio-shadows row">
-      <div ng-class="{'filter-monday': show.monday, 'filter-tuesday': show.tuesday, 'filter-wednesday': show.wednesday, 'filter-thursday': show.thursday, 'filter-friday': show.friday, 'filter-saturday': show.saturday, 'filter-sunday': show.sunday}" class="portfolio-item infinite-item col-md-4 col-sm-4" ng-repeat="show in shows | orderByTime">
+    <div isotope="{{schedule.loadedImages}}" class="isotope portfolio no-transition portfolio-round portfolio-shadows row">
+      <div ng-class="{'filter-monday': show.monday, 'filter-tuesday': show.tuesday, 'filter-wednesday': show.wednesday, 'filter-thursday': show.thursday, 'filter-friday': show.friday, 'filter-saturday': show.saturday, 'filter-sunday': show.sunday}" class="portfolio-item infinite-item col-md-4 col-sm-4" ng-repeat="show in schedule.shows | orderByTime">
         <figure class="portfolio-figure">
           <a href="portfolio-item-big.html">
             <img width="600" height="518" ng-src="{{show.profilePicture.url}}" class="img-responsive" alt="{{show.name}}">
           </a>
           <figcaption>
             <h4>
-              <a class="pointer" ng-click="goToShow(show)">
+              <a class="pointer" ng-click="schedule.goToShow(show)">
                 {{show.title}}
               </a>
             </h4>
-            <a class="link" ng-click="goToShow(show)"><i class="fa fa-link"></i></a>
+            <a class="link" ng-click="schedule.goToShow(show)"><i class="fa fa-link"></i></a>
             <p>{{show | showDays}}</p>
             <p>{{show.bio | ellipsis}}</p>
           </figcaption>

@@ -1,15 +1,17 @@
 'use strict';
 
 angular.module('rac')
-  .controller('ScheduleCtrl', function ($scope, $rootScope, $mixcloud, $page, $show, $current, $location) {
-    $scope.calendarView = 'month';
-    $scope.currentDay = new Date();
-    $scope.title = 'Programación';
-    $scope.subTitle = '';
+  .controller('ScheduleCtrl', function ($rootScope, $mixcloud, $page, $show, $current, $location) {
+    var _this = this;
 
-    $scope.shows = [];
+    this.calendarView = 'month';
+    this.currentDay = new Date();
+    this.title = 'Programación';
+    this.subTitle = '';
 
-    $scope.goToShow = function(show) {
+    this.shows = [];
+
+    this.goToShow = function(show) {
       $current.show = show;
       $location.path('/show/' + $current.show.title);
     };
@@ -20,8 +22,8 @@ angular.module('rac')
     });
 
     $show.get({}, function(shows) {
-        $scope.shows = shows;
-        $scope.loadedImages = true;
+        _this.shows = shows;
+        _this.loadedImages = true;
     });
 
   });

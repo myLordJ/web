@@ -38,7 +38,8 @@ angular
       })
       .when('/schedule', {
         templateUrl: 'views/schedule.html',
-        controller: 'ScheduleCtrl'
+        controller: 'ScheduleCtrl',
+        controllerAs: 'schedule'
       })
       .when('/blog', {
         templateUrl: 'views/blog.html',
