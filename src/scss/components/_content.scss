@@ -1,0 +1,22 @@
+.content {
+  height: 100%;
+  margin: 10px auto 0;
+  max-width: 1280px;
+  padding: 0 40px;
+  position: relative;
+  transition: all .2s linear;
+  width: 100%;
+  z-index: z("content");
+
+  @include media(tablet) {
+    padding: 0 15px;
+  }
+
+  &__section {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+}

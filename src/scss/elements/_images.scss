@@ -1,0 +1,9 @@
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+
+  @include media(tablet) {
+    width: 100%;
+  }
+}

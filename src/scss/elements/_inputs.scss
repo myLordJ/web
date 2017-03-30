@@ -1,0 +1,51 @@
+#{$all-inputs},
+textarea {
+  border-color: $nobel;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0 0 15px;
+  padding: 7px 13px;
+  transition: all .2s linear;
+
+  &:hover {
+    border-color: darken($matterhorn, 30);
+  }
+
+  &:focus {
+    border-color: $matterhorn;
+    color: $matterhorn;
+    outline: 0;
+  }
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    border-color: $nobel;
+    color: $nobel;
+    cursor: not-allowed;
+  }
+}
+
+#{$all-inputs} {
+  height: 33px;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  cursor: pointer;
+  display: inline;
+  margin-right: 5px;
+}
+
+[type="range"] {
+  border-radius: 25px;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}

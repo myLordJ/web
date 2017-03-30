@@ -1,0 +1,26 @@
+.headline {
+
+  &__holder {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 85px;
+    width: 100%;
+  }
+
+  &__title {
+    text-transform: lowercase;
+  }
+
+  &__button {
+    color: $white;
+    height: 28px;
+    padding: 4px;
+    width: 28px;
+  }
+
+  &__link {
+    color: $matterhorn;
+    font-size: 15px;
+  }
+}

@@ -1,7 +1,0 @@
-.modifim {
-	text-transform: uppercase;
-}
-
-li.modifim ::after {
-	content: ' | ' ;
-}

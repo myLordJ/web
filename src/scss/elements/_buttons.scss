@@ -1,0 +1,48 @@
+button,
+[type="submit"] {
+  appearance: none;
+  background: $downy;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  height: 33px;
+  margin: 15px 5px;
+  padding: 7px 8px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s linear;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 150px;
+
+  &,
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $black;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: lighten($downy, 5%);
+  }
+
+  &:focus,
+  &:visited {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    background: darken($downy, 10);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .8;
+  }
+}

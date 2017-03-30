@@ -1,0 +1,157 @@
+.header {
+  position: relative;
+  transition: all .2s linear;
+  z-index: z("header", "root");
+
+  &.is-fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: z("header", "fixed");
+
+    .header__holder,
+    .header__ads {
+      transform: translateY(-200%);
+    }
+
+    .header__alt {
+      transform: translateY(0);
+    }
+  }
+
+  &,
+  &__holder {
+    width: 100%;
+  }
+
+  &__holder {
+    box-shadow: 0 2px 10px 0px rgba($black, .2);
+  }
+
+  &__holder,
+  &__ads,
+  &__alt {
+    transition: all .75s cubic-bezier(.75, .25, .25, .75);
+  }
+
+  &__holder,
+  &__ads,
+  &__live,
+  &__player,
+  &__middle {
+    align-items: center;
+    display: flex;
+  }
+
+  &__ads {
+    justify-content: center;
+    padding: 5px;
+  }
+
+  &__block {
+    flex-direction: column;
+    flex-grow: 1;
+    height: 165px;
+    overflow: hidden;
+
+    &:last-child {
+      @include media(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__middle,
+  &__live {
+    height: 40px;
+    overflow: hidden;
+  }
+
+  &__banner,
+  &__live {
+    align-items: center;
+    background-color: $green;
+  }
+
+  &__banner,
+  &__social {
+    display: flex;
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+
+  &__banner,
+  &__bottom {
+    justify-content: flex-end;
+
+    @include media(tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__middle,
+  &__social,
+  &__links {
+    justify-content: space-between;
+  }
+
+  &__social,
+  &__player {
+    background-color: $downy;
+  }
+
+  &__player,
+  &__bottom {
+    box-shadow: 2px 0 10px 0px rgba($black, .2);
+    position: relative;
+  }
+  &__bottom {
+    background-color: $white;
+    display: flex;
+    height: 129px;
+  }
+
+  &__live {
+    padding-left: 15px;
+  }
+
+  &__links {
+    display: flex;
+    padding: 25px 25px 25px 0px;
+  }
+
+  &__menu {
+    padding-left: 60px;
+  }
+
+  &__status {
+    text-transform: uppercase;
+    padding: 0 20px 0 10px;
+  }
+
+  &__menu,
+  &__social {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+
+  &__alt {
+    background-color: $downy;
+    position: absolute;
+    transform: translateY(-150%);
+    top: 0;
+    width: 100%;
+  }
+
+  &__highlight {
+
+    &--alt {
+      padding-bottom: 10px;
+
+      strong {
+        padding-right: 10px;
+      }
+    }
+  }
+}

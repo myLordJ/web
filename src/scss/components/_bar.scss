@@ -1,0 +1,52 @@
+.bar {
+  background-color: $downy;
+  height: 55px;
+  margin-top: 20px;
+  justify-content: space-between;
+
+
+  @include media(mobile) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__highlight,
+  &__icon {
+    align-items: center;
+    display: flex;
+  }
+
+  &__highlight {
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0 15px;
+
+    > * {
+      margin: 0 5px;
+    }
+  }
+
+  &__icon {
+    color: $white;
+    justify-content: center;
+    text-align: center;
+    width: 80px;
+
+    @include media(mobile) {
+      width: 100%;
+    }
+
+    &--yellow {
+      background-color: $yellow;
+    }
+    &--black {
+      background-color: $black;
+    }
+    &--green {
+      background-color: $saturate-green;
+    }
+    &--turquoise {
+      background-color: $turquoise;
+    }
+  }
+}

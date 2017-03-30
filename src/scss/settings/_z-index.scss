@@ -1,0 +1,24 @@
+// From higher to lower
+$z-layers: (
+  "footer": (
+    "button":        9999988,
+    "root":          9999987
+  ),
+  "content":         9999986,
+  "header": (
+    "fixed":         9999989,
+    "root":          9999985
+  ),
+  "carousel": (
+    "before":        1003,
+    "text":          1002,
+    "button":        1001,
+    "shadow":        1000,
+    "after":         999
+  ),
+  "box": (
+    "button":        3,
+    "headline":      2,
+    "root":          1
+  )
+);

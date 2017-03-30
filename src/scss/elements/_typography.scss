@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+#{$headings} {
+  color: $nobel;
+  font-family: $main-font;
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $whisper;
+  color: $white;
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+label {
+  color: $black;
+  display: block;
+  font-weight: bold;
+  margin: 0 0 8px 13px;
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: $green;
+  cursor: pointer;
+  transition: all .2s linear;
+
+  &,
+  &:hover,
+  &:visited,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: darken($hbacked, 5);
+  }
+
+  &:active {
+    color: darken($hbacked, 15);
+  }
+
+  &:hover {
+    color: lighten($hbacked, 7.5);
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $nobel;
+  box-sizing: content-box;
+  margin: 20px 0 25px;
+}

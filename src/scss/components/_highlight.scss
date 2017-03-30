@@ -1,0 +1,63 @@
+
+.highlight {
+  margin: 0;
+
+  &--red {
+    background-color: $red;
+    padding: 5px 15px;
+  }
+
+  &--green {
+    background-color: $green;
+    margin-right: 10px;
+    padding: 0 10px;
+  }
+
+  &--yellow {
+    background-color: $yellow;
+    padding: 0 5px;
+  }
+
+  &--light {
+    background-color: $white;
+    color: $matterhorn;
+    padding: 2px 5px;
+  }
+
+  &--small {
+    display: block;
+    width: 130px;
+  }
+
+  &--tiny {
+    display: block;
+    width: 80px;
+  }
+
+  &--medium {
+    display: block;
+    width: 170px;
+  }
+
+  &,
+  &__text {
+    color: $white;
+  }
+
+  &--featured {
+    padding: 5px 10px;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+
+    &--bordered {
+      border-bottom: 3px solid $green;
+      padding: 3px 10px;
+    }
+  }
+}

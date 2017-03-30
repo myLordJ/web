@@ -1,23 +1,27 @@
-# Radio a la Calle Web App
+# rac-web-app
 
-## Possible Designs
-* [Learning](http://themekit.aws.ipv4.ro/dist/themes/learning/index.html)
+> RAC Web App built with Vue.js
 
-* [Angle](http://demo.oxygenna.com/angle-html)
+## Build Setup
 
-* [Rocco Flat](http://themeforest.net/item/rocco-flat-html-template/full_screen_preview/11789603)
+``` bash
+# install dependencies
+npm install
 
-* [Coloristic](http://themeforest.net/item/coloristic-flat-onepage-responsive-template/full_screen_preview/6821097)
+# serve with hot reload at localhost:8080
+npm run dev
 
-http://appestia-angular.phoenixcoded.com/creative/index.html
-http://theemon.com/c/chronicle/LivePreview/
-http://learning.aws.ipv4.ro/angular/index.html#
-http://www.bdinfosys.com/demo/materialx/
+# build for production with minification
+npm run build
 
-## Build & development
+# run unit tests
+npm run unit
 
-Run `grunt` for building and `grunt serve` for preview.
+# run e2e tests
+npm run e2e
 
-## Testing
+# run all tests
+npm test
+```
 
-Running `grunt test` will run the unit tests with karma.
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

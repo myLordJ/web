@@ -1,0 +1,25 @@
+@mixin range-track {
+  animate: .2s;
+  background-color: transparent;
+  border: 0px solid $black;
+  border-radius: 25px;
+  cursor: pointer;
+  height: 8px;
+  width: 100%;
+}
+
+@mixin range-thumb {
+  background: $downy;
+  border: 5px solid $white;
+  border-radius: 50%;
+  box-shadow: 2px 0 10px 0px rgba($black, .2);
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+}
+
+@mixin range-ie-fix {
+  background: $hbacked;
+  border: 0px solid $black;
+  border-radius: 50%;
+}

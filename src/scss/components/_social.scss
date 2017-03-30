@@ -1,0 +1,31 @@
+.social {
+
+  &__follow {
+
+    &--alt {
+      padding-left: 30px;
+    }
+  }
+
+  &__contact {
+    align-items: center;
+    display: flex;
+  }
+
+  &__text {
+    padding: 0 7.5px 0 5px;
+  }
+
+  &__link {
+    padding: 0 7.5px;
+
+    &,
+    &:hover {
+      color: $white;
+    }
+
+    &:hover {
+      transform: translateX(-2px);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<template lang='pug'>
+  .bar.box__cell.is-unguttered
+    .bar__icon.bar__icon--green
+      .icon.fa.fa-whatsapp.fa-3x
+    h6.bar__highlight.highlight
+      strong Nos queres contar algo?
+      strong.highlight--green +54 9 11 6194 3691
+</template>
+
+<script>
+  export default {
+    name: 'BannerWs'
+  }
+</script>

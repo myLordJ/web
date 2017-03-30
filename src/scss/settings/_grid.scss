@@ -1,0 +1,22 @@
+// Breakpoints
+$breakpoints: (
+  mobile: 480px,
+  mobile-up: 481px,
+  tablet: 767px,
+  tablet-up: 768px,
+  web: 989px,
+  web-up: 990px
+);
+
+// All Directions
+$box-directions: column, column-reverse, row, row-reverse;
+
+// All sizes
+$box-sizes-values: (
+  full 100%,
+  three-quarters 75%,
+  two-thirds 66.6666%,
+  half 50%,
+  one-third 33.3333%,
+  one-quarter 25%
+);

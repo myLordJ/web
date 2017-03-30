@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+
+  * {
+    transition: all .2s linear;
+  }
+}
+
+tr,
+td,
+th {
+  color: $matterhorn;
+  vertical-align: middle;
+}
+
+td,
+th {
+  padding: 15px 10px;
+  text-align: left;
+
+  &:first-child {
+    padding-left: 20px;
+  }
+
+  &:last-child {
+    padding-right: 20px;
+  }
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}

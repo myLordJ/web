@@ -1,0 +1,21 @@
+.is-hidden {
+  display: none !important;
+}
+
+.is-shown {
+  display: block !important;
+}
+
+.is-invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.is-unguttered {
+  padding: 0 !important;
+}

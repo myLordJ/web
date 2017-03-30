@@ -1,0 +1,23 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+
+  &__link {
+    color: $nobel;
+    padding: 0 5px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $downy;
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child)::after {
+      content: "|";
+      color: $downy;
+    }
+  }
+}

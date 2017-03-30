@@ -1,0 +1,28 @@
+.icon {
+  fill: $matterhorn;
+  vertical-align: middle;
+
+  @each $name, $color in $icon-colors {
+
+    &--#{$name} {
+      color: $color;
+    }
+  }
+
+  @each $size, $value in $icon-sizes {
+
+    &--#{$size} {
+      height: $value + px;
+      width: $value + px;
+    }
+  }
+
+  .button & {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

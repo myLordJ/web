@@ -1,0 +1,52 @@
+// Variables - colors, fonts, breakpoints...
+@import 'settings/settings';
+
+// Mixins, Functions...
+@import 'tools/tools';
+
+// Defaults - Normalize, Reset...
+@import 'generic/generic';
+
+// unclassed HTML Tags - h1, button, form...
+@import 'elements/elements';
+
+// Elements with classes - .button, .icon...
+@import 'objects/objects';
+
+// Pieces of UI - Header, Footer, Box...
+@import 'components/components';
+
+// Overrides - !important
+@import 'helpers/helpers';
+
+.is-visible {
+  opacity: 1;
+}
+
+.is-invisible {
+  opacity: 0;
+}
+
+img {
+  animation: fadeIn;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carousel__holder.box.box--row {
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
