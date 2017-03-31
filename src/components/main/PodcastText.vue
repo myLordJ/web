@@ -24,7 +24,7 @@
                   span(v-show="podcast.show && podcast.show.name && podcast.publishedDate") &nbsp; | &nbsp;
                   span {{ podcast.publishedDate | date("DD.MM.YYYY") }}
               .is-unguttered(style="margin-top: 15px")
-                h5.box__text.box__text--featured(style="font-weight: bold") {{ podcast.description }}
+                p.box__text.box__text--featured(style="font-weight: bold") {{ podcast.description }}
               .is-unguttered
                 p.box__text.box__text--featured(v-html="podcast.content")
 
@@ -113,9 +113,13 @@
 </script>
 
 <style lang="scss">
+  .box__image--featured {
+    width: 350px;
+  }
+
   .box__image__podcast {
     img {
-      width: 330px;
+      width: 350px;
       height: 350px;
     }
   }

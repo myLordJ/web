@@ -31,7 +31,7 @@
                       | &nbsp;&nbsp;
                     span {{ podcast.publishedDate | date("DD.MM.YYYY") }}
               .box__cell.is-unguttered
-                p.box__text.box__text--featured(style="font-weight: bold; font-size: 1.3em; margin-top: 0") {{ podcast.brief }}
+                p.box__text.box__text--featured(style="font-weight: bold; margin-top: 0") {{ podcast.brief }}
               .player--featured(v-if="podcast.contentType === 'mixcloud'")
                 iframe(width='100%', height='120', :src='`https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fradioalacalle%2F${podcast.mixcloudId}%2F&hide_cover=1`', frameborder='0')
 
@@ -119,9 +119,13 @@
 </script>
 
 <style lang="scss">
+  .box__image--featured {
+    width: 350px;
+  }
+
   .box__image__podcast {
     img {
-      width: 330px;
+      width: 350px;
       height: 350px;
     }
   }
