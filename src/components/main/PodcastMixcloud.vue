@@ -31,7 +31,7 @@
                       | &nbsp;&nbsp;
                     span {{ podcast.publishedDate | date("DD.MM.YYYY") }}
               .box__cell.is-unguttered
-                p.box__text.box__text--featured(style="font-weight: bold; margin-top: 0") {{ podcast.brief }}
+                p.box__text.box__text--featured(style="font-weight: bold; margin-top: 0") {{ podcast.description }}
               .player--featured(v-if="podcast.contentType === 'mixcloud'")
                 iframe(width='100%', height='120', :src='`https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fradioalacalle%2F${podcast.mixcloudId}%2F&hide_cover=1`', frameborder='0')
 
