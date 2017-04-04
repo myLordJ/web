@@ -130,6 +130,7 @@
 
     mounted() {
       radioPlayer = document.getElementById('radioPlayer')
+      this.isPlaying = !radioPlayer.paused
     },
 
     watch: {
