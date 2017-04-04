@@ -50,3 +50,27 @@ h1 {
     max-height: 200px;
   }
 }
+
+.hide {
+  display: none;
+}
+
+@include media(mobile) {
+  .show--mobile {
+    display: flex !important;
+  }
+
+  .hide--mobile {
+    display: none !important;
+  }
+}
+
+@include media(tablet) {
+  .show--mobile {
+    display: flex !important;
+  }
+
+  .hide--mobile {
+    display: none !important;
+  }
+}
