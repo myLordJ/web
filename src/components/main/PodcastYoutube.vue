@@ -8,10 +8,11 @@
           .sharethis-inline-share-buttons.box__button.box__button--featured
           //- button.box__button.box__button--featured.button.button--rounded
           //-   .fa.fa-share-alt
-          .box__headline.box__headline--bottom-left.box__headline--featured
+          //- .box__headline.box__headline--bottom-left.box__headline--featured
             h6.highlight__title
-          .box__image.box__image--featured.box__cell.box__cell--one-quarter.is-unguttered.box__image__podcast
-            img(:src="podcast.image1 ? podcast.image1.url : ''" alt="vivo")
+          .box__image.box__image--featured.box__cell.box__cell--one-half.is-unguttered.box__image__podcast
+            iframe(width="625" height="352", :src="`https://www.youtube.com/embed/${podcast.youtubeId}?rel=0&amp;showinfo=0`" frameborder="0")
+            //- img(:src="podcast.image1 ? podcast.image1.url : ''" alt="vivo")
           .box__cell
             .box.box--column
               .is-unguttered
