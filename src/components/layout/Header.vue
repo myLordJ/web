@@ -112,7 +112,7 @@
     data() {
       return {
         currentShow: { profile: {} },
-        isPlaying: true,
+        isPlaying: false,
         volume: 50,
 
         logo,
@@ -131,6 +131,8 @@
     mounted() {
       radioPlayer = document.getElementById('radioPlayer')
       this.isPlaying = !radioPlayer.paused
+
+      radioPlayer.addEventListener('playing', () => { this.isPlaying = true })
     },
 
     watch: {
