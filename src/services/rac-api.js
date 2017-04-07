@@ -7,7 +7,7 @@ class API extends EventEmitter {
     super()
 
     trae.defaults({
-      baseUrl: 'https://dashboard.radioalacalle.com/api'
+      baseUrl: 'https://rac-dashboard2.herokuapp.com/api'
     })
 
     trae.before((config) => {
