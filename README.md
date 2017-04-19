@@ -1,6 +1,6 @@
 # rac-web-app
 
-> RAC Web App built with Vue.js
+> 📻🐦 RAC Web App built with Vue.js
 
 ## Build Setup
 

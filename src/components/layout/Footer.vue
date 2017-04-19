@@ -24,7 +24,7 @@
         li.footer__contact
           .icon.icon--large.fa.fa-whatsapp.fa-3x
           p.footer__text
-            a(href="tel:+54 9 11 6194 3691", target="_blank") +54 9 11 6194 3691
+            a(href="tel:+54 9 11 2825 2375", target="_blank") +54 9 11 2825 2375
         li.footer__contact
           .icon.icon--large.fa.fa-envelope-o.fa-3x
           p.footer__text
