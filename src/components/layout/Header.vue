@@ -17,8 +17,8 @@
           .header__social.social
             .social__contact
               .icon.fa.fa-whatsapp.fa-2x
-              p.social__text
-                a(href="tel:+54 9 11 6194 3691") +54 9 11 6194 3691
+              p.social__text15
+                a(href="tel:+54 9 11 2825 2375") +54 9 11 2825 2375
 
             .social__follow.navbar
               .social__text Seguinos en
