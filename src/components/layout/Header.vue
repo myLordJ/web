@@ -8,7 +8,7 @@
           .header__banner.banner
             .icon.fa.fa-mobile-phone.fa-2x.hide--mobile
             p.banner__text
-              a.hide--mobile(href="https://play.google.com/store/apps/details?id=com.clapps.radioalacalle&hl=en", target="_blank") Bájate la App de la Radio
+              a.hide--mobile(href="https://play.google.com/store/apps/details?id=com.solumedia.alacalle", target="_blank") Bájate la App de la Radio
             a.hide.show--mobile(@click.prevent="toggle", style="color: #fff; font-size: 2em;")
               .fa.fa-play(v-show="!isPlaying")
               .fa.fa-pause(v-show="isPlaying")
