@@ -48,10 +48,9 @@
         .footer__copyright
           small.footer__text Radio A La Calle © {{ new Date().getFullYear() }}
            br
+           | ＜＞ with ❤️
            | by&nbsp;
            a(href="https://keepe.rs") Keepers
-           | &nbsp;❤️
-
 </template>
 
 <script>
