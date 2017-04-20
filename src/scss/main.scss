@@ -74,3 +74,20 @@ h1 {
     display: none !important;
   }
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+
+.move-enter-active, .move-leave-active {
+  transform: translateX(0);
+  transition: all .3s linear;
+}
+
+.move-enter,
+.move-leave-to {
+  transform: translateX(100%);
+}

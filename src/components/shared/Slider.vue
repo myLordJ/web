@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
   .carousel
     button.carousel__button.carousel__button--prev.button.button--light.button--rounded(
       v-if="isFull",
@@ -12,12 +12,16 @@
       .icon.fa.fa-angle-right.fa-3x
 
     .carousel__holder.box.box--row(:style="{ width: !isFull ? (items.length * 100) / pageSize + '%' : '100%' }")
-      router-link.carousel__block.box__cell.is-unguttered(
-        v-for="c in currents",
-        :to="{ name: c.router, params: { id: c.id }}"
-      )
-        img(:src="c.image && c.image.url")
-        h6.carousel__text {{ c.caption }}
+        span(
+          v-for="(c, i) in items",
+          v-show="i >= from && i < to"
+        )
+          router-link.carousel__block.box__cell.is-unguttered(
+            :to="{ name: c.router, params: { id: c.id }}"
+          )
+            transition(name="move")
+              img(:src="c.image && c.image.url", v-show="i >= from && i < to")
+            h6.carousel__text {{ c.caption }}
 </template>
 
 <script>
@@ -41,7 +45,6 @@
 
     data() {
       return {
-        currents: [],
         from: 0,
         to: 0
       }
@@ -67,7 +70,6 @@
       loadCurrents() {
         if (this.items) {
           this.to = parseInt(this.pageSize)
-          this.currents = this.items.slice(this.from, this.to)
         }
       },
 
@@ -76,7 +78,6 @@
 
         this.from += this.moveSize
         this.to += this.moveSize
-        this.currents = this.items.slice(this.from, this.to)
       },
 
       prevPage() {
@@ -84,7 +85,6 @@
 
         this.from -= this.moveSize
         this.to -= this.moveSize
-        this.currents = this.items.slice(this.from, this.to)
       }
     }
   }

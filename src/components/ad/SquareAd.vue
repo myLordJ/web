@@ -19,8 +19,9 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .square-ad {
     height: 240px;
+    width: 270px;
   }
 </style>
