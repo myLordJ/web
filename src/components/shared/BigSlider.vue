@@ -1,13 +1,19 @@
 <template lang="pug">
   .box__cell.is-unguttered(style="margin-bottom: -5px")
-    a(v-for="c in currents", :href="c.linkUrl", target="_blank")
-      img.slider-ad(
-        :src="c.image.url",
-        :alt="c.name",
-        :title="c.name"
-      )
-    button.box__button.button.button--light.button--rounded(@click.prevent="nextPage", v-show="items && items.length")
-      .icon.fa.fa-angle-right.fa-3x
+    span(
+      v-for="(c, i) in items",
+      v-show="i >= from && i < to"
+    )
+      a(:href="c.linkUrl", target="_blank")
+        transition(name="fade")
+          img.slider-ad(
+            :src="c.image.url",
+            :alt="c.name",
+            :title="c.name",
+            v-show="i >= from && i < to"
+          )
+      button.box__button.button.button--light.button--rounded(@click.prevent="nextPage", v-show="items && items.length")
+        .icon.fa.fa-angle-right.fa-3x
 </template>
 
 <script>
@@ -36,7 +42,6 @@
 
     data() {
       return {
-        currents: [],
         from: 0,
         to: 0
       }
@@ -69,7 +74,6 @@
       loadCurrents() {
         if (this.items) {
           this.to = parseInt(this.pageSize)
-          this.currents = this.items.slice(this.from, this.to)
         }
       },
 
@@ -85,8 +89,6 @@
 
           this.clearSliderInterval()
           this.setSliderInterval()
-
-          this.currents = this.items.slice(this.from, this.to)
         }
       }
     }

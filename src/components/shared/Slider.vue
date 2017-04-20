@@ -19,7 +19,7 @@
           router-link.carousel__block.box__cell.is-unguttered(
             :to="{ name: c.router, params: { id: c.id }}"
           )
-            transition(name="fade")
+            transition(name="move")
               img(:src="c.image && c.image.url", v-show="i >= from && i < to")
             h6.carousel__text {{ c.caption }}
 </template>
