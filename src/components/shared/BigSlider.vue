@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template lang="pug">
   .box__cell.is-unguttered(style="margin-bottom: -5px")
     a(v-for="c in currents", :href="c.linkUrl", target="_blank")
       img.slider-ad(
