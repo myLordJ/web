@@ -7,7 +7,7 @@ class API extends EventEmitter {
     super()
 
     trae.defaults({
-      baseUrl: 'https://dashboard.radioalacalle.com/api'
+      baseUrl: 'http://dashboard.radioalacalle.com/api'
     })
 
     trae.before((config) => {
