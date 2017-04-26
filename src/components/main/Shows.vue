@@ -1,5 +1,5 @@
 <template lang="pug">
-  main.content
+  main.content(v-show="true")
     section.content__section.box.box--column(v-show='monday.length')
       .headline__holder(style="margin-top: 20px")
         h2 Lunes

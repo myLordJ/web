@@ -2,7 +2,8 @@
   main
     loader(v-show='showLoader')
     rac-header
-    router-view
+    transition(name="moveup")
+      router-view
     rac-footer
 </template>
 
