@@ -1,5 +1,5 @@
 <template lang="pug">
-  main.content
+  main.content(v-show="true")
     section.content__section.box
 
       .box__cell.box__cell--white.has-shadow

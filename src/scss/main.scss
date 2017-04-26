@@ -91,3 +91,13 @@ h1 {
 .move-leave-to {
   transform: translateX(100%);
 }
+
+.moveup-enter-active, .moveup-leave-active {
+  transform: translateY(0);
+  transition: all .5s linear;
+}
+
+.moveup-enter,
+.moveup-leave-to {
+  transform: translateY(100%);
+}
