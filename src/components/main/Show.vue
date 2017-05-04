@@ -109,45 +109,48 @@ export default {
     },
 
     getDateTime() {
-      let day, start, end
+      let days = []
+      let start, end
+
       if (this.show.monday) {
-        day = 'Lunes'
+        days.push('Lunes')
         start = this.show.mondayStartTime <= 9 ? '0' + this.show.mondayStartTime : this.show.mondayStartTime
         end = this.show.mondayEndTime <= 9 ? '0' + this.show.mondayEndTime : this.show.mondayEndTime
       }
       if (this.show.tuesday) {
-        day = 'Martes'
+        days.push('Martes')
         start = this.show.tuesdayStartTime <= 9 ? '0' + this.show.tuesdayStartTime : this.show.tuesdayStartTime
         end = this.show.tuesdayEndTime <= 9 ? '0' + this.show.tuesdayEndTime : this.show.tuesdayEndTime
       }
       if (this.show.wednesday) {
-        day = 'Miércoles'
+        days.push('Miércoles')
         start = this.show.wednesdayStartTime <= 9 ? '0' + this.show.wednesdayStartTime : this.show.wednesdayStartTime
         end = this.show.wednesdayEndTime <= 9 ? '0' + this.show.wednesdayEndTime : this.show.wednesdayEndTime
       }
       if (this.show.thursday) {
-        day = 'Jueves'
-        console.log(this.show.thursdayStartTime, this.show.thursdayEndTime)
+        days.push('Jueves')
         start = this.show.thursdayStartTime <= 9 ? '0' + this.show.thursdayStartTime : this.show.thursdayStartTime
         end = this.show.thursdayEndTime <= 9 ? '0' + this.show.thursdayEndTime : this.show.thursdayEndTime
       }
       if (this.show.friday) {
-        day = 'Viernes'
+        days.push('Viernes')
         start = this.show.fridayStartTime <= 9 ? '0' + this.show.fridayStartTime : this.show.fridayStartTime
         end = this.show.fridayEndTime <= 9 ? '0' + this.show.fridayEndTime : this.show.fridayEndTime
       }
       if (this.show.saturday) {
-        day = 'Sábado'
+        days.push('Sábado')
         start = this.show.saturdayStartTime <= 9 ? '0' + this.show.saturdayStartTime : this.show.saturdayStartTime
         end = this.show.saturdayEndTime <= 9 ? '0' + this.show.saturdayEndTime : this.show.saturdayEndTime
       }
       if (this.show.sunday) {
-        day = 'Domingo'
+        days.push('Domingo')
         start = this.show.sundayStartTime <= 9 ? '0' + this.show.sundayStartTime : this.show.sundayStartTime
         end = this.show.sundayEndTime <= 9 ? '0' + this.show.sundayEndTime : this.show.sundayEndTime
       }
 
-      return `${day} de ${start}:00 a ${end}:00`
+      days = days.join(', ').replace(/,\s([^,]+)$/, ' y $1')
+
+      return `${days} de ${start}:00 a ${end}:00`
     }
   }
 }
