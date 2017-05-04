@@ -35,7 +35,7 @@
           a(href="https://goo.gl/maps/2GmUkR6Um7K2", target="_blank") Av. Forest 1236 - C.A.B.A.
     .footer__block.footer__block--bottom
       nav.footer__nav
-        a.footer__copyright(href="#")
+        a.footer__copyright(href="https://drive.google.com/file/d/0B9H05w5nKju7WjlVdnJNMy1zdjQ/view?usp=sharing", target="_blank")
           .footer__icon.icon.fa.fa-download
           p.footer__text Descargar presentación
         a.footer__copyright(href="#")
