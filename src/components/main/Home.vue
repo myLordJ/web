@@ -2,26 +2,7 @@
   main.content(v-show="true")
 
     section.content__section.box.box--container
-
-      .box__cell.is-unguttered.has-shadow
-        //- video(
-          v-if="video && video.video && video.video.url",
-          style="width: 625px; height: 352px;",
-          loop,
-          autoplay,
-          muted
-          )
-          source(:src="video.video.url")
-          | Tu navegador no soporta videos HTML5 😐
-        //- img(:src="logoBig" alt="rac", v-else, style="width: 625px; height: 352px")
-        iframe(width="625" height="352" src="https://www.youtube.com/embed/H_hlOTLCMYo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0")
-        .box__headline.box__headline--bottom-left(v-if="video && video.video && video.video.url")
-          h5.highlight__title
-            span.highlight.highlight--red(v-show="video.title") {{ video.title }}
-            strong.highlight__text.highlight__text--bordered(v-show="video.subTitle") {{ video.subTitle }}
-          //- button.button.button--light.button--rounded
-          //-   .fa.fa-share-alt
-
+      youtube
       big-slider(:items="adPlaces.home1.ads", v-show="adPlaces.home1.ads && adPlaces.home1.ads.length")
 
     section.content__section.box.box--container
@@ -142,6 +123,7 @@ import BannerWs from 'components/shared/BannerWs'
 import BigSlider from 'components/shared/BigSlider'
 import Slider from 'components/shared/Slider'
 import Instagram from 'components/shared/Instagram'
+import Youtube from 'components/shared/Youtube'
 
 import pageService from 'services/page'
 import showService from 'services/show'
@@ -151,7 +133,7 @@ import podcastService from 'services/podcast'
 export default {
   name: 'Home',
 
-  components: { Slider, BigSlider, BannerWs, BannerApp, RectangleAd, SquareAd, Instagram },
+  components: { Slider, BigSlider, BannerWs, BannerApp, RectangleAd, SquareAd, Instagram, Youtube },
 
   data () {
     return {
