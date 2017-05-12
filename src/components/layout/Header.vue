@@ -1,7 +1,7 @@
 <template lang="pug">
   header.header
-    .header__ads(v-if="false")
-      img(src="https://placem.at/things?w=945&h=89" alt="ads")
+    .header__ads(v-if="headerAd && headerAd.image && headerAd.image.url")
+      img(:src="headerAd.image.url" alt="headerAd.name", style="width: 945px; height: 89px")
     .header__holder
       .header__block
         .header__middle
@@ -102,6 +102,8 @@
 <script>
   import logo from 'assets/images/logo.png'
   import bird from 'assets/images/bird.png'
+
+  import adService from 'services/ad'
   import showService from 'services/show'
 
   let radioPlayer
@@ -115,12 +117,21 @@
         isPlaying: false,
         volume: 50,
 
+        headerAd: {},
+
         logo,
         bird
       }
     },
 
     created() {
+      adService.getByPlace('header')
+        .then(ads => {
+          if (ads && ads.length) {
+            this.headerAd = ads[0]
+          }
+        })
+
       showService.getCurrent()
         .then(res => {
           this.currentShow = res
