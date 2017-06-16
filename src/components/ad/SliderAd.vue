@@ -91,7 +91,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .square-ad {
+  .slider-ad {
     height: 240px;
     width: 270px;
   }
