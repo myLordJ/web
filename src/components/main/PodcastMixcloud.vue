@@ -33,7 +33,7 @@
               .box__cell.is-unguttered
                 p.box__text.box__text--featured(style="font-weight: bold; margin-top: 0", v-html="podcast.description")
               .player--featured(v-if="podcast.contentType === 'mixcloud'")
-                iframe(width='100%', height='120', :src='`https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fradioalacalle%2F${podcast.mixcloudId}%2F&hide_cover=1`', frameborder='0')
+                iframe(width='100%', height='120', :src='`https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com/${podcast.mixcloudId}%2F&hide_cover=1`', frameborder='0')
 
 
     section.content__section.box.box--row
