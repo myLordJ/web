@@ -1,12 +1,12 @@
 <template lang="pug">
   .carousel
     button.carousel__button.carousel__button--prev.button.button--light.button--rounded(
-      v-if="isFull",
+      v-if="isFull && to > pageSize",
       @click.prevent="prevPage"
     )
       .icon.fa.fa-angle-left.fa-3x
     button.carousel__button.carousel__button--next.button.button--light.button--rounded(
-      v-if="isFull",
+      v-if="isFull && to < items.length",
       @click.prevent="nextPage"
     )
       .icon.fa.fa-angle-right.fa-3x
