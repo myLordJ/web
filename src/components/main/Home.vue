@@ -57,7 +57,7 @@
       //-       :alt="podcastPlaces.home1.podcasts[0].title"
       //-     )
 
-      square-ad(:ads="adPlaces.home2.ads")
+      slider-ad(:ads="adPlaces.home2.ads")
 
     section.content__section.box.box--column
       .headline__holder
@@ -117,7 +117,7 @@
 import logoBig from 'assets/images/logo-big.jpg'
 
 import RectangleAd from 'components/ad/RectangleAd'
-import SquareAd from 'components/ad/SquareAd'
+import SliderAd from 'components/ad/SliderAd'
 import BannerApp from 'components/shared/BannerApp'
 import BannerWs from 'components/shared/BannerWs'
 import BigSlider from 'components/shared/BigSlider'
@@ -133,7 +133,7 @@ import podcastService from 'services/podcast'
 export default {
   name: 'Home',
 
-  components: { Slider, BigSlider, BannerWs, BannerApp, RectangleAd, SquareAd, Instagram, Youtube },
+  components: { Slider, BigSlider, BannerWs, BannerApp, RectangleAd, SliderAd, Instagram, Youtube },
 
   data () {
     return {
