@@ -25,7 +25,7 @@
                   span(v-show="podcast.show && podcast.show.name && podcast.publishedDate") &nbsp; | &nbsp;
                   span {{ podcast.publishedDate | date("DD.MM.YYYY") }}
               .is-unguttered(style="margin-top: 15px")
-                p.box__text.box__text--featured(style="font-weight: bold") {{ podcast.description }}
+                p.box__text.box__text--featured(v-html="podcast.description")
               .is-unguttered
                 p.box__text.box__text--featured(v-html="podcast.content")
 
