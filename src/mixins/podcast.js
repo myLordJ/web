@@ -1,5 +1,5 @@
 import RectangleAd from 'components/ad/RectangleAd'
-import SquareAd from 'components/ad/SquareAd'
+import SliderAd from 'components/ad/SliderAd'
 import BannerApp from 'components/shared/BannerApp'
 import BannerWs from 'components/shared/BannerWs'
 import Slider from 'components/shared/Slider'
@@ -8,7 +8,7 @@ import podcastService from 'services/podcast'
 import pageService from 'services/page'
 
 const podcastMixin = {
-  components: { Slider, BannerApp, BannerWs, RectangleAd, SquareAd },
+  components: { Slider, BannerApp, BannerWs, RectangleAd, SliderAd },
 
   data () {
     return {

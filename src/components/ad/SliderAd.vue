@@ -1,19 +1,17 @@
 <template lang="pug">
   .box__cell.is-unguttered(style="margin-bottom: -5px")
     span(
-      v-for="(c, i) in items",
+      v-for="(a, i) in ads",
       v-show="i >= from && i < to"
     )
-      a(:href="c.linkUrl", target="_blank")
+      a(:href="a.linkUrl", target="_blank")
         transition(name="fade")
           img.slider-ad(
-            :src="c.image.url",
-            :alt="c.name",
-            :title="c.name",
+            :src="a.image.url",
+            :alt="a.name",
+            :title="a.name",
             v-show="i >= from && i < to"
           )
-      button.box__button.button.button--light.button--rounded(@click.prevent="nextPage", v-show="items && items.length")
-        .icon.fa.fa-angle-right.fa-3x
 </template>
 
 <script>
@@ -23,16 +21,13 @@
     name: 'AddSlider',
 
     props: {
-      items: {
+      ads: {
         type: Array,
         required: true
       },
       pageSize: {
         type: Number,
         default: 1
-      },
-      router: {
-        type: String
       },
       moveSize: {
         type: Number,
@@ -57,7 +52,7 @@
     },
 
     watch: {
-      items() {
+      ads() {
         this.loadCurrents()
       }
     },
@@ -72,14 +67,14 @@
       },
 
       loadCurrents() {
-        if (this.items) {
+        if (this.ads) {
           this.to = parseInt(this.pageSize)
         }
       },
 
       nextPage() {
-        if (this.items && this.items.length) {
-          if (this.to >= this.items.length) {
+        if (this.ads && this.ads.length) {
+          if (this.to >= this.ads.length) {
             this.to = parseInt(this.pageSize)
             this.from = 0
           } else {
@@ -96,8 +91,8 @@
 </script>
 
 <style lang="scss" scoped>
-  .slider-ad {
-    height: 352px;
-    width: 597px;
+  .square-ad {
+    height: 240px;
+    width: 270px;
   }
 </style>

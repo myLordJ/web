@@ -43,7 +43,7 @@
 
       .box__cell.is-unguttered.sqare__ad
         .separator
-        square-ad(:ads="adPlaces.podcast1.ads")
+        slider-ad(:ads="adPlaces.podcast1.ads")
 
     section.content__section.box.box--row
       rectangle-ad(:ads="adPlaces.podcast2.ads")
