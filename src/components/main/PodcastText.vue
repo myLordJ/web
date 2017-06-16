@@ -60,7 +60,6 @@
 
     mixins: [podcastMixin]
   }
-
 </script>
 
 <style lang="scss">
