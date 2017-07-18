@@ -3,6 +3,7 @@
 
     section.content__section.box.box--container
       youtube
+      //- iframe(width="100%" height="100%" src="http://vmf.edge-apps.net/embed/live.php?streamname=radioALaCalle01-100074&autoplay=true" frameborder="0" allowfullscreen)
       big-slider(:items="adPlaces.home1.ads", v-show="adPlaces.home1.ads && adPlaces.home1.ads.length")
 
     section.content__section.box.box--container
