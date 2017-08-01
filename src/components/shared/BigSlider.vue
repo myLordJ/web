@@ -12,7 +12,7 @@
             :title="c.name",
             v-show="i >= from && i < to"
           )
-      button.box__button.button.button--light.button--rounded(@click.prevent="nextPage", v-show="items && items.length")
+      button.hide--mobile.box__button.button.button--light.button--rounded(@click.prevent="nextPage", v-show="items && items.length")
         .icon.fa.fa-angle-right.fa-3x
 </template>
 

@@ -35,7 +35,7 @@
 
         .header__bottom
           .header__links
-            router-link.navbar__link(:to="{ name: 'home'}")
+            router-link.navbar__link.logo(:to="{ name: 'home'}")
               img.header__logo(:src="logo" alt="rac")
             .header__menu.navbar
               //- li.navbar__item

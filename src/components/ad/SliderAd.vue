@@ -1,5 +1,5 @@
 <template lang="pug">
-  .box__cell.is-unguttered(style="margin-bottom: -5px")
+  .box__cell.is-unguttered.slider-ad(style="margin-bottom: -5px")
     span(
       v-for="(a, i) in ads",
       v-show="i >= from && i < to"
@@ -91,7 +91,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .slider-ad {
+  img.slider-ad {
     height: 240px;
     width: 270px;
   }
