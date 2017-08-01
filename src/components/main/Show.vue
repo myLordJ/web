@@ -51,27 +51,14 @@
       //-   img(src="https://radio-a-la-calle.s3.amazonaws.com/74blC3eJ9_gwn08-.png" alt="pepsi")
 
     section.content__section.box.box--row
-      .bar.box__cell.is-unguttered
-        .bar__icon.bar__icon--yellow
-          .icon.fa.fa-mobile-phone.fa-3x
-        h6.bar__highlight.highlight
-          strong Bájate la
-          strong.highlight--green App de la Radio
-          strong ahora!
-        a.bar__icon.bar__icon--turquoise
-          .icon.fa.fa-android.fa-3x
-        a.bar__icon.bar__icon--black
-          .icon.fa.fa-apple.fa-3x
-      .bar.box__cell.is-unguttered
-        .bar__icon.bar__icon--green
-          .icon.fa.fa-whatsapp.fa-3x
-        h6.bar__highlight.highlight
-          strong Nos queres contar algo?
-          strong.highlight--green +54 9 11 2825 2375
+      banner-app
+      banner-ws
 </template>
 
 <script>
 import Slider from 'components/shared/Slider'
+import BannerApp from 'components/shared/BannerApp'
+import BannerWs from 'components/shared/BannerWs'
 
 import showService from 'services/show'
 // import mixcloudService from 'services/mixcloud'
@@ -79,7 +66,7 @@ import showService from 'services/show'
 export default {
   name: 'Show',
 
-  components: { Slider },
+  components: { Slider, BannerApp, BannerWs },
 
   data () {
     return {
