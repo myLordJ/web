@@ -1,6 +1,6 @@
 <template lang="pug">
   footer.footer
-    button.footer__button.button.button--rounded.button--light
+    button.hide--mobile.footer__button.button.button--rounded.button--light
       .icon.fa.fa-angle-up.fa-3x
     .footer__block.footer__block--top
       nav.footer__nav
@@ -48,9 +48,9 @@
         .footer__copyright
           small.footer__text Radio A La Calle © {{ new Date().getFullYear() }}
            br
-           | ＜＞ with ❤️
+           | ⌨️&nbsp;&nbsp;with&nbsp;&nbsp;❤️&nbsp;&nbsp;
            | by&nbsp;
-           a(href="https://keepe.rs") Keepers
+           a(href="https://keepe.rs", style="font-size: 90%; text-decoration: underline") Keepers
 </template>
 
 <script>

@@ -4,7 +4,7 @@
 
       .box__cell.box__cell--white.has-shadow
 
-        .box
+        .box.box--podcast
           .sharethis-inline-share-buttons.box__button.box__button--featured
           //- button.box__button.box__button--featured.button.button--rounded
           //-   .fa.fa-share-alt
@@ -49,7 +49,7 @@
           slider(:items="suggestions", :pageSize='4')
 
       .box__cell.is-unguttered.sqare__ad
-        .separator
+        .separator.hide--mobile
         slider-ad(:ads="adPlaces.podcast1.ads")
 
     section.content__section.box.box--row

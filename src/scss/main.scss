@@ -63,6 +63,43 @@ h1 {
   .hide--mobile {
     display: none !important;
   }
+
+  .box {
+    padding: 0 10px;
+  }
+
+  a.logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  main.content {
+    padding: 0;
+  }
+
+  img.slider-ad, img.header__logo, .box__image--featured img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .carousel__holder {
+    padding: 10px;
+    width: 100% !important;
+  }
+
+  a.carousel__block {
+    max-width: 200px;
+    margin: 10px auto !important;
+    // margin-bottom: 10px;
+  }
+
+  .square-ad, .slider-ad {
+    justify-content: center;
+  }
+
+  .box--podcast {
+    padding: 0 2px;
+  }
 }
 
 @include media(tablet) {

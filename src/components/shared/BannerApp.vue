@@ -1,5 +1,5 @@
 <template lang="pug">
-  .bar.box__cell.is-unguttered
+  .bar.box__cell.is-unguttered.hide--mobile
     .bar__icon.bar__icon--yellow
       .icon.fa.fa-mobile-phone.fa-3x
     h6.bar__highlight.highlight
